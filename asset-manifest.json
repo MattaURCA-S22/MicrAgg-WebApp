@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/MicrAgg-WebApp/static/css/main.073c9b0a.css",
-    "main.js": "/MicrAgg-WebApp/static/js/main.88406f39.js",
+    "main.css": "/MicrAgg-WebApp/static/css/main.4db9bf2a.css",
+    "main.js": "/MicrAgg-WebApp/static/js/main.ac67da58.js",
     "static/js/787.3298df51.chunk.js": "/MicrAgg-WebApp/static/js/787.3298df51.chunk.js",
-    "static/media/logo.svg": "/MicrAgg-WebApp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/MicrAgg-WebApp/index.html",
-    "main.073c9b0a.css.map": "/MicrAgg-WebApp/static/css/main.073c9b0a.css.map",
-    "main.88406f39.js.map": "/MicrAgg-WebApp/static/js/main.88406f39.js.map",
+    "main.4db9bf2a.css.map": "/MicrAgg-WebApp/static/css/main.4db9bf2a.css.map",
+    "main.ac67da58.js.map": "/MicrAgg-WebApp/static/js/main.ac67da58.js.map",
     "787.3298df51.chunk.js.map": "/MicrAgg-WebApp/static/js/787.3298df51.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.88406f39.js"
+    "static/css/main.4db9bf2a.css",
+    "static/js/main.ac67da58.js"
   ]
 }
