@@ -28,6 +28,11 @@
   max-height: 56.25vw;
 }
 
+.App-hint {
+  font-size: calc(10px + 0.6vh);
+  color: black;
+}
+
 .App-controls {
   display: flex;
   flex-direction: row;

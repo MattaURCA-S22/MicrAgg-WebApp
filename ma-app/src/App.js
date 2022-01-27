@@ -27,8 +27,9 @@ function App() {
           ></iframe>
         </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
-        
 
+        <i className="App-hint">*Tap or Click Video to Play - Please Avoid Fullscreen</i>
+      
 
         {/*   Local Video, this was giving me trouble for some reason, showed blank player
         <video className="App-video" controls>
