@@ -25,6 +25,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### Main Scripts We Need
+
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -33,10 +35,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `npm run deploy`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Builds the app (uses the build script below), then deploys to Github Pages
+
+-----------------------------------------------------------------------------------------
+### Other Scripts
 
 ### `npm run build`
 
@@ -48,7 +52,11 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
