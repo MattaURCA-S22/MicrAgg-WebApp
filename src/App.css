@@ -44,15 +44,18 @@
 .App-button {
   border: none;
   color: black;
-  width: 20vh;
+  width: calc(120px + 10vw);
   height: calc(12px + 10vh);
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: calc(12px + 0.6vh);
+  font-size: calc(16px + 0.6vh);
   margin: 1vh;
   cursor: pointer;
 }
 
 .App-button1 {background-color: #81ee84;} /* Green */
-.App-button2 {background-color: #ff7070;} /* Blue */
+.App-button1:active {background-color: #59a55c;} /* Green */
+
+.App-button2 {background-color: #ff7070;} /* Red */
+.App-button2:active {background-color: #ac4c4c;} /* Red */
