@@ -43,6 +43,7 @@
 
 .App-button {
   border: none;
+  border-radius: 12px;
   color: black;
   width: calc(120px + 10vw);
   height: calc(12px + 10vh);
