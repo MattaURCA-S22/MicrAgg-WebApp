@@ -38,4 +38,21 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 2vw;
 }
+
+.App-button {
+  border: none;
+  color: black;
+  width: 20vh;
+  height: calc(12px + 10vh);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: calc(12px + 0.6vh);
+  margin: 1vh;
+  cursor: pointer;
+}
+
+.App-button1 {background-color: #81ee84;} /* Green */
+.App-button2 {background-color: #ff7070;} /* Blue */

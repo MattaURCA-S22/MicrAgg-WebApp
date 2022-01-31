@@ -27,7 +27,7 @@ function App() {
           ></iframe>
         </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
-
+        
         <i className="App-hint">*Tap or Click Video to Play - Please Avoid Fullscreen</i>
       
 
@@ -38,7 +38,10 @@ function App() {
         </video>
         */}
 
-        <div className="App-controls"></div>
+        <div className="App-controls">
+          <button class="App-button App-button1" onClick={this.responseClicked}>Supportive</button>
+          <button class="App-button App-button2" onClick={this.responseClicked}>Unsupportive</button>
+        </div>
       </div>
     </div>
   );
