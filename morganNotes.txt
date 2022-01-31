@@ -14,3 +14,7 @@ implement. While browsers have built in video players, there is more variety, wh
 less predictable unless a custom player were created. This option also requires local hosting, which is not just 
 a storage concern, but a concern for bandwidth, especially if several users will take the survey simultaneously.
 The videos would also need to be converted to multiple formats to support all browsers. 
+
+------
+
+I've added some buttons to the UI, though there is no functionality to them yet, just styling
