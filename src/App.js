@@ -39,8 +39,8 @@ function App() {
         */}
 
         <div className="App-controls">
-          <button class="App-button App-button1" onClick={this.responseClicked}>Supportive</button>
-          <button class="App-button App-button2" onClick={this.responseClicked}>Unsupportive</button>
+          <button class="App-button App-button1">Supportive</button>
+          <button class="App-button App-button2">Unsupportive</button>
         </div>
       </div>
     </div>
