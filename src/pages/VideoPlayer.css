@@ -1,0 +1,62 @@
+.VideoPlayer {
+  text-align: center;
+}
+
+.VideoPlayer-content {
+  background-color: lightgray;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.VideoPlayer-navBar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  background-color: whitesmoke;
+}
+
+.VideoPlayer-video {
+  width: 115.555556vh;
+  height: 65vh;
+  max-width: 100vw;
+  max-height: 56.25vw;
+}
+
+.VideoPlayer-hint {
+  font-size: calc(10px + 0.6vh);
+  color: black;
+}
+
+.VideoPlayer-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.VideoPlayer-button {
+  border: none;
+  border-radius: 12px;
+  color: black;
+  width: calc(120px + 10vw);
+  height: calc(12px + 10vh);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: calc(16px + 0.6vh);
+  margin: 1vh;
+  cursor: pointer;
+}
+
+.VideoPlayer-button1 {background-color: #81ee84;} /* Green */
+.VideoPlayer-button1:active {background-color: #59a55c;} /* Green */
+
+.VideoPlayer-button2 {background-color: #ff7070;} /* Red */
+.VideoPlayer-button2:active {background-color: #ac4c4c;} /* Red */
