@@ -5,7 +5,7 @@ function VideoPlayer() {
   return (
     <div className="VideoPlayer">
       <div className="VideoPlayer-content">
-        <div className="VideoPlayer-navBar"></div>
+        <div className="VideoPlayer-navBar"><a href="/DashboardMain">Dashboard</a></div>
 
         {/*   Youtube Embed
         <iframe
