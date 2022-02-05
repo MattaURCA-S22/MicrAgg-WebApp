@@ -1,0 +1,51 @@
+.DashboardMain-Main {
+    background-color: lightgray;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.DashboardMain-Nav {
+    width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  background-color: whitesmoke;
+}
+
+.DashboardMain-VideoQuickView {
+    width: 115.555556vh;
+    height: 65vh;
+    max-width: 100vw;
+    max-height: 56.25vw;
+    background-color: darkslategray;
+}
+
+.DashboardMain-Button {
+    border: none;
+  border-radius: 12px;
+  color: black;
+  width: calc(120px + 10vw);
+  height: calc(12px + 10vh);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: calc(16px + 0.6vh);
+  margin: 1vh;
+  cursor: pointer;
+}
+
+.DashboardMain-Body {
+    display: flex;
+    flex-direction: row;
+}
+
+.DashboardMain-Table {
+    display: flex;
+    flex-direction: column;
+}
