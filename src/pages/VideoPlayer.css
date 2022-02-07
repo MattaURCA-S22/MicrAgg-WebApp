@@ -42,7 +42,7 @@
 }
 
 .VideoPlayer-button {
-  border: none;
+  border: 1px solid black;
   border-radius: 12px;
   color: black;
   width: calc(120px + 10vw);
