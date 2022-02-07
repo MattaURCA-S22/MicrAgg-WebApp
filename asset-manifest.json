@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MicrAgg-WebApp/static/css/main.bd6c9e94.css",
-    "main.js": "/MicrAgg-WebApp/static/js/main.55e9ed98.js",
+    "main.css": "/MicrAgg-WebApp/static/css/main.a47a5044.css",
+    "main.js": "/MicrAgg-WebApp/static/js/main.eb384556.js",
     "static/js/787.3298df51.chunk.js": "/MicrAgg-WebApp/static/js/787.3298df51.chunk.js",
     "index.html": "/MicrAgg-WebApp/index.html",
-    "main.bd6c9e94.css.map": "/MicrAgg-WebApp/static/css/main.bd6c9e94.css.map",
-    "main.55e9ed98.js.map": "/MicrAgg-WebApp/static/js/main.55e9ed98.js.map",
+    "main.a47a5044.css.map": "/MicrAgg-WebApp/static/css/main.a47a5044.css.map",
+    "main.eb384556.js.map": "/MicrAgg-WebApp/static/js/main.eb384556.js.map",
     "787.3298df51.chunk.js.map": "/MicrAgg-WebApp/static/js/787.3298df51.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd6c9e94.css",
-    "static/js/main.55e9ed98.js"
+    "static/css/main.a47a5044.css",
+    "static/js/main.eb384556.js"
   ]
 }
