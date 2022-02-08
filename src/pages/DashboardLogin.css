@@ -1,0 +1,54 @@
+.DashboardLogin-Entry {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    color: black;
+}
+
+.DashboardLogin-Body {
+    display: block;
+    text-align: center;
+}
+
+.DashboardLogin-Credentials {
+    padding-top: 60px;
+}
+
+input[name="username"], input[name="password"] {
+    width: 40%;
+    padding: 5px 4px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: lightgrey;
+    margin-top: 10px;
+}
+
+.DashboardLogin-Username {
+    margin-left: 30%;
+    text-align: left;
+}
+
+.DashboardLogin-Password {
+    margin-left: 30%;
+    text-align: left;
+}
+
+input[type="submit"] {
+    border-radius: 12px;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 8px 60px;
+    font-size: 14px;
+    margin: 20px 2px;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    position: relative;
+    top: 1px;
+}
