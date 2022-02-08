@@ -32,7 +32,7 @@ function VideoPlayer() {
         {/*   Vimeo Embed  */}
         <div>
           <iframe
-            src="https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=1&player_id=0&VideoPlayer_id=58479"
+            src="https://player.vimeo.com/video/674740238?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=1&player_id=0&VideoPlayer_id=58479"
             frameborder="0"
             allow="autoplay;"
             className="VideoPlayer-video"
