@@ -9,13 +9,14 @@ function DashboardMain() {
             </div>
                 <div className="DashboardMain-Body">
                     <div className="DashboardMain-Content">
+                    <h4>Current Video</h4>
                         <div className="Dashboard-VideoQuickView">
                         <div>
           <iframe
             src="https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=1&player_id=0&VideoPlayer_id=58479"
             frameborder="0"
             allow="autoplay;"
-            className="VideoPlayer-video"
+            className="DashboardMain-VideoQuickView"
             title="MVI_0566"
           ></iframe>
         </div>
@@ -27,16 +28,14 @@ function DashboardMain() {
                     <div className="DashboardMain-Body">
                         <div className="DashboardMain-Content">
                         <button className="DashboardMain-Button">Quick View</button>
-                        <div className="Dashbaord-VideoQuickView">
                         <div>
           <iframe
             src="https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=1&player_id=0&VideoPlayer_id=58479"
             frameborder="0"
             allow="autoplay;"
-            className="VideoPlayer-video"
+            className="DashboardMain-VideoQuickView"
             title="MVI_0566"
           ></iframe>
-        </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
                         </div>
                         <button className="DashboardMain-Button">Detailed View</button>
