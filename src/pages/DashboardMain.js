@@ -9,39 +9,36 @@ function DashboardMain() {
             </div>
                 <div className="DashboardMain-Body">
                     <div className="DashboardMain-Content">
-                    <h4>Current Video</h4>
-                        <div className="Dashboard-VideoQuickView">
+                        <h4>Current Video</h4>
                         <div>
-          <iframe
-            src="https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=1&player_id=0&VideoPlayer_id=58479"
-            frameborder="0"
-            allow="autoplay;"
-            className="DashboardMain-VideoQuickView"
-            title="MVI_0566"
-          ></iframe>
-        </div>
-        <script src="https://player.vimeo.com/api/player.js"></script>
+                        <div>
+                            <iframe
+                                src="https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=1&player_id=0&VideoPlayer_id=58479"
+                                frameborder="0"
+                                allow="autoplay;"
+                                className="Dashboard-VideoQuickView"
+                                title="MVI_0566"
+                                ></iframe>
+                        </div>
                         </div>
                         <h4>Video Configuration Status</h4>
                         <button className="DashboardMain-Button">Configure Video</button>
                     </div>
-                    <div className="DashboardMain-Body">
-                        <div className="DashboardMain-Content">
+                    <div className="DashboardMain-Content">
                         <button className="DashboardMain-Button">Quick View</button>
                         <div>
-          <iframe
-            src="https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=1&player_id=0&VideoPlayer_id=58479"
-            frameborder="0"
-            allow="autoplay;"
-            className="DashboardMain-VideoQuickView"
-            title="MVI_0566"
-          ></iframe>
-        <script src="https://player.vimeo.com/api/player.js"></script>
+                        <div>
+                            <iframe
+                                src="https://siue.co1.qualtrics.com/jfe/form/SV_2nP78vxZNrpch9A"
+                                height="300vh"
+                                width="300vw"
+                                title="Qualtrics"
+                                ></iframe>
+                        </div>
                         </div>
                         <button className="DashboardMain-Button">Detailed View</button>
-                        </div>
-                    </div>
                 </div>
+            </div>
         </div>
     );
 }
