@@ -1,62 +1,60 @@
-import React from "react"
+import React, { useRef, useState } from "react";
+import { useAuth } from "../AuthContext";
+import Alert from "react-bootstrap/Alert";
 import "./DashboardLogin.css"
+import { useNavigate } from "react-router-dom";
 
-export default class DashboardLogin extends React.Component {
-    constructor(props) {
-        super(props);
+export default function Login() {
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const { login } = useAuth();
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
-        this.state = {
-            user: {
-                username: props.username,
-                password: props.password
-            }
+    async function handleSubmit(e) {
+        e.preventDefault();
+
+        try {
+            setError("");
+            setLoading(true);
+            console.log(emailRef.current.value + " " +  passwordRef.current.value)
+            await login(emailRef.current.value, passwordRef.current.value);
+            navigate("/");
+        } catch {
+            setError("Failed to log in");
         }
+        setLoading(false);
     }
+    
 
-    handleUsernameChanged(event) {
-        var user = this.state.user;
-        user.username = event.target.value;
-        this.setState ({ user: user });
-    }
-
-    handlePasswordChanged(event) {
-        var user = this.state.user;
-        user.password = event.target.value;
-        this.setState ({ user: user});
-    }
-
-    handleCredentialSubmission() {
-        alert("Username: " + this.state.user.username + "\nPassword: " + this.state.user.password);
-    }
-
-    render() {
-        return (
-            <div className="DashboardLogin-Login">
-                <div className="DashboardLogin-Entry">
-                    <h3>Dashboard Login</h3>
-                </div>
-                <div className="DashboardLogin-Body">
-                    <div className="DashboardLogin-Credentials">
-                        <form onSubmit={this.handleSubmit}>
-                            <div className="DashboardLogin-Username">
-                                <label for="usernameLabel">
-                                    Username<br/>
-                                </label>
-                            </div>
-                                <input type="text" value={this.state.user.username} onChange={this.handleUsernameChanged.bind(this)} name="username" />
+    return (
+        <div className="DashboardLogin-Login">
+            <div className="DashboardLogin-Entry">
+                <h3>Dashboard Login</h3>
+            </div>
+            <div className="DashboardLogin-Body">
+                <div className="DashboardLogin-Credentials">
+                    {error && <Alert className="" variant="danger">{error}</Alert>}
+                    <form onSubmit={handleSubmit}>
+                        <div className="DashboardLogin-Username">
+                            <label htmlFor="usernameLabel">
+                                Email<br/>
+                            </label>
+                        </div>
+                            <input type="text" id="email" ref={emailRef} name="email" />
+                    <br/>
+                        <div className="DashboardLogin-Password">
+                            <label htmlFor="passwordLabel">
+                                Password<br/>
+                            </label>
+                        </div>
+                        <input type="password" id="password" ref={passwordRef} name="password"/>
                         <br/>
-                            <div className="DashboardLogin-Password">
-                                <label for="passwordLabel">
-                                    Password<br/>
-                                </label>
-                            </div>
-                            <input type="password" value={this.state.user.password} onChange={this.handlePasswordChanged.bind(this)} name="password"/>
-                            <br/>
-                            <input type="submit" onClick={this.handleCredentialSubmission.bind(this)} value="Login" />
-                        </form>
-                    </div>
+                        <input type="submit" disabled={loading} name="submit" value="Login" />
+                    </form>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
