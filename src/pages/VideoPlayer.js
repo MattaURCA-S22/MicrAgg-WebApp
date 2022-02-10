@@ -1,11 +1,24 @@
+import Vimeo from "@vimeo/player";
 import React from "react";
+
 import "./VideoPlayer.css";
 
 function VideoPlayer() {
+  function UserResponse(message){
+    var iframe = document.querySelector('iframe');
+    var player = new Vimeo(iframe);
+
+    player.getCurrentTime().then(function(seconds){
+      console.log(seconds)
+    });
+
+    console.log(message);
+  }
+
   return (
     <div className="VideoPlayer">
       <div className="VideoPlayer-content">
-        <div className="VideoPlayer-navBar"><a href="/DashboardMain">Dashboard</a></div>
+        <div className="VideoPlayer-navBar"></div>
 
         {/*   Youtube Embed
         <iframe
@@ -26,7 +39,6 @@ function VideoPlayer() {
             title="MVI_0566"
           ></iframe>
         </div>
-        <script src="https://player.vimeo.com/api/player.js"></script>
         
         <i className="VideoPlayer-hint">*Tap or Click Video to Play - Please Avoid Fullscreen</i>
       
@@ -39,8 +51,8 @@ function VideoPlayer() {
         */}
 
         <div className="VideoPlayer-controls">
-          <button class="VideoPlayer-button VideoPlayer-button1">Supportive</button>
-          <button class="VideoPlayer-button VideoPlayer-button2">Unsupportive</button>
+          <button class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Supportive')}>Supportive</button>
+          <button class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Unsupportive')}>Unsupportive</button>
         </div>
       </div>
     </div>

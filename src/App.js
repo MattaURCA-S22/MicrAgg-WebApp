@@ -8,8 +8,8 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/VideoPlayer" element={<VideoPlayer/>}/>
-        <Route path="/" element={<DashboardMain/>}/>
+        <Route path="/" element={<VideoPlayer/>}/>
+        <Route path="/#pages/DashboardMain" element={<DashboardMain/>}/>
       </Routes>
     </HashRouter>
   );
