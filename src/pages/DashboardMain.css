@@ -44,13 +44,21 @@
 .DashboardMain-Body {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around; 
+    gap: 155px;
+    margin-top: 75px;
 }
 
-.DashboardMain-Content {
-    padding-top: 20%;
+.DashboardMain-Content-Video {
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly; 
+}
+
+.DashboardMain-Content-Survey {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
 }
