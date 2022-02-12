@@ -3,7 +3,7 @@
 First start a new terminal operating in the repo directory
 
 From there, you will need to install react the first time you do this, so type
-'npm install --save react'
+### `npm install --save react`
 
 After that, you should be able to start the local dev server with 'npm start'
 To stop the server, press Ctrl+C, then confirm with 'Y'
