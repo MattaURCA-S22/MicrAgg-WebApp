@@ -1,21 +1,21 @@
 import React from "react"
-import "./DashboardMain.css"
+import "./Survey.css"
 
-export default class Survey extends React.Component() {
-    render(){
+export default function Survey() {
         return (
             <div className="Survey-Main">
+                <div className="Survey-Nav">
+
+                </div>
                 <div className="Survey-Body">
                     <iframe 
                         src="https://siue.co1.qualtrics.com/jfe/form/SV_2nP78vxZNrpch9A"
-                        height="300vh"
-                        width="300vw"
+                        height="800vh"
+                        width="600vw"
                         title="Qualtrics"
                     >
                     </iframe>
                 </div>
             </div>
-        )
-            
-    }   
+        );   
 }

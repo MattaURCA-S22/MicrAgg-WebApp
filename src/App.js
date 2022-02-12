@@ -3,6 +3,7 @@ import VideoPlayer from './pages/VideoPlayer'
 import DashboardMain from './pages/DashboardMain'
 import Survey from './pages/Survey'
 import { HashRouter, Routes, Route } from "react-router-dom";
+import Consent from './pages/Consent';
 
 //Just Launches the App
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <Routes>
         <Route path="/videoPlayer" element={<VideoPlayer/>}/>
         <Route path="/DashboardMain" element={<DashboardMain/>}/>
-        <Route path="/" element={<Survey/>}/>
+        <Route path="/Survey" element={<Survey/>}/>
+        <Route path="/" element={<Consent/>}/>
       </Routes>
     </HashRouter>
   );
