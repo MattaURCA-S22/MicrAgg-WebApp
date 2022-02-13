@@ -4,7 +4,7 @@ import StandardPage from "../components/StandardPage";
 
 function DashboardMain() {
     return (
-        <div className="DashboardMain-Main">
+        <StandardPage className="DashboardMain-Main">
             <div className="DashboardMain-Nav">
                 <h3>Welcome Dr. George!</h3>
             </div>
@@ -32,7 +32,7 @@ function DashboardMain() {
                     <button className="DashboardMain-Button">Detailed View</button>
                 </div>
             </div>
-        </div>
+        </StandardPage>
     );
 }
 

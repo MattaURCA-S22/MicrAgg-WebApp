@@ -4,10 +4,7 @@ import StandardPage from "../components/StandardPage";
 
 export default function Survey() {
         return (
-            <div className="Survey-Main">
-                <div className="Survey-Nav">
-
-                </div>
+            <StandardPage className="Survey-Main">
                 <div className="Survey-Body">
                     <iframe 
                         src="https://siue.co1.qualtrics.com/jfe/form/SV_2nP78vxZNrpch9A"
@@ -17,6 +14,6 @@ export default function Survey() {
                     >
                     </iframe>
                 </div>
-            </div>
+            </StandardPage>
         );   
 }

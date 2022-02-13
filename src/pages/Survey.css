@@ -27,7 +27,7 @@
 }
 
 .Consent-Button {
-    border: none;
+  border: none;
   border-radius: 12px;
   color: black;
   width: calc(12px + 10vw);

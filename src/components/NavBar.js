@@ -22,7 +22,7 @@ export default function NavBar() {
         <button className="NavBar-Button">DashboardData</button>
       </Link>
 
-      <Link to="/Consent">
+      <Link to="/">
         <button className="NavBar-Button">Consent</button>
       </Link>
 

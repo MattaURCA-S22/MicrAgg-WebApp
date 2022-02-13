@@ -30,7 +30,7 @@ export default function Login() {
     
 
     return (
-        <div className="DashboardLogin-Login">
+        <StandardPage className="DashboardLogin-Login">
             <div className="DashboardLogin-Entry">
                 <h3>Dashboard Login</h3>
             </div>
@@ -56,6 +56,6 @@ export default function Login() {
                     </form>
                 </div>
             </div>
-        </div>
+        </StandardPage>
     );
 }

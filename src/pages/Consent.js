@@ -5,11 +5,9 @@ import StandardPage from "../components/StandardPage";
 
 export default function Consent() {
         return (
-            <div className="Survey-Main">
-                <div className="Survey-Nav">
-
-                </div>
+            <StandardPage className="Survey-Main">
                 <div className="Consent-Body">
+                <br />
                     <div className="Consent-Content">
                         <br />
                         <p className="Consent-Text"> This is sample text that will fill in some things for the consent form. This
@@ -36,6 +34,6 @@ export default function Consent() {
                       <button className="Consent-Button">	&#8614;</button>
                     </Link>
                 </div>
-            </div>
+            </StandardPage>
         );   
 }
