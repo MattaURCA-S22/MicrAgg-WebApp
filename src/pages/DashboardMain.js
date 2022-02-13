@@ -1,5 +1,6 @@
 import React from "react"
 import "./DashboardMain.css"
+import StandardPage from "../components/StandardPage";
 
 function DashboardMain() {
     return (

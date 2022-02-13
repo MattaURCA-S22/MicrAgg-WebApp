@@ -3,6 +3,7 @@ import { useAuth } from "../AuthContext";
 import Alert from "react-bootstrap/Alert";
 import "./DashboardLogin.css"
 import { useNavigate } from "react-router-dom";
+import StandardPage from "../components/StandardPage";
 
 export default function Login() {
     const emailRef = useRef();

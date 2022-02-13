@@ -1,5 +1,6 @@
 import React from "react"
 import "./Survey.css"
+import StandardPage from "../components/StandardPage";
 
 export default function Survey() {
         return (

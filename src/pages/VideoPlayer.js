@@ -1,6 +1,6 @@
 import Vimeo from "@vimeo/player";
 import React from "react";
-
+import StandardPage from "../components/StandardPage";
 import "./VideoPlayer.css";
 
 function VideoPlayer() {
@@ -16,9 +16,8 @@ function VideoPlayer() {
   }
 
   return (
-    <div className="VideoPlayer">
+    <StandardPage className="VideoPlayer">
       <div className="VideoPlayer-content">
-        <div className="VideoPlayer-navBar"></div>
 
         {/*   Youtube Embed
         <iframe
@@ -55,7 +54,7 @@ function VideoPlayer() {
           <button class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Unsupportive')}>Unsupportive</button>
         </div>
       </div>
-    </div>
+    </StandardPage>
   );
 }
 

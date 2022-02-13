@@ -1,0 +1,22 @@
+.NavBar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  background-color: whitesmoke;
+}
+
+.NavBar-Button {
+  border: none;
+border-radius: 12px;
+color: black;
+width: calc(12px + 10vw);
+height: calc(2px + 6vh);
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: calc(16px + 0.6vh);
+margin: 1vh;
+cursor: pointer;
+background-color: gray;
+}
