@@ -5,11 +5,14 @@ import DashboardMain from './pages/DashboardMain'
 import Survey from './pages/Survey'
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Consent from './pages/Consent';
+import DashboardLogin from './pages/DashboardLogin';
+import { AuthProvider } from './AuthContext';
 
 //Just Launches the App
 function App() {
   return (
-    <HashRouter>
+    <AuthProvider>
+      <HashRouter>
       <Routes>
         <Route path="/VideoPlayer" element={<VideoPlayer/>}/>
         <Route path="/DashboardData" element={<DashboardData/>}/>
@@ -18,6 +21,7 @@ function App() {
         <Route path="/" element={<Consent/>}/>
       </Routes>
     </HashRouter>
+    </AuthProvider>
   );
 }
 

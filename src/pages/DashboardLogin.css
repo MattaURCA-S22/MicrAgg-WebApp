@@ -1,0 +1,68 @@
+.DashboardLogin-Entry {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    color: black;
+}
+
+.DashboardLogin-Body {
+    display: block;
+    text-align: center;
+}
+
+.DashboardLogin-Credentials {
+    padding-top: 60px;
+}
+
+input[name="email"], input[name="password"] {
+    width: 40%;
+    padding: 5px 4px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: lightgrey;
+    margin-top: 10px;
+}
+
+.DashboardLogin-Username {
+    margin-left: 30%;
+    text-align: left;
+}
+
+.DashboardLogin-Password {
+    margin-left: 30%;
+    text-align: left;
+}
+
+input[type="submit"] {
+    border-radius: 12px;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 8px 60px;
+    font-size: 14px;
+    margin: 20px 2px;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    position: relative;
+    top: 1px;
+}
+
+.alert {
+    top: -10px;
+    width: 35%;
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    display: inline-block;
+}
