@@ -2,18 +2,24 @@
 
 First start a new terminal operating in the repo directory
 
-From there, you will need to install react the first time you do this, so type
+You should be able to install all dependencies listed in package.json by simply typing
+### `npm install`
+
+Alternatively you can install individual packages with the following commands:
+
+React and React Router DOM
 ### `npm install --save react`
 and
 ### `npm install react-router-dom`
 
-Firebase is also required to access the database, so type
+Firebase
 ### `npm install firebase`
 
-Vimeo is also required for the video player, so type 
+Vimeo
 ### `npm install @vimeo/player`
 
-After that, you should be able to start the local dev server with 'npm start'
+After that, you should be able to start the local dev server with 
+### `npm start`
 To stop the server, press Ctrl+C, then confirm with 'Y'
 
 Pushing code is just like normal Git, so we'll want to setup dev branches for the future,
