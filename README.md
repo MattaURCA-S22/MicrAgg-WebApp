@@ -4,7 +4,11 @@ First start a new terminal operating in the repo directory
 
 From there, you will need to install react the first time you do this, so type
 ### `npm install --save react`
+and
+### `npm install react-router-dom`
 
+Firebase is also required to access the database, so type
+### `npm install firebase`
 After that, you should be able to start the local dev server with 'npm start'
 To stop the server, press Ctrl+C, then confirm with 'Y'
 
