@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import "./Survey.css"
 
 export default function Consent() {
@@ -30,7 +31,9 @@ export default function Consent() {
                             qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
                         </p>
                     </div>
-                    <button className="Consent-Button">	&#8614;</button>
+                    <Link to="/VideoPlayer">
+                      <button className="Consent-Button">	&#8614;</button>
+                    </Link>
                 </div>
             </div>
         );   

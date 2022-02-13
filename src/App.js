@@ -12,8 +12,7 @@ function App() {
     <HashRouter>
       <Routes>
         <Route path="/VideoPlayer" element={<VideoPlayer/>}/>
-        <Route path="/" element={<DashboardData/>}/>
-        <Route path="/videoPlayer" element={<VideoPlayer/>}/>
+        <Route path="/DashboardData" element={<DashboardData/>}/>
         <Route path="/DashboardMain" element={<DashboardMain/>}/>
         <Route path="/Survey" element={<Survey/>}/>
         <Route path="/" element={<Consent/>}/>
