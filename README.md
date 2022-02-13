@@ -9,6 +9,10 @@ and
 
 Firebase is also required to access the database, so type
 ### `npm install firebase`
+
+Vimeo is also required for the video player, so type 
+### `npm install @vimeo/player`
+
 After that, you should be able to start the local dev server with 'npm start'
 To stop the server, press Ctrl+C, then confirm with 'Y'
 
