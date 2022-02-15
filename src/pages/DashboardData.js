@@ -15,6 +15,18 @@ function DashboardMain() {
                 </div>
             </div>
             <div className="DashboardMain-Body">
+            <div>
+                    <table className="DashboardData-Table">
+                        <th>Data Table</th>
+                        <tr>
+                            <td className="DashboardData-Table">ID</td>
+                            <td># Key Presses</td>
+                            <td># Sensitive Key presses</td>
+                            <td># insensitive key presses</td>
+                            <td>Measures data</td>
+                        </tr>
+                    </table>
+            </div>
             </div>
         </StandardPage>
     );

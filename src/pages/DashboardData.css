@@ -69,3 +69,11 @@
 li {
     display: inline;
 }
+
+.DashboardData-Table {
+  border-style: double;
+}
+
+td {
+  border-style: double;
+}
