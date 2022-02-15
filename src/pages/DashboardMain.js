@@ -1,6 +1,7 @@
 import React from "react"
 import "./DashboardMain.css"
 import StandardPage from "../components/StandardPage";
+import VideoRetrieval from "../components/VideoRetrieval";
 
 function DashboardMain() {
     return (
@@ -11,13 +12,14 @@ function DashboardMain() {
             <div className="DashboardMain-Body">
                 <div className="DashboardMain-Content-Video">
                     <h4>Current Video</h4>
-                    <iframe
+                    <VideoRetrieval videoPlay="2" />
+                    {/* <iframe
                         src="https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=1&player_id=0&VideoPlayer_id=58479"
                         frameborder="0"
                         allow="autoplay;"
                         className="Dashboard-VideoQuickView"
                         title="MVI_0566"
-                        ></iframe>
+                        ></iframe> */}
                     <h4>Video Configuration Status</h4>
                     <button className="DashboardMain-Button">Configure Video</button>
                 </div>

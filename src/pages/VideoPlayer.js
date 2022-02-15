@@ -1,6 +1,7 @@
 import Vimeo from "@vimeo/player";
 import React from "react";
 import StandardPage from "../components/StandardPage";
+import VideoRetrieval from "../components/VideoRetrieval";
 import "./VideoPlayer.css";
 
 function VideoPlayer() {
@@ -29,7 +30,7 @@ function VideoPlayer() {
 
 
         {/*   Vimeo Embed  */}
-        <div>
+        {/* <div>
           <iframe
             src="https://player.vimeo.com/video/674740238?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=1&player_id=0&VideoPlayer_id=58479"
             frameborder="0"
@@ -37,7 +38,8 @@ function VideoPlayer() {
             className="VideoPlayer-video"
             title="MVI_0566"
           ></iframe>
-        </div>
+        </div> */}
+        <VideoRetrieval videoPlay="1" />
         
         <i className="VideoPlayer-hint">*Tap or Click Video to Play - Please Avoid Fullscreen</i>
       
