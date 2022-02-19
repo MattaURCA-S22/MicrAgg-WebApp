@@ -9,13 +9,24 @@
 
 
 .DashboardMain-Nav {
-    width: 100vw;
+  width: 80vw;
   height: 20vh;
   display: flex;
   flex-direction: column;
   background-color: whitesmoke;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  color: crimson;
+}
+
+.eNav{
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  align-items: center;
+  justify-content: space-around;
   color: crimson;
 }
 
@@ -48,6 +59,25 @@
     gap: 40px; 
 }
 
+.DashboardData-eNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.DashboardData-Body-Nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2vw; 
+  margin-left: 20vw;
+}
+
+.align {
+  align-self: baseline; 
+}
+
 .Dashboard {
     align-self: flex-start;
 }
@@ -76,4 +106,9 @@ li {
 
 td {
   border-style: double;
+}
+
+.align {
+  align-self: baseline;
+  margin-left: 2vw;
 }
