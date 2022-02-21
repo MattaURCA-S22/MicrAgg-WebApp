@@ -10,6 +10,7 @@ function VideoPlayer() {
     var player = new Vimeo(iframe);
 
     player.getCurrentTime().then(function(seconds){
+      // You can use seconds and message here to add data to the user's response data
       console.log(seconds)
     });
 
@@ -52,8 +53,8 @@ function VideoPlayer() {
         */}
 
         <div className="VideoPlayer-controls">
-          <button class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Supportive')}>Supportive</button>
-          <button class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Unsupportive')}>Unsupportive</button>
+          <button class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Sensitive')}>Sensitive</button>
+          <button class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Insensitive')}>Insensitive</button>
         </div>
       </div>
     </StandardPage>
