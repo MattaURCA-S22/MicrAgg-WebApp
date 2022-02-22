@@ -6,6 +6,7 @@ import Survey from './pages/Survey'
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Consent from './pages/Consent';
 import DashboardLogin from './pages/DashboardLogin';
+import VideoConfigure from './pages/VideoConfigure';
 import { AuthProvider } from './AuthContext';
 
 //Just Launches the App
@@ -14,6 +15,7 @@ function App() {
     <AuthProvider>
       <HashRouter>
       <Routes>
+        <Route path="/VideoConfigure" element={<VideoConfigure/>}/>
         <Route path="/VideoPlayer" element={<VideoPlayer/>}/>
         <Route path="/DashboardData" element={<DashboardData/>}/>
         <Route path="/DashboardMain" element={<DashboardMain/>}/>

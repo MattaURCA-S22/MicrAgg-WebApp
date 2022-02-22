@@ -2,31 +2,34 @@ import React from "react"
 import "./DashboardData.css"
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
+import { Link } from "react-router-dom";
 
 function DashboardMain() {
     return (
         <StandardPage className="DashboardMain-Main">
-        <div>
+        <div className="">
             <div className="DashboardData-eNav">
-            <div className="DashboardMain-Nav">
-                <h4 className="align">Dashboard</h4>
-                    {/* <h4 className="Dashboard">Dashboard</h4> */}
-                    <div className="DashboardData-Body-Nav">
-                        <h4>Data Options</h4>
-                    </div>
-                <div className="DashboardData-Body-Nav">
-                    <button className="DashboardData-Button">Data View</button>
-                    <button className="DashboardData-Button">Data Analysis</button>
-                    <button className="DashboardData-Button">Video</button>
+                <div className="eNavL">
+                    <h2 className="align">Dashboard</h2>
+                    <h4 className="align">Welcome Dr. George</h4>
                 </div>
-            </div>
-                <div className="eNav">
-                    <VideoRetrieval videoPlay="1" data="true"/>
-                    <button>These are words</button>
+                <div className="DashboardData-Nav">
+                            <h2 className="align2">Data Options</h2>
+                    <div className="DashboardData-Body-Nav">
+                        <button className="DashboardData-Button">Data View</button>
+                        <button className="DashboardData-Button">Data Analysis</button>
+                    </div>
+                </div>
+                <div className="eNavR">
+                        <VideoRetrieval videoPlay="1" data="true"/>
+                        <Link to="/">
+                            <button>Configure Video</button>
+                        </Link>
+                        
                 </div>
             </div>
             <div className="DashboardMain-Body">
-            <div>
+                <div>
                     <table className="DashboardData-Table">
                         <th>Data Table</th>
                         <tr>
@@ -37,10 +40,10 @@ function DashboardMain() {
                             <td>Measures data</td>
                         </tr>
                     </table>
+                </div>
             </div>
-            </div>
-            </div>
-         </StandardPage>
+        </div>
+        </StandardPage>
     );
 }
 
