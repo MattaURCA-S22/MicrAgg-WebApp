@@ -26,7 +26,7 @@ export default function NavBar() {
         <button className="NavBar-Button">Consent</button>
       </Link>
 
-      <Link to="/Survey">
+      <Link to="/SurveyPage">
         <button className="NavBar-Button">Survey</button>
       </Link>
 
