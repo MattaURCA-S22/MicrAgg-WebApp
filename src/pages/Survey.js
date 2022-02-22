@@ -2,6 +2,7 @@ import React from "react"
 import "./Survey.css"
 import StandardPage from "../components/StandardPage";
 
+// Depracated, qualtrics survey
 export default function Survey() {
         return (
             <StandardPage className="Survey-Main">

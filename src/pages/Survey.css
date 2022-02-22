@@ -30,7 +30,7 @@
   border: none;
   border-radius: 12px;
   color: black;
-  width: calc(12px + 10vw);
+  width: calc(96px + 2vw);
   height: calc(2px + 6vh);
   text-align: center;
   text-decoration: none;
@@ -62,7 +62,7 @@
     flex-direction: column;
     justify-content:flex-start; 
     background-color: aliceblue;
-    width: 60vw;
+    width: 80vw;
     height: 70vh;
     border: 10px;
     padding: 16px;
