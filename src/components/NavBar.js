@@ -5,9 +5,16 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <div className="NavBar">
-
+      <Link to="/">
+        <button className="NavBar-Button">Consent</button>
+      </Link>
+      
       <Link to="/VideoPlayer">
         <button className="NavBar-Button">Video Player</button>
+      </Link>
+
+      <Link to="/SurveyPage">
+        <button className="NavBar-Button">Survey</button>
       </Link>
 
       <Link to="/DashboardLogin">
@@ -21,15 +28,6 @@ export default function NavBar() {
       <Link to="/DashboardData">
         <button className="NavBar-Button">DashboardData</button>
       </Link>
-
-      <Link to="/">
-        <button className="NavBar-Button">Consent</button>
-      </Link>
-
-      <Link to="/SurveyPage">
-        <button className="NavBar-Button">Survey</button>
-      </Link>
-
     </div>
   );
 }
