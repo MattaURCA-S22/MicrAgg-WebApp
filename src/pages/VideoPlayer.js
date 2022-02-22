@@ -1,5 +1,6 @@
 import Vimeo from "@vimeo/player";
 import React from "react";
+import {Link} from "react-router-dom";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
 import "./VideoPlayer.css";
@@ -56,6 +57,9 @@ function VideoPlayer() {
           <button class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Sensitive')}>Sensitive</button>
           <button class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Insensitive')}>Insensitive</button>
         </div>
+        <Link to="/Survey">
+          <button class="VideoPlayer-button" style={{height: 40}}>Continue</button>
+        </Link>
       </div>
     </StandardPage>
   );
