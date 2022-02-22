@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Survey.css";
+import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
 
 export default function Consent() {

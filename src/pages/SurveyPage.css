@@ -1,0 +1,9 @@
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table {
+    border: 1.1px solid;
+    border-bottom: 1.1px solid;
+    margin-top: 20px;
+}
