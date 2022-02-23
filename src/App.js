@@ -15,13 +15,13 @@ function App() {
     <AuthProvider>
       <HashRouter>
       <Routes>
-        <Route path="/" element={<VideoConfigure/>}/>
+        <Route path="/VideoConfigure" element={<VideoConfigure/>}/>
         <Route path="/VideoPlayer" element={<VideoPlayer/>}/>
         <Route path="/DashboardData" element={<DashboardData/>}/>
         <Route path="/DashboardMain" element={<DashboardMain/>}/>
         <Route path="/DashboardLogin" element={<DashboardLogin/>}/>
         <Route path="/SurveyPage" element={<Survey/>}/>
-        <Route path="/Consent" element={<Consent/>}/>
+        <Route path="/" element={<Consent/>}/>
       </Routes>
     </HashRouter>
     </AuthProvider>
