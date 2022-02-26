@@ -1,6 +1,7 @@
 import React from "react";
 import "./StandardPage.css";
 import NavBar from "../components/NavBar";
+import DemoBar from "../components/DemoBar";
 
 export default function StandardPage(props) {
   var style = "Default";
@@ -11,7 +12,7 @@ export default function StandardPage(props) {
   }
   return (
     <div className={style}>
-      <NavBar />
+      <DemoBar />
       {props.children}
     </div>
   );

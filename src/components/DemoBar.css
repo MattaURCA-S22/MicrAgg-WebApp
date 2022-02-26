@@ -1,0 +1,24 @@
+.DemoBar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.DemoBar-Button {
+  border: none;
+  border-radius: 12px;
+  color: black;
+  width: calc(12px + 10vw);
+  height: calc(2px + 6vh);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: calc(16px + 0.6vh);
+  margin: 3vh;
+  cursor: pointer;
+  background-color: rgb(174, 216, 255);
+}
