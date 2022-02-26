@@ -24,6 +24,10 @@ function VideoConfigure() {
     var player = new Vimeo(iframe);
 
     player.getCurrentTime().then(function(seconds){
+      if (message === "Sensitive"){
+        sensitive.push(seconds.toString());
+        console.log(sensitive);
+      }
       console.log(seconds)
     });
 
@@ -47,12 +51,15 @@ function VideoConfigure() {
       <div className="overlay">
           <a href={"javascript:void(0)"} className="closebtn" onClick={() => closeNav()}>&times;</a>
           <div className="VideoConfigure-contentL">
-                <h5>Sensitive Times</h5>
+                <h5><u>Sensitive Times</u></h5>
+                <ul>
+                  {sensitive.map((time) => (<VideoConfigureSensitive timeS = {time}/>))}
+                </ul>
                 <hr></hr>
-                <VideoConfigureSensitive timeS={sensitive}/>
-                <h5>Insensitive Times</h5>
-                <hr></hr>
-                <VideoConfigureInsensitive timeIS={Insensitive}/>
+                <h5><u>Insensitive Times</u></h5>
+                <ul>
+                  {Insensitive.map((time) => (<VideoConfigureInsensitive timeIS = {time}/>))}
+                </ul>
           </div>
       </div>
       <div className="VideoConfigure-content">
