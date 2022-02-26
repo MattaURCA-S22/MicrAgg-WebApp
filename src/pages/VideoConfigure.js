@@ -2,7 +2,21 @@ import Vimeo from "@vimeo/player";
 import React from "react";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
+import VideoConfigureSensitive from "../components/VideoConfigureSensitive";
+import VideoConfigureInsensitive from "../components/VideoConfigureInsensitive";
 import "./VideoConfigure.css";
+
+var sensitive = [
+  "1.80",
+  "2.74",
+  "5.86"
+];
+
+var Insensitive = [
+  "2.45",
+  "6.34",
+  "12.13"
+];
 
 function VideoConfigure() {
   function UserResponse(message){
@@ -17,21 +31,28 @@ function VideoConfigure() {
   }
 
   function openNav() {
-    document.getElementsByClassName("overlay").style.left = "15vw";
+    var overlay = document.getElementsByClassName("overlay");
+    overlay.style.visibility = "visible";
+    console.log(overlay);
   }
   
   /* Close when someone clicks on the "x" symbol inside the overlay */
   function closeNav() {
-    document.getElementsByClassName("overlay").style.left = "0vw";
+    document.getElementsByClassName("overlay").style.visibility = "hidden";
   }
 
   return (
     <StandardPage>
-      <span onClick={() => openNav()}>open</span>
+      <button onClick={() => openNav()}>Open</button>
       <div className="overlay">
           <a href={"javascript:void(0)"} className="closebtn" onClick={() => closeNav()}>&times;</a>
           <div className="VideoConfigure-contentL">
-                <h4>Testing</h4>
+                <h5>Sensitive Times</h5>
+                <hr></hr>
+                <VideoConfigureSensitive timeS={sensitive}/>
+                <h5>Insensitive Times</h5>
+                <hr></hr>
+                <VideoConfigureInsensitive timeIS={Insensitive}/>
           </div>
       </div>
       <div className="VideoConfigure-content">

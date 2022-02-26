@@ -1,4 +1,5 @@
 .VideoPlayer-video {
+    border-radius: 5%;
     width: 115.555556vh;
     height: 65vh;
     max-width: 100vw;
