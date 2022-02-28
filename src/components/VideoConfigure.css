@@ -1,0 +1,13 @@
+.configureButton {
+    align-items: center;
+    margin-left: 5.5vw;
+}
+
+.configureList {
+    align-items: center;
+    margin-left: 2vw;
+}
+
+hr {
+    width: 20vw;
+}

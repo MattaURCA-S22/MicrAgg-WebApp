@@ -52,9 +52,7 @@ function VideoConfigure() {
           <a href={"javascript:void(0)"} className="closebtn" onClick={() => closeNav()}>&times;</a>
           <div className="VideoConfigure-contentL">
                 <h5><u>Sensitive Times</u></h5>
-                <ul>
-                  {sensitive.map((time) => (<VideoConfigureSensitive timeS = {time}/>))}
-                </ul>
+                <VideoConfigureSensitive timeS={sensitive}/>
                 <hr></hr>
                 <h5><u>Insensitive Times</u></h5>
                 <ul>
