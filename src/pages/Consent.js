@@ -54,7 +54,7 @@ export default function Consent() {
             PARTICIPATE. You may print a copy of this notice for your records.
           </p>
         </div>
-        <Link to="/VideoPlayer">
+        <Link to="/Instructions">
           <button className="Consent-Button"> Continue</button>
         </Link>
       </div>
