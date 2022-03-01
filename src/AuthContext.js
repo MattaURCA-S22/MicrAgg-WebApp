@@ -1,7 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { auth } from './firebase';
+import { auth, db } from './firebase';
+import { collection, addDoc } from "firebase/firestore";
 
 const AuthContext = React.createContext();
+
+export const addNewUserData = async (newAnswers) => {
+    const docRef = await addDoc(collection(db, "User-answers"), newAnswers);
+    console.log("Document written with ID: " + docRef.id);
+}
 
 export function useAuth() {
     return useContext(AuthContext);
