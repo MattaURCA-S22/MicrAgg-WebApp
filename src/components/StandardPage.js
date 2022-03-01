@@ -14,7 +14,7 @@ export default function StandardPage(props) {
     <div className={style}>
       {/* Switch the below component between DemoBar and NavBar as needed */}
       {/* NavBar is for development, DemoBar is closer to production */}
-      <DemoBar />
+      <NavBar />
       {props.children}
     </div>
   );
