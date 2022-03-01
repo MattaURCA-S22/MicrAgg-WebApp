@@ -1,6 +1,7 @@
 import React from "react";
 import "./StandardPage.css";
 import NavBar from "../components/NavBar";
+import DemoBar from "../components/DemoBar";
 
 export default function StandardPage(props) {
   var style = "Default";
@@ -11,7 +12,9 @@ export default function StandardPage(props) {
   }
   return (
     <div className={style}>
-      <NavBar />
+      {/* Switch the below component between DemoBar and NavBar as needed */}
+      {/* NavBar is for development, DemoBar is closer to production */}
+      <DemoBar />
       {props.children}
     </div>
   );
