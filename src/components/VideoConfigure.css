@@ -1,13 +1,46 @@
 .configureButton {
     align-items: center;
-    margin-left: 5.5vw;
+    margin-left: 5.75vw;
+    border: 1px solid black;
+    border-radius: 12px;
+    color: black;
+    width: calc(20px + 5vw);
+    height: calc(12px + 3vh);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(8px + 0.6vh);
+    cursor: pointer;
 }
 
 .configureList {
     align-items: center;
-    margin-left: 2vw;
+    
 }
 
-hr {
-    width: 20vw;
+.configureHR {
+    width: 15vw;
+    background-color: red;
 }
+
+.VideoPlayer-button {
+    border: 1px solid black;
+    border-radius: 12px;
+    color: black;
+    width: calc(20px + 5vw);
+    height: calc(12px + 3vh);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(16px + 0.6vh);
+    margin: 1vh;
+    cursor: pointer;
+  }
+
+  .configureButton-1 {
+      background-color: #81ee84;
+  }
+
+  .configureButton-2 {
+      background-color: red;
+  }

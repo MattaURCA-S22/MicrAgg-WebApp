@@ -11,6 +11,10 @@ export default function AddSensitive(props) {
     ];
     const [timeArr, setValue] = useState(['3.21', '3.31', '12.2']);
 
+    function RemoveItems() {
+      
+    }
+
     function UserResponse(message){
         var iframe = document.querySelector('iframe');
         var player = new Vimeo(iframe);
@@ -33,10 +37,10 @@ export default function AddSensitive(props) {
    
     //var newTime = props.newTime;
     var timeS = props.timeS;
-   const listItems = timeArr.map((time) => <li className = 'configureList' key = {time.toString()}>{time} &times;<hr></hr></li>)
+   const listItems = timeArr.map((time) => <li className = 'configureList' key = {time.toString()}>{time} &times;<hr className="configureHR"></hr></li>)
     return (
     <div>
-        <button className="configureButton" onClick={() => UserResponse('Sensitive')}>Add Sensitive</button>
+        <button className="configureButton configureButton-1" onClick={() => UserResponse('Sensitive')}>Add Sensitive</button>
         <ul className='configureList'>{listItems}</ul>
     </div>)
 }

@@ -33,31 +33,17 @@ function VideoConfigure() {
 
     console.log(message);
   }
-
-  function openNav() {
-    var overlay = document.getElementsByClassName("overlay");
-    overlay.style.visibility = "visible";
-    console.log(overlay);
-  }
   
-  /* Close when someone clicks on the "x" symbol inside the overlay */
-  function closeNav() {
-    document.getElementsByClassName("overlay").style.visibility = "hidden";
-  }
 
   return (
     <StandardPage>
-      <button onClick={() => openNav()}>Open</button>
       <div className="overlay">
-          <a href={"javascript:void(0)"} className="closebtn" onClick={() => closeNav()}>&times;</a>
           <div className="VideoConfigure-contentL">
                 <h5><u>Sensitive Times</u></h5>
                 <VideoConfigureSensitive timeS={sensitive}/>
                 <hr></hr>
                 <h5><u>Insensitive Times</u></h5>
-                <ul>
-                  {Insensitive.map((time) => (<VideoConfigureInsensitive timeIS = {time}/>))}
-                </ul>
+                <VideoConfigureInsensitive timeIS = {Insensitive}/>
           </div>
       </div>
       <div className="VideoConfigure-content">
