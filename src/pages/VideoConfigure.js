@@ -39,19 +39,19 @@ function VideoConfigure() {
     <StandardPage>
       <div className="overlay">
           <div className="VideoConfigure-contentL">
-                <h5><u>Sensitive Times</u></h5>
+                <h5 className="title"><u>Sensitive Times</u></h5>
+              <div className="overlayTimes1">
                 <VideoConfigureSensitive timeS={sensitive}/>
+              </div>
                 <hr></hr>
                 <h5><u>Insensitive Times</u></h5>
+              <div className="">
                 <VideoConfigureInsensitive timeIS = {Insensitive}/>
+              </div>
           </div>
       </div>
       <div className="VideoConfigure-content">
         <VideoRetrieval videoPlay="1" />
-        <div className="VideoPlayer-controls">
-          <button class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Sensitive')}>Sensitive</button>
-          <button class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Insensitive')}>Insensitive</button>
-        </div> 
       </div>
     </StandardPage>
   );
