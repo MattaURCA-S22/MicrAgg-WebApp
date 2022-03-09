@@ -60,3 +60,10 @@
     cursor: pointer;
     font-size: calc(14px + 0.6vh);;
 }
+
+.overlayTimes1 {
+    width: 17vw;
+    height: 40vh;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: auto;
+  }

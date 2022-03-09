@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Vimeo from "@vimeo/player";
-import './VideoConfigure.css';
+import './VideoConfigureComponent.css';
 
 export default function AddInsensitive(props) {
 

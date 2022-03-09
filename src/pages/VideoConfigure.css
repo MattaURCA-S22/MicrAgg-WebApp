@@ -94,13 +94,35 @@
 
     .overlayTimes1 {
       width: 17vw;
-      height: 50vh;
+      height: 40vh;
       overflow-x: hidden; /* Disable horizontal scroll */
       overflow-y: auto;
+      background-color: black;
     }
 
     .overlayTimes2 {
       width: 17vw;
-      height: 45vh;
-      overflow: auto;
+      height: 40vh;
+      overflow-x: hidden; /* Disable horizontal scroll */
+      overflow-y: auto;
+      background-color: black;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: grey;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
     }

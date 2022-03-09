@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Vimeo from "@vimeo/player";
-import './VideoConfigure.css';
+import './VideoConfigureComponent.css';
 
 
 export default function AddSensitive(props) {
@@ -10,6 +10,7 @@ export default function AddSensitive(props) {
         '12.2'
     ];
     const [timeArr, setValue] = useState(sensitive);
+    const [isVisible, setStyle] = useState();
 
     function RemoveItems(id) {
       console.log(id);
