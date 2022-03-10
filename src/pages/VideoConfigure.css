@@ -126,3 +126,19 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
+    ::-webkit-scrollbar {
+      width: 0.5vw;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px black;
+      border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: red;
+      border-radius: 10px;
+    }

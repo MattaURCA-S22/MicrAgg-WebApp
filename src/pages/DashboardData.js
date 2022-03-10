@@ -21,7 +21,7 @@ function DashboardMain() {
                     </div>
                 </div>
                 <div className="eNavR">
-                        <VideoRetrieval videoPlay="1" data="true"/>
+                        <VideoRetrieval videoPlay="1" data="true" showChange="2"/>
                         <Link to="/VideoConfigure">
                             <button>Configure Video</button>
                         </Link>

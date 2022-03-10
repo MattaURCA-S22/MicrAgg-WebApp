@@ -58,14 +58,14 @@ function VideoConfigure() {
           </div>
       </div>
       <div className="VideoConfigure-content">
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <button>Videos</button>
           <div className="dropdown-content">
             <button onClick={() => ChangeVideo("1")}>Control video</button>
             <button onClick={() => ChangeVideo("2")}>Experimental Video</button>
           </div>
-        </div>
-        <VideoRetrieval videoPlay={video} />
+        </div> */}
+        <VideoRetrieval videoPlay={video} showChange="1"/>
       </div>
     </StandardPage>
   );
