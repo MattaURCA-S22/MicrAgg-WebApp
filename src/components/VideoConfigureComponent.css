@@ -20,7 +20,7 @@
 
 .configureHR {
     width: 15vw;
-    background-color: red;
+    background-color: #ff3333;
 }
 
 .VideoPlayer-button {
@@ -42,5 +42,28 @@
   }
 
   .configureButton-2 {
-      background-color: red;
+      background-color: #ff3333;
+  }
+
+  .removeButton {
+      background: none;
+      border: none;
+      color: #ff3333;
+      cursor: pointer;
+      font-size: calc(14px + 0.6vh);;
+  }
+
+  .addButton {
+    background: none;
+    border: none;
+    color: #81ee84;
+    cursor: pointer;
+    font-size: calc(14px + 0.6vh);;
+}
+
+.overlayTimes1 {
+    width: 17vw;
+    height: 40vh;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: auto;
   }
