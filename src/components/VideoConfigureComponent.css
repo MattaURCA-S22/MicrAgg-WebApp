@@ -1,6 +1,6 @@
 .configureButton {
     align-items: center;
-    margin-left: 5.75vw;
+    margin-left: 5.5vw;
     border: 1px solid black;
     border-radius: 12px;
     color: black;
@@ -14,28 +14,13 @@
 }
 
 .configureList {
-    align-items: center;
+    align-items: baseline;
     
 }
 
 .configureHR {
     width: 15vw;
-    background-color: #ff3333;
 }
-
-.VideoPlayer-button {
-    border: 1px solid black;
-    border-radius: 12px;
-    color: black;
-    width: calc(20px + 5vw);
-    height: calc(12px + 3vh);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: calc(16px + 0.6vh);
-    margin: 1vh;
-    cursor: pointer;
-  }
 
   .configureButton-1 {
       background-color: #81ee84;

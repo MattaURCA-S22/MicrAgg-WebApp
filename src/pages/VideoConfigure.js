@@ -21,26 +21,6 @@ var Insensitive = [
 var video = "1";
 
 function VideoConfigure() {
-  function UserResponse(message){
-    var iframe = document.querySelector('iframe');
-    var player = new Vimeo(iframe);
-
-    player.getCurrentTime().then(function(seconds){
-      if (message === "Sensitive"){
-        sensitive.push(seconds.toString());
-        console.log(sensitive);
-      }
-      console.log(seconds)
-    });
-
-    console.log(message);
-  }
-
-  function ChangeVideo(videoNum) {
-    video = videoNum;
-    console.log(video);
-  }
-  
 
   return (
     <StandardPage>
