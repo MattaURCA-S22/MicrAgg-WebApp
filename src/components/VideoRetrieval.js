@@ -32,9 +32,9 @@ export default function VideoRetrieval(props) {
 
     if (showButton === "1") {
         finalVar = (
-        <div>
+        <div className="VideoConfigure-content">
             <div className="dropdown">
-                <button>Videos</button>
+                <button className="configureButton">Videos</button>
                 <div className="dropdown-content">
                     <button onClick={() => ChangeVideo("1")}>Control video</button>
                     <button onClick={() => ChangeVideo("2")}>Experimental Video</button>

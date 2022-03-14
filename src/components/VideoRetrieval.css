@@ -21,7 +21,7 @@
 }
 
 .dropdown {
-  position: relative;
+  position: center;
   display: inline-block;
 }
 
@@ -37,4 +37,30 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.VideoConfigure-content {
+  background-color: lightgray;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.configureButton {
+  align-items: center;
+  margin-left: 5.5vw;
+  border: 1px solid black;
+  border-radius: 12px;
+  color: black;
+  width: calc(20px + 5vw);
+  height: calc(12px + 3vh);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: calc(8px + 0.6vh);
+  cursor: pointer;
 }
