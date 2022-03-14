@@ -2,7 +2,7 @@
     background-color: lightgray;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: top;
 }
@@ -62,12 +62,11 @@
   background-color: red;
 }
 
-.DashboardData-Body {
+ .DashboardData-Body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 40px; 
-}
+} 
 
 .DashboardData-eNav {
   display: flex;
@@ -103,10 +102,7 @@ li {
 
 .DashboardData-Table {
   border-style: double;
-}
-
-.DashboardData-Table {
-  border-style: double;
+  width: 25vw;
 }
 
 .align {

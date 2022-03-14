@@ -23,23 +23,47 @@ function DashboardMain() {
                 <div className="eNavR">
                         <VideoRetrieval videoPlay="1" data="true" showChange="2"/>
                         <Link to="/VideoConfigure">
-                            <button>Configure Video</button>
+                            <button className="DashboardData-Button">Configure Video</button>
                         </Link>
                         
                 </div>
             </div>
-            <div className="DashboardMain-Body">
+            <div className="DashboardData-Body">
                 <div>
+                    <table className="DashboardData-Table">
+                        <th>ID</th>
+                        <tr>
+                            <td>ID</td>
+                        </tr>
+                    </table>
+                    <table className="DashboardData-Table">
+                        <th>Demographics</th>
+                        <tr>
+                            <td>Age</td>
+                            <td>Gender</td>
+                            <td>Other Info</td>
+                        </tr>
+                    </table>
                     <table className="DashboardData-Table">
                         <th>Data Table</th>
                         <tr>
-                            <td className="DashboardData-Table">ID</td>
-                            <td># Key Presses</td>
                             <td># Sensitive Key presses</td>
                             <td># insensitive key presses</td>
-                            <td>Measures data</td>
+                            <td># Correct</td>
                         </tr>
                     </table>
+                    <table className="DashboardData-Table">
+                        <th>Measures</th>
+                        <tr>
+                            <td>Measure test 1</td>
+                            <td>Measure test 2</td>
+                            <td>Measure test 3</td>
+                        </tr>
+                    </table>
+                    <button>thistuff</button>
+                    <button>thistuff</button>
+                    <button>thistuff</button>
+                    <button>thistuff</button>
                 </div>
             </div>
         </div>
