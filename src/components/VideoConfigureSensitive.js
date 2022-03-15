@@ -48,6 +48,8 @@ export default function AddSensitive(props) {
     return (
     <div>
         <button className="configureButton configureButton-1" onClick={() => UserResponse('Sensitive')}>Add Sensitive</button>
+        <div className='overlayTimes1'>
         <ul className='configureList'>{listItems}</ul>
+        </div>
     </div>)
 }

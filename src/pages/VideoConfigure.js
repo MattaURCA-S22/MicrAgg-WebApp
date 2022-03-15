@@ -26,13 +26,13 @@ function VideoConfigure() {
     <StandardPage>
       <div className="overlay">
           <div className="VideoConfigure-contentL">
-                <h5 className="title"><u>Sensitive Times</u></h5>
-              <div className="overlayTimes1">
+                <h5 className=""><u>Sensitive Times</u></h5>
+              <div className="">
                 <VideoConfigureSensitive timeS={sensitive}/>
               </div>
                 <hr></hr>
                 <h5><u>Insensitive Times</u></h5>
-              <div className="overlayTimes2">
+              <div className="">
                 <VideoConfigureInsensitive timeIS = {Insensitive}/>
               </div>
           </div>

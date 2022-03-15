@@ -49,6 +49,8 @@ const listItems = timeArr.map((time) => <div><li className = 'configureList' key
 return (
 <div>
     <button className="configureButton-2 configureButton" onClick={() => UserResponse('Insensitive')}>Add Insensitive</button>
+    <div className='overlayTimes1'>
     <ul className='configureList'>{listItems}</ul>
+    </div>
 </div>)
 }

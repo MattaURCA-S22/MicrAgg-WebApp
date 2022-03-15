@@ -11,7 +11,7 @@ export default function VideoRetrieval(props) {
     var videoLink;
     var cssType;
     var finalVar;
-
+    var videoTitle;
 
     function ChangeVideo(videoNum) {
         setVideo(videoNum);
@@ -21,12 +21,15 @@ export default function VideoRetrieval(props) {
         videoLink = "https://player.vimeo.com/video/674740238?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
         if (data === "true"){
             cssType = "DashboardData-VideoQuickView";
+            videoTitle = "Control";
         } else {
             cssType = "VideoPlayer-video";
+            videoTitle = "Control";
         }
     } else if (video === "2"){
         videoLink = "https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
         cssType = "Dashboard-VideoQuickView";
+        videoTitle = "Experimental";
     }
 
 
@@ -46,9 +49,10 @@ export default function VideoRetrieval(props) {
                     frameborder="0"
                     allow="autoplay;"
                     className={cssType}
-                    title="MVI_0566"
+                    title={videoTitle}
                 ></iframe>
             </div> 
+            <h3 className="title">Video Name: {videoTitle}</h3>
         </div>
         )
     } else {
