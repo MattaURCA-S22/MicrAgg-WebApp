@@ -1,11 +1,13 @@
 import Vimeo from "@vimeo/player";
-import React from "react";
+import React, { useState } from "react";
 import {Link} from "react-router-dom";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
 import "./VideoPlayer.css";
 
 function VideoPlayer() {
+  const [finished, setFinished] = useState(false);
+
   function UserResponse(message){
     var iframe = document.querySelector('iframe');
     var player = new Vimeo(iframe);
@@ -13,6 +15,11 @@ function VideoPlayer() {
     player.getCurrentTime().then(function(seconds){
       // You can use seconds and message here to add data to the user's response data
       console.log(seconds)
+    });
+
+    player.on('ended', function() {
+      console.log('Finished.');
+      setFinished(true);
     });
 
     console.log(message);
@@ -57,9 +64,12 @@ function VideoPlayer() {
           <button class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Sensitive')}>Sensitive</button>
           <button class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Insensitive')}>Insensitive</button>
         </div>
+        {/* Button Only Appears on video finish*/}
+        {finished && 
         <Link to="/SurveyPage">
           <button class="VideoPlayer-button" style={{height: 40}}>Continue</button>
         </Link>
+        }
       </div>
     </StandardPage>
   );
