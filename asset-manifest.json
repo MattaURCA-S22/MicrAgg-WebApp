@@ -1,15 +1,17 @@
 {
-  "files": {
-    "main.css": "/MicrAgg-WebApp/static/css/main.4eb562a1.css",
-    "main.js": "/MicrAgg-WebApp/static/js/main.149613ff.js",
-    "static/js/787.3298df51.chunk.js": "/MicrAgg-WebApp/static/js/787.3298df51.chunk.js",
-    "index.html": "/MicrAgg-WebApp/index.html",
-    "main.4eb562a1.css.map": "/MicrAgg-WebApp/static/css/main.4eb562a1.css.map",
-    "main.149613ff.js.map": "/MicrAgg-WebApp/static/js/main.149613ff.js.map",
-    "787.3298df51.chunk.js.map": "/MicrAgg-WebApp/static/js/787.3298df51.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.4eb562a1.css",
-    "static/js/main.149613ff.js"
-  ]
+  "main.css": "/MicrAgg-WebApp/static/css/main.a146130e.chunk.css",
+  "main.js": "/MicrAgg-WebApp/static/js/main.db731601.chunk.js",
+  "main.js.map": "/MicrAgg-WebApp/static/js/main.db731601.chunk.js.map",
+  "static/js/1.7f1662d5.chunk.js": "/MicrAgg-WebApp/static/js/1.7f1662d5.chunk.js",
+  "static/js/1.7f1662d5.chunk.js.map": "/MicrAgg-WebApp/static/js/1.7f1662d5.chunk.js.map",
+  "static/css/2.b563570b.chunk.css": "/MicrAgg-WebApp/static/css/2.b563570b.chunk.css",
+  "static/js/2.1499c2f1.chunk.js": "/MicrAgg-WebApp/static/js/2.1499c2f1.chunk.js",
+  "static/js/2.1499c2f1.chunk.js.map": "/MicrAgg-WebApp/static/js/2.1499c2f1.chunk.js.map",
+  "runtime~main.js": "/MicrAgg-WebApp/static/js/runtime~main.c4d15570.js",
+  "runtime~main.js.map": "/MicrAgg-WebApp/static/js/runtime~main.c4d15570.js.map",
+  "static/css/main.a146130e.chunk.css.map": "/MicrAgg-WebApp/static/css/main.a146130e.chunk.css.map",
+  "static/css/2.b563570b.chunk.css.map": "/MicrAgg-WebApp/static/css/2.b563570b.chunk.css.map",
+  "index.html": "/MicrAgg-WebApp/index.html",
+  "precache-manifest.07afacfce1109e8e8b5f36bf9b8272ce.js": "/MicrAgg-WebApp/precache-manifest.07afacfce1109e8e8b5f36bf9b8272ce.js",
+  "service-worker.js": "/MicrAgg-WebApp/service-worker.js"
 }
