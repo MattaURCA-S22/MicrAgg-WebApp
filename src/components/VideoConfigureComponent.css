@@ -48,7 +48,14 @@
 
 .overlayTimes1 {
     width: 17vw;
-    height: 40vh;
+    height: 17vh;
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: auto;
+    border: 0.5vw;
+    border-style: ridge;
+  }
+
+  .title {
+      align-items: center;
+      color: black;
   }
