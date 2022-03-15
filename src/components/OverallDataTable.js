@@ -54,16 +54,9 @@ export default function OverallDataTable(props) {
           <th># Insensitive Wrong</th>
 
         </tr>
-
-        <tr>
-          <td>igukbadkb</td>
-          <td>4</td>
-          <td>3</td>
-          <td>2</td>
-          <td>4</td>
-        </tr>
-
+        
         {dataTable}
+
       </table>
     </div>
   );
