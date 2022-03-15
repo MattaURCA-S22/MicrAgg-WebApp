@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./IndividualData.css";
 import { auth, db } from '../firebase';
 import { collection, addDoc, getDocs } from "firebase/firestore";
 
 export default function OverallDataTable(props) {
+  const [dataTable, setDataTable] = useState("");
+
   async function getUserData(){
     const answersCol = collection(db, 'User-answers');
     const answerSnapshot = await getDocs(answersCol);
@@ -19,26 +21,31 @@ export default function OverallDataTable(props) {
     promise.then((allData) => {
       console.log(allData.length)
       for (var i = 0; i < allData.length; i++) {
-        // note: we are adding a key prop here to allow react to uniquely identify each
-        // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
+        let user = allData[i];
+        //customize data in row below, headings put also be modified further down
         rows.push(
           <tr>
-            <td>5</td>
-            <td>4</td>
-            <td>3</td>
-            <td>2</td>
-            <td>4</td>
+            <td>{user.uid}</td>
+            <td>{user.sCorrect}</td>
+            <td>{user.sIncorrect}</td>
+            <td>{user.iCorrect}</td>
+            <td>{user.iIncorrect}</td>
           </tr>
         );
       }
-      return rows;
+      console.log(rows);
+      setDataTable(rows);
+      console.log(dataTable);
     });
   }
+
+  returnRows();
 
   return (
     <div className="DashboardData-Body">
       <table className="DashboardData-Table">
         <caption>Results</caption>
+        {/* Modify Table Headings Here */}
         <tr>
           <th>User</th>
           <th># Sensitive Correct</th>
@@ -56,7 +63,7 @@ export default function OverallDataTable(props) {
           <td>4</td>
         </tr>
 
-        {returnRows()}
+        {dataTable}
       </table>
     </div>
   );
