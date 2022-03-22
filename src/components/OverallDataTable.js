@@ -5,12 +5,14 @@ import { collection, addDoc, getDocs } from "firebase/firestore";
 
 export default function OverallDataTable(props) {
   const [dataTable, setDataTable] = useState("");
+  //const [loaded, setLoaded] = useState(false);
+  console.log(dataTable)
 
   async function getUserData(){
     const answersCol = collection(db, 'User-answers');
     const answerSnapshot = await getDocs(answersCol);
     const answerList = answerSnapshot.docs.map(doc => doc.data());
-    console.log(answerList)
+    console.log("DataRead")
     return answerList;
   }
   
@@ -33,9 +35,13 @@ export default function OverallDataTable(props) {
           </tr>
         );
       }
-      console.log(rows);
-      setDataTable(rows);
-      console.log(dataTable);
+      //console.log("Rows")
+      //console.log(rows);
+      if (dataTable == "" && rows != ""){
+        setDataTable(rows);
+      }
+      //console.log("DataTable")
+      //console.log(dataTable);
     });
   }
 

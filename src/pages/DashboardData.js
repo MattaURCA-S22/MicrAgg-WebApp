@@ -30,7 +30,7 @@ function DashboardMain() {
           </div>
         </div>
         {/**<IndividualData/>**/}
-        <OverallDataTable/>
+        {/*<OverallDataTable/>*/}
       </div>
     </StandardPage>
   );
