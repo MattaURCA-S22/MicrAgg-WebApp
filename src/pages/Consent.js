@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useContext} from "react";
 import { Link } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
+import ResponseContext from "../components/context/ResponseContext";
 
 export default function Consent() {
+  const userData = useContext(ResponseContext);
+
+  function SignConsent() {
+    userData.consent = true;
+  }
+
   return (
     <StandardPage className="Survey-Main">
       <div className="Consent-Body">
@@ -55,7 +62,7 @@ export default function Consent() {
           </p>
         </div>
         <Link to="/Instructions">
-          <button className="Consent-Button"> Continue</button>
+          <button className="Consent-Button" onClick={SignConsent}> Continue</button>
         </Link>
       </div>
     </StandardPage>

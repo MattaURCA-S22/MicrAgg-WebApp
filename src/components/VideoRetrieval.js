@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import "./VideoRetrieval.css";
-
+import ResponseContext from "./context/ResponseContext";
 
 
 export default function VideoRetrieval(props) {
     const [video, setVideo] = useState(props.videoPlay);
+    const userData = useContext(ResponseContext);
     var showButton = props.showChange;
    // var video = props.videoPlay;
     var data = props.data;
@@ -13,9 +14,11 @@ export default function VideoRetrieval(props) {
     var finalVar;
     var videoTitle;
 
+    console.log(userData)
+
     function ChangeVideo(videoNum) {
         setVideo(videoNum);
-      }
+    }
 
     if (video === "1"){
         videoLink = "https://player.vimeo.com/video/674740238?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
