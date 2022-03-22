@@ -18,54 +18,34 @@ var Insensitive = [
   "12.13"
 ];
 
+var video = "1";
+
 function VideoConfigure() {
-  function UserResponse(message){
-    var iframe = document.querySelector('iframe');
-    var player = new Vimeo(iframe);
-
-    player.getCurrentTime().then(function(seconds){
-      if (message === "Sensitive"){
-        sensitive.push(seconds.toString());
-        console.log(sensitive);
-      }
-      console.log(seconds)
-    });
-
-    console.log(message);
-  }
-
-  function openNav() {
-    var overlay = document.getElementsByClassName("overlay");
-    overlay.style.visibility = "visible";
-    console.log(overlay);
-  }
-  
-  /* Close when someone clicks on the "x" symbol inside the overlay */
-  function closeNav() {
-    document.getElementsByClassName("overlay").style.visibility = "hidden";
-  }
 
   return (
     <StandardPage>
-      <button onClick={() => openNav()}>Open</button>
       <div className="overlay">
-          <a href={"javascript:void(0)"} className="closebtn" onClick={() => closeNav()}>&times;</a>
           <div className="VideoConfigure-contentL">
-                <h5><u>Sensitive Times</u></h5>
+                <h5 className=""><u>Sensitive Times</u></h5>
+              <div className="">
                 <VideoConfigureSensitive timeS={sensitive}/>
+              </div>
                 <hr></hr>
                 <h5><u>Insensitive Times</u></h5>
-                <ul>
-                  {Insensitive.map((time) => (<VideoConfigureInsensitive timeIS = {time}/>))}
-                </ul>
+              <div className="">
+                <VideoConfigureInsensitive timeIS = {Insensitive}/>
+              </div>
           </div>
       </div>
       <div className="VideoConfigure-content">
-        <VideoRetrieval videoPlay="1" />
-        <div className="VideoPlayer-controls">
-          <button class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Sensitive')}>Sensitive</button>
-          <button class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Insensitive')}>Insensitive</button>
-        </div> 
+        {/* <div className="dropdown">
+          <button>Videos</button>
+          <div className="dropdown-content">
+            <button onClick={() => ChangeVideo("1")}>Control video</button>
+            <button onClick={() => ChangeVideo("2")}>Experimental Video</button>
+          </div>
+        </div> */}
+        <VideoRetrieval videoPlay={video} showChange="1"/>
       </div>
     </StandardPage>
   );

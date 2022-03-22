@@ -6,4 +6,27 @@ table {
     border: 1.1px solid;
     border-bottom: 1.1px solid;
     margin-top: 20px;
+    background-color: white;
 }
+
+.sv_q {
+    background-color: white;
+    border-bottom: 1.5px solid;
+}
+
+.surveyDiv{
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+
+.titleHeader {
+    text-align: center; 
+    font-size: 25px;
+}
+
+.nameHeader{
+    text-align: center; 
+    font-size: 25px;
+}
+

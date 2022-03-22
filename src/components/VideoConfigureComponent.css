@@ -1,0 +1,61 @@
+.configureButton {
+    align-items: center;
+    margin-left: 5.5vw;
+    border: 1px solid black;
+    border-radius: 12px;
+    color: black;
+    width: calc(20px + 5vw);
+    height: calc(12px + 3vh);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(8px + 0.6vh);
+    cursor: pointer;
+}
+
+.configureList {
+    align-items: baseline;
+    
+}
+
+.configureHR {
+    width: 15vw;
+}
+
+  .configureButton-1 {
+      background-color: #81ee84;
+  }
+
+  .configureButton-2 {
+      background-color: #ff3333;
+  }
+
+  .removeButton {
+      background: none;
+      border: none;
+      color: #ff3333;
+      cursor: pointer;
+      font-size: calc(14px + 0.6vh);;
+  }
+
+  .addButton {
+    background: none;
+    border: none;
+    color: #81ee84;
+    cursor: pointer;
+    font-size: calc(14px + 0.6vh);;
+}
+
+.overlayTimes1 {
+    width: 17vw;
+    height: 17vh;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: auto;
+    border: 0.5vw;
+    border-style: ridge;
+  }
+
+  .title {
+      align-items: center;
+      color: black;
+  }

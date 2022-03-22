@@ -100,9 +100,16 @@ li {
     display: inline;
 }
 
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
 .DashboardData-Table {
-  border-style: double;
-  width: 25vw;
+  border: 2px solid black;
+  border-style: collapse;
+  width: 80vw;
 }
 
 .align {

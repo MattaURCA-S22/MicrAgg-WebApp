@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import VideoPlayer from './pages/VideoPlayer'
 import DashboardData from './pages/DashboardData'
 import DashboardMain from './pages/DashboardMain'
