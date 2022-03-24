@@ -20,7 +20,7 @@ export default function VideoRetrieval(props) {
         setVideo(videoNum);
     }
 
-    if (video === "1"){
+    if (video === "1" || video === "0"){
         videoLink = "https://player.vimeo.com/video/674740238?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
         if (data === "true"){
             cssType = "DashboardData-VideoQuickView";
