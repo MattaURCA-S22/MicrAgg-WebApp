@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
-import ResponseContext from "../components/context/ResponseContext";
+import ResponseContext from "../context/ResponseContext";
 
 export default function Consent() {
   const userData = useContext(ResponseContext);

@@ -10,7 +10,7 @@ import Instructions from './pages/Instructions';
 import DashboardLogin from './pages/DashboardLogin';
 import VideoConfigure from './pages/VideoConfigure';
 import { AuthProvider } from './AuthContext';
-import ResponseContext from './components/context/ResponseContext.js'
+import ResponseContext from './context/ResponseContext.js'
 
 const userData = {
   consent: 'false'
