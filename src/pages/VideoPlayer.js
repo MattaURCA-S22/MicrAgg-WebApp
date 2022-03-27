@@ -25,6 +25,14 @@ function VideoPlayer() {
     console.log(message);
   }
 
+  var thistime = "1";
+  function GetVideoNum() {
+    thistime = Math.floor(Math.random() * 3);
+    console.log(thistime);
+    return thistime.toString();
+
+  }
+
   return (
     <StandardPage>
       <div className="VideoPlayer-content">
@@ -48,7 +56,7 @@ function VideoPlayer() {
             title="MVI_0566"
           ></iframe>
         </div> */}
-        <VideoRetrieval videoPlay="1" />
+        <VideoRetrieval videoPlay={GetVideoNum} />
         
         <i className="VideoPlayer-hint">*Tap or Click Video to Play - Please Avoid Fullscreen</i>
       
