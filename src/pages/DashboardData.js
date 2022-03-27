@@ -12,7 +12,7 @@ function DashboardMain() {
       <div className="">
         <div className="DashboardData-eNav">
           <div className="eNavL">
-            <h2 className="align">Dashboard</h2>
+            <h3 className="align">Dashboard</h3>
             <h4 className="align">Welcome Dr. George</h4>
           </div>
           <div className="DashboardData-Nav">

@@ -39,11 +39,13 @@
   display: block;
 }
 
-.VideoConfigure-content {
+.VideoConfigure-Content {
   background-color: lightgray;
   display: flex;
   width: 100vw;
-  flex-direction: column;
+  margin-left: 50vw;
+  gap: 2vw;
+  flex-direction: row;
   align-items: center;
   justify-content: top;
   font-size: calc(10px + 2vmin);
@@ -63,4 +65,38 @@
   display: inline-block;
   font-size: calc(8px + 0.6vh);
   cursor: pointer;
+}
+
+.overlay-2 {
+  align-items: flex-end;
+  justify-items: center;
+  opacity: 90%;
+  /* margin-top: 5vw;    */
+    height: 90vh;
+    width: 20vw;
+    /* position: fixed;  */
+    z-index: 1; 
+    
+    /* top: 0; */
+    background-color: rgb(73, 71, 71); 
+    /* overflow-x: hidden;  */
+    /* overflow-y: auto; */
+    
+}
+
+.Title {
+  color: white;
+  margin-left: 0.5vw;
+}
+
+.pushItems-Video {
+  margin-left: 4vw;
+}
+
+.pushItems-Button {
+  margin-left: 7vw;
+}
+
+.pushItems-Button2 {
+  margin-left: 6vw;
 }

@@ -27,6 +27,7 @@
   background-color: whitesmoke;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
   color: crimson;
 }
 
@@ -48,7 +49,7 @@
 }
 
 .DashboardData-Button {
-    border: none;
+  border: none;
   border-radius: 12px;
   color: black;
   width: calc(50px + 10vw);
@@ -71,8 +72,8 @@
 .DashboardData-eNav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  /* flex-wrap: wrap; */
 }
 
 .DashboardData-Body-Nav {
