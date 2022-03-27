@@ -4,7 +4,7 @@ import "./SurveyPage.css";
 import StandardPage from "../components/StandardPage";
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
-import { addNewUserData } from "../AuthContext.js"
+import { addNewUserData } from "../context/AuthContext.js"
 import Login from "./DashboardLogin";
 
 export default function SurveyPage() {

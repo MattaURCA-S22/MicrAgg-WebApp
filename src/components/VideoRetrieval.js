@@ -1,6 +1,6 @@
 import React, {useState, useContext} from "react";
 import "./VideoRetrieval.css";
-import ResponseContext from "../context/ResponseContext";
+import ResponseContext from "./context/ResponseContext";
 
 
 export default function VideoRetrieval(props) {
