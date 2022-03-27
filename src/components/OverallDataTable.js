@@ -4,19 +4,6 @@ import { auth, db } from '../firebase';
 import { collection, addDoc, getDocs } from "firebase/firestore";
 
 export default function OverallDataTable(props) {
-  const [dataTable, setDataTable] = useState("");
-  //const [loaded, setLoaded] = useState(false);
-  console.log(dataTable)
-
-  async function getUserData(){
-    const answersCol = collection(db, 'User-answers');
-    const answerSnapshot = await getDocs(answersCol);
-    const answerList = answerSnapshot.docs.map(doc => doc.data());
-    console.log("DataRead")
-    return answerList;
-  }
-  
-
   function returnRows(){
     const promise = getUserData()
     var rows = [];
