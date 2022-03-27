@@ -11,6 +11,7 @@ import DashboardLogin from './pages/DashboardLogin';
 import VideoConfigure from './pages/VideoConfigure';
 import { AuthProvider } from './AuthContext';
 import ResponseContext from './components/context/ResponseContext.js'
+import DemographicSurvey from './pages/DemographicSurvey';
 
 const userData = {
   consent: 'false'
@@ -31,6 +32,7 @@ function App() {
             <Route path="/DashboardMain" element={<DashboardMain/>}/>
             <Route path="/DashboardLogin" element={<DashboardLogin/>}/>
             <Route path="/VideoConfigure" element={<VideoConfigure/>}/>
+            <Route path="/DemographicSurvey" element={<DemographicSurvey/>}/>
           </Routes>
         </HashRouter>
       </ResponseContext.Provider>
