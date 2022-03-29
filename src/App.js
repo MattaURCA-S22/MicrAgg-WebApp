@@ -9,8 +9,8 @@ import Consent from './pages/Consent';
 import Instructions from './pages/Instructions';
 import DashboardLogin from './pages/DashboardLogin';
 import VideoConfigure from './pages/VideoConfigure';
-import { AuthProvider } from './AuthContext';
-import ResponseContext from './components/context/ResponseContext.js'
+import { AuthProvider } from './context/AuthContext';
+import ResponseContext from './context/ResponseContext.js'
 import DemographicSurvey from './pages/DemographicSurvey';
 
 const userData = {

@@ -4,7 +4,8 @@ import StandardPage from "../components/StandardPage";
 import * as Survey from "survey-react";
 import * as SurveyReact from "survey-react-ui";
 import "survey-react/survey.css";
-import { addNewUserData } from "../AuthContext.js"
+import { addNewUserData } from "../context/AuthContext.js"
+import Login from "./DashboardLogin";
 
 export default function SurveyPage() {
 
@@ -21,7 +22,7 @@ export default function SurveyPage() {
               type: "html",
               name: "question6",
               html:
-                '<h2 style= "text-align: center; font-size: 30px">Multicultural Orientation External Rating Form</h2>\n<h3 style="text-align: center">Jesse Owen & Karen Tao</h3>',
+                '<h2 style= "text-align: center; font-size: 30px">Multicultural Orientation External Rating Form</h2>',
             },
             {
               type: "html",
