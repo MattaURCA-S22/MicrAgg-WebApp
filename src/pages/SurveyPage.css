@@ -11,7 +11,8 @@ table {
 
 .sv_q {
     background-color: white;
-    border-bottom: 1.5px solid;
+    /* border-bottom: 1.5px solid; */
+    border-style: 1.5px dotted;
 }
 
 .surveyDiv{
