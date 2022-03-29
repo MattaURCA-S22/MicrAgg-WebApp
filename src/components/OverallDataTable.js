@@ -16,6 +16,8 @@ export default function OverallDataTable(props) {
           <td>{user.sIncorrect}</td>
           <td>{user.iCorrect}</td>
           <td>{user.iIncorrect}</td>
+          <td>{user.sTimes}</td>
+          <td>{user.iTimes}</td>
         </tr>
       );
     }
@@ -33,6 +35,8 @@ export default function OverallDataTable(props) {
           <th># Sensitive Wrong</th>
           <th># Insensitive Correct</th>
           <th># Insensitive Wrong</th>
+          <th># Sensitive Times</th>
+          <th># Insensitive Times</th>
         </tr>
 
         {returnRows()}
