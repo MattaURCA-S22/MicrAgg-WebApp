@@ -47,6 +47,7 @@ export default function VideoRetrieval(props) {
                     <button onClick={() => ChangeVideo("2")}>Experimental Video</button>
                 </div>
             </div> */}
+            {/* <div className="alignItems"> */}
             <div>
                 <iframe
                     src={videoLink}
@@ -57,8 +58,7 @@ export default function VideoRetrieval(props) {
                 ></iframe>
             </div> 
             <div className="overlay-2">
-            <h3 className="Title">Video Name: </h3>
-            <p className="pushItems">{videoTitle}</p>
+            <h3 className="Title">Video Name: {videoTitle}</h3>
             {/* <div className="dropdown"> */}
                 {/* <button className="configureButton">Videos</button> */}
                 <div className="pushItems-Video">
@@ -90,6 +90,7 @@ export default function VideoRetrieval(props) {
             {/* </div> */}
             </div>
         </div>
+        // </div>
         )
     } else {
         finalVar = (

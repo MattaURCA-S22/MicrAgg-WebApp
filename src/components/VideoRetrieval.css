@@ -43,8 +43,8 @@
   background-color: lightgray;
   display: flex;
   width: 100vw;
-  margin-left: 50vw;
-  gap: 2vw;
+  margin-left: 43vw;
+  gap: 1.5vw;
   flex-direction: row;
   align-items: center;
   justify-content: top;
@@ -99,4 +99,8 @@
 
 .pushItems-Button2 {
   margin-left: 6vw;
+}
+
+.alignItems {
+  /* margin-left: 25vw; */
 }
