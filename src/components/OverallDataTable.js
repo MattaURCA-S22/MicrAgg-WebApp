@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./IndividualData.css";
-import { auth, db } from "../firebase";
-import { collection, addDoc, getDocs } from "firebase/firestore";
 
 export default function OverallDataTable(props) {
   function returnRows() {
