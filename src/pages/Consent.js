@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
-import ResponseContext from "../components/context/ResponseContext";
+import ResponseContext from "../context/ResponseContext";
 
 export default function Consent() {
   const userData = useContext(ResponseContext);
@@ -61,7 +61,7 @@ export default function Consent() {
             PARTICIPATE. You may print a copy of this notice for your records.
           </p>
         </div>
-        <Link to="/Instructions">
+        <Link to="/DemographicSurvey">
           <button className="Consent-Button" onClick={SignConsent}> Continue</button>
         </Link>
       </div>
