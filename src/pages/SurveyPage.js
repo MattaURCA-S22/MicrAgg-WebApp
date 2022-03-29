@@ -20,12 +20,6 @@ export default function SurveyPage() {
           elements: [
             {
               type: "html",
-              name: "question6",
-              html:
-                '<h2 style= "text-align: center; font-size: 30px">Multicultural Orientation External Rating Form</h2>',
-            },
-            {
-              type: "html",
               name: "question5",
               html:
                 '<div className="surveyDiv">\n<strong>Please rate the therapist in the video based on how comfortable the therapist appears in \ndiscussing/addressing cultural dynamics or topics with the client. It is important to know that there are no right or wrong answers here. Rather, therapists are human and they have a range of emotions and \nreactions. We are trying to get a sense of how the therapist was with the client in this session. In some \ncases, therapists may be uncomfortable and avoid discussions; whereas in other cases, they may be very comfortable and navigate the conversation with ease (and likely a range between these extremes). It is \nalso important to note that there may be no salient culturally related dialogue in the session. In these \nsituations, we ask for you to just indicate that in the space below</strong></div>',
