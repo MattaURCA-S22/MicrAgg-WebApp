@@ -5,16 +5,21 @@ import VideoRetrieval from "../components/VideoRetrieval";
 import { Link } from "react-router-dom";
 import IndividualData from "../components/IndividualData";
 import OverallDataTable from "../components/OverallDataTable";
-import { getAllUserData } from "../data/firebaseInterface"
+import { getAllUserData } from "../data/firebaseInterface";
 
 function DashboardMain() {
-  
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    getAllUserData;
-  });
+    const fetchData = async () => {
+      const userData = await getAllUserData();
+      setData(userData);
+    };
 
-  
+    fetchData();
+  }, []);
+
+  console.log(data);
   return (
     <StandardPage className="DashboardMain-Main">
       <div className="">
@@ -38,7 +43,7 @@ function DashboardMain() {
           </div>
         </div>
         {/**<IndividualData/>**/}
-        {/*<OverallDataTable/>*/}
+        <OverallDataTable data={data} />
       </div>
     </StandardPage>
   );
