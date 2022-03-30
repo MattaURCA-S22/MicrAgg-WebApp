@@ -422,7 +422,7 @@ export default function DemographicSurveyPage() {
         rel="stylesheet"
       />
       <script src="https://unpkg.com/survey-jquery@1.9.20/survey.jquery.min.js"></script>
-      <SurveyReact.Survey model={model} onComplete={submitData} navigateToUrl={"/#/VideoPlayer"}/>
+      <SurveyReact.Survey model={model} onComplete={submitData} navigateToUrl={"../#/Instructions"}/>
     </StandardPage>
   );
 }
