@@ -5,7 +5,6 @@ import * as Survey from "survey-react";
 import * as SurveyReact from "survey-react-ui";
 import "survey-react/survey.css";
 import { addNewUserData } from "../context/AuthContext.js"
-import Login from "./DashboardLogin";
 
 export default function SurveyPage() {
 
@@ -275,6 +274,9 @@ export default function SurveyPage() {
 
         options.html = str;
     });
+
+    model.showCompletedPage = false;
+    model.navigateToUrl = "/#/SurveyComplete";
 
     return (
         <StandardPage className="survey">

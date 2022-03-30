@@ -52,7 +52,7 @@ export default function Login() {
                         </div>
                         <input type="password" id="password" ref={passwordRef} name="password"/>
                         <br/>
-                        <input type="submit" disabled={loading} name="submit" value="Login" />
+                        <input type="submit" className = "submitLogin" disabled={loading} name="submit" value="Login" />
                     </form>
                 </div>
             </div>

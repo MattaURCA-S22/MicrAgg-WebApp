@@ -25,10 +25,6 @@
     color: #ed5565;
 }
 
-.sq-title-required {
-    color: green;
-}
-
 .sv_q_erbox sv_qstn_error_top {
     color: green !important;
 }
@@ -40,20 +36,10 @@
     width: 20px;
 } 
 
+.row_connor_panel:nth-child(1) {
+    width: 700px;
+}
+
 .errorRoot {
     color: green;
 }
-
-/* .row_connor:nth-child(8) {
-    border-bottom: none;
-    min-height: 32px;
-    height: 32px;
-    width: 250px;
-} */
-/* .row_connor:nth-child(17) {
-    border-bottom: 10px solid black;
-} */
-
-/* .row_connor:nth-child(8), .row_connor:nth-child(9), .row_connor:nth-child(10), .row_connor:nth-child(11), .row_connor:nth-child(12), .row_connor:nth-child(13), .row_connor:nth-child(14), .row_connor:nth-child(15), .row_connor:nth-child(16), .row_connor:nth-child(17) {
-    line-height: 2em;
-} */

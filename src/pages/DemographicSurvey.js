@@ -1,9 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import StandardPage from "../components/StandardPage";
 import * as Survey from "survey-react";
 import * as SurveyReact from "survey-react-ui";
 import "./DemographicSurvey.css";
-import { getOptions } from "showdown";
 
 
 export default function DemographicSurveyPage() {
@@ -21,15 +20,15 @@ export default function DemographicSurveyPage() {
     var cl = c.cssClasses;
     cl.row = "row_connor"
     model.onErrorCustomText.add(function (sender, options) {
-        if (options.obj.name == "Psychologist" ||
-            options.obj.name == "Counselor" ||
-            options.obj.name == "Marriage and Family Therapist" ||
-            options.obj.name == "Social Worker" ||
-            options.obj.name == "Art Therapist" ||
-            options.obj.name == "Dance Therapist" ||
-            options.obj.name == "Music Therapist" ||
-            options.obj.name == "Drama Therapist" ||
-            options.obj.name == "Psychodramatist") {
+        if (options.obj.name === "Psychologist" ||
+            options.obj.name === "Counselor" ||
+            options.obj.name === "Marriage and Family Therapist" ||
+            options.obj.name === "Social Worker" ||
+            options.obj.name === "Art Therapist" ||
+            options.obj.name === "Dance Therapist" ||
+            options.obj.name === "Music Therapist" ||
+            options.obj.name === "Drama Therapist" ||
+            options.obj.name === "Psychodramatist") {
                 options.obj.clearErrors()  
                 setError()
         } 
@@ -40,21 +39,21 @@ export default function DemographicSurveyPage() {
     })
 
     function setError() {
-        if (count.current != 0) return
+        if (count.current !== 0) return
         q.errors.push(new Survey.SurveyError("Please fill in credentials."))
         count.current++;
     }
 
     var q = model.getPanelByName('panel1');
-    // q.errors.push(new Survey.SurveyError("Adsfasdf"))
     var classes = q.cssClasses;
     classes.row = "row_connor_panel";
-    // classes.error = "error_connor"
-    console.log(classes.error.root)
     classes.error.root = "error_connor"
 
+    model.showCompletedPage = false;
+    model.navigateToUrl = "/#/Instructions";
+
     function sendDataToServer(survey) {
-        alert(JSON.stringify(survey.data));
+        // alert(JSON.stringify(survey.data));
         
         // Add function call to log data to database
     }
