@@ -1,7 +1,7 @@
 {
   "main.css": "/MicrAgg-WebApp/static/css/main.29695fbe.chunk.css",
-  "main.js": "/MicrAgg-WebApp/static/js/main.7291d4c2.chunk.js",
-  "main.js.map": "/MicrAgg-WebApp/static/js/main.7291d4c2.chunk.js.map",
+  "main.js": "/MicrAgg-WebApp/static/js/main.b264d5f4.chunk.js",
+  "main.js.map": "/MicrAgg-WebApp/static/js/main.b264d5f4.chunk.js.map",
   "static/js/1.ac5b1bae.chunk.js": "/MicrAgg-WebApp/static/js/1.ac5b1bae.chunk.js",
   "static/js/1.ac5b1bae.chunk.js.map": "/MicrAgg-WebApp/static/js/1.ac5b1bae.chunk.js.map",
   "static/css/2.7018a2a4.chunk.css": "/MicrAgg-WebApp/static/css/2.7018a2a4.chunk.css",
@@ -9,9 +9,9 @@
   "static/js/2.7ab8cfa4.chunk.js.map": "/MicrAgg-WebApp/static/js/2.7ab8cfa4.chunk.js.map",
   "runtime~main.js": "/MicrAgg-WebApp/static/js/runtime~main.eb6d6df1.js",
   "runtime~main.js.map": "/MicrAgg-WebApp/static/js/runtime~main.eb6d6df1.js.map",
-  "static/css/main.29695fbe.chunk.css.map": "/MicrAgg-WebApp/static/css/main.29695fbe.chunk.css.map",
   "static/css/2.7018a2a4.chunk.css.map": "/MicrAgg-WebApp/static/css/2.7018a2a4.chunk.css.map",
+  "static/css/main.29695fbe.chunk.css.map": "/MicrAgg-WebApp/static/css/main.29695fbe.chunk.css.map",
   "index.html": "/MicrAgg-WebApp/index.html",
-  "precache-manifest.8fa94a15f1c740b91946b3a8790e6d91.js": "/MicrAgg-WebApp/precache-manifest.8fa94a15f1c740b91946b3a8790e6d91.js",
+  "precache-manifest.f513ec0ad904655023f7c5b9c5154068.js": "/MicrAgg-WebApp/precache-manifest.f513ec0ad904655023f7c5b9c5154068.js",
   "service-worker.js": "/MicrAgg-WebApp/service-worker.js"
 }
