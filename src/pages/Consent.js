@@ -10,6 +10,13 @@ export default function Consent() {
 
   function SignConsent() {
     userData.consent = true;
+    userData.video = GetVideo();
+  }
+
+  function GetVideo() {
+    var chosenValue = Math.random() < 0.5 ? "A" : "B";
+    console.log(chosenValue + " Chosen");
+    return chosenValue;
   }
 
   return (
