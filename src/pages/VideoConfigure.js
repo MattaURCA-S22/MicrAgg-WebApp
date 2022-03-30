@@ -17,7 +17,7 @@ var Insensitive = [
   "12.13"
 ];
 
-var video = "1";
+var video = "A";
 
 function VideoConfigure() {
 
