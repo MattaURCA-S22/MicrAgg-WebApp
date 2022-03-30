@@ -13,7 +13,7 @@ export default function VideoRetrieval(props) {
     var cssType;
     var finalVar;
     var videoTitle;
-    var videoList;
+    //var videoList;
 
     console.log(userData)
 
@@ -51,7 +51,7 @@ export default function VideoRetrieval(props) {
             <div>
                 <iframe
                     src={videoLink}
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay;"
                     className={cssType}
                     title={videoTitle}
@@ -64,7 +64,7 @@ export default function VideoRetrieval(props) {
                 <div className="pushItems-Video">
                     <iframe
                     src="https://player.vimeo.com/video/693834980?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay;"
                     className="DashboardData-VideoQuickView"
                     title="MVI_0566"
@@ -76,7 +76,7 @@ export default function VideoRetrieval(props) {
                 <div className="pushItems-Video">
                     <iframe
                     src="https://player.vimeo.com/video/693835115?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay;"
                     className="DashboardData-VideoQuickView"
                     title="MVI_0566"
@@ -97,7 +97,7 @@ export default function VideoRetrieval(props) {
             <div>
             <iframe
             src={videoLink}
-            frameborder="0"
+            frameBorder="0"
             allow="autoplay;"
             className={cssType}
             title="MVI_0566"

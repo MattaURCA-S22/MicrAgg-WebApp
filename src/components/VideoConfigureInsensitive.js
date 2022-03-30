@@ -44,7 +44,7 @@ function UserResponse(message){
 
 
 //var newTime = props.newTime;
-var timeIS = props.timeIS;
+//var timeIS = props.timeIS;
 const listItems = timeArr.map((time) => <div><li className = 'configureList' key = {time}>{time} <button className="removeButton" onClick={() => RemoveItems(time)}><b>&times;</b></button></li><li><hr></hr></li></div>)
 return (
 <div>

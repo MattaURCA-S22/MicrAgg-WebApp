@@ -1,4 +1,3 @@
-import Vimeo from "@vimeo/player";
 import React from "react";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";

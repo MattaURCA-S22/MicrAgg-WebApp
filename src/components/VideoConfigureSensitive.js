@@ -10,7 +10,7 @@ export default function AddSensitive(props) {
         '12.2'
     ];
     const [timeArr, setValue] = useState(sensitive);
-    const [isVisible, setStyle] = useState();
+    //const [isVisible, setStyle] = useState();
 
     function RemoveItems(id) {
       console.log(id);
@@ -43,7 +43,7 @@ export default function AddSensitive(props) {
 
    
     //var newTime = props.newTime;
-    var timeS = props.timeS;
+   //var timeS = props.timeS;
    const listItems = timeArr.map((time) => <li key={time} className = 'configureList' >{time} <button className="addButton" onClick={() => RemoveItems(time)}><b>&times;</b></button><hr className="configureHR"></hr></li>)
     return (
     <div>

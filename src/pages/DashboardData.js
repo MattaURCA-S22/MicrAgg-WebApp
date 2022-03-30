@@ -3,7 +3,7 @@ import "./DashboardData.css";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
 import { Link } from "react-router-dom";
-import IndividualData from "../components/IndividualData";
+//import IndividualData from "../components/IndividualData";
 import OverallDataTable from "../components/OverallDataTable";
 import { getAllUserData } from "../data/firebaseInterface";
 

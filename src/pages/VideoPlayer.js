@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
 import "./VideoPlayer.css";
-import { UserInfo } from "firebase-admin/lib/auth/user-record";
 
 function VideoPlayer() {
   const [finished, setFinished] = useState(false);
@@ -21,10 +20,10 @@ function VideoPlayer() {
       // You can use seconds and message here to add data to the user's response data
       console.log(secondsLast);
       if ((secondsLast + lockoutTime) < seconds){
-        if (message == "Sensitive"){
+        if (message === "Sensitive"){
           userData.sTimes.push(seconds);  
         }
-        else if (message == "Insensitive"){
+        else if (message === "Insensitive"){
           userData.iTimes.push(seconds);   
         }
         secondsLast = seconds;

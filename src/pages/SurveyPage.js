@@ -5,7 +5,7 @@ import * as Survey from "survey-react";
 import * as SurveyReact from "survey-react-ui";
 import "survey-react/survey.css";
 import { addNewUserData } from "../context/AuthContext.js"
-import Login from "./DashboardLogin";
+//import Login from "./DashboardLogin";
 
 export default function SurveyPage() {
 
