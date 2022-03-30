@@ -22,7 +22,7 @@ export default function VideoRetrieval(props) {
     }
 
     if (video === "1" || video === "0"){
-        videoLink = "https://player.vimeo.com/video/674740238?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
+        videoLink = "https://player.vimeo.com/video/693834980?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
         if (data === "true"){
             cssType = "DashboardData-VideoQuickView";
             videoTitle = "Control";
@@ -31,7 +31,7 @@ export default function VideoRetrieval(props) {
             videoTitle = "Control";
         }
     } else if (video === "2"){
-        videoLink = "https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
+        videoLink = "https://player.vimeo.com/video/693835115?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
         cssType = "VideoPlayer-video";
         videoTitle = "Experimental";
     }
@@ -63,7 +63,7 @@ export default function VideoRetrieval(props) {
                 {/* <button className="configureButton">Videos</button> */}
                 <div className="pushItems-Video">
                     <iframe
-                    src="https://player.vimeo.com/video/674740238?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
+                    src="https://player.vimeo.com/video/693834980?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
                     frameborder="0"
                     allow="autoplay;"
                     className="DashboardData-VideoQuickView"
@@ -75,7 +75,7 @@ export default function VideoRetrieval(props) {
                 
                 <div className="pushItems-Video">
                     <iframe
-                    src="https://player.vimeo.com/video/670831443?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
+                    src="https://player.vimeo.com/video/693835115?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
                     frameborder="0"
                     allow="autoplay;"
                     className="DashboardData-VideoQuickView"

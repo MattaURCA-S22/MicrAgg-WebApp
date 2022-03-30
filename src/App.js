@@ -14,7 +14,9 @@ import ResponseContext from './context/ResponseContext.js'
 import DemographicSurvey from './pages/DemographicSurvey';
 
 const userData = {
-  consent: 'false'
+  consent: 'false',
+  sTimes: [],
+  iTimes: [],
 }
 
 //Just Launches the App

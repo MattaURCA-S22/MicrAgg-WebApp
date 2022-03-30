@@ -1,20 +1,36 @@
 import Vimeo from "@vimeo/player";
-import React, { useState } from "react";
+import ResponseContext from "../context/ResponseContext";
+import React, { useState , useContext } from "react";
 import {Link} from "react-router-dom";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
 import "./VideoPlayer.css";
+import { UserInfo } from "firebase-admin/lib/auth/user-record";
 
 function VideoPlayer() {
   const [finished, setFinished] = useState(false);
+  const userData = useContext(ResponseContext);
+  var secondsLast = -10;
 
   function UserResponse(message){
     var iframe = document.querySelector('iframe');
     var player = new Vimeo(iframe);
+    let lockoutTime = 2;
 
     player.getCurrentTime().then(function(seconds){
       // You can use seconds and message here to add data to the user's response data
-      console.log(seconds)
+      console.log(secondsLast);
+      if ((secondsLast + lockoutTime) < seconds){
+        if (message == "Sensitive"){
+          userData.sTimes.push(seconds);  
+        }
+        else if (message == "Insensitive"){
+          userData.iTimes.push(seconds);   
+        }
+        secondsLast = seconds;
+      }
+      console.log(userData);
+      console.log(secondsLast);
     });
 
     player.on('ended', function() {
