@@ -24,6 +24,8 @@ function VideoConfigure() {
 
   return (
     <StandardPage>
+      
+      <div className="VideoConfigure-content">
       <div className="overlay">
           <div className="VideoConfigure-contentL">
                 <h5 className=""><u>Sensitive Times</u></h5>
@@ -37,7 +39,7 @@ function VideoConfigure() {
               </div>
           </div>
       </div>
-      <div className="VideoConfigure-content">
+      <div className="">
         {/* <div className="dropdown">
           <button>Videos</button>
           <div className="dropdown-content">
@@ -47,6 +49,8 @@ function VideoConfigure() {
         </div> */}
         <VideoRetrieval videoPlay={video} showChange="1"/>
       </div>
+      </div>
+      
     </StandardPage>
   );
 }
