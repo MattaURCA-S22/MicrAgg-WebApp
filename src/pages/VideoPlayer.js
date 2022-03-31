@@ -11,6 +11,8 @@ function VideoPlayer() {
   const userData = useContext(ResponseContext);
   var secondsLast = -10;
 
+  console.log(userData.video)
+
   function UserResponse(message){
     var iframe = document.querySelector('iframe');
     var player = new Vimeo(iframe);

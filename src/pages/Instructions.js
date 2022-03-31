@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
+import ResponseContext from "../context/ResponseContext";
 
 export default function Instructions() {
+  const userData = useContext(ResponseContext);
+  console.log(userData.video)
   return (
     <StandardPage className="Survey-Main">
       <div className="Consent-Body">

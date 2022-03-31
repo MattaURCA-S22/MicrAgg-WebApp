@@ -4,13 +4,29 @@ import "./Survey.css";
 import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
 import ResponseContext from "../context/ResponseContext";
+import { useAuth } from "../context/AuthContext";
 
 export default function Consent() {
   const userData = useContext(ResponseContext);
+  const { signInAnon, currentUser, initializeDoc, currentDocRef } = useAuth();
 
   function SignConsent() {
     userData.consent = true;
     userData.video = GetVideo();
+    console.log(userData.video)
+    signUserInAsAnon();
+    giveUserDoc();
+  }
+
+  async function signUserInAsAnon() {
+    await signInAnon();
+    console.log(currentUser.uid)
+  }
+
+  async function giveUserDoc() {
+    await initializeDoc();
+    console.log(currentDocRef)
+
   }
 
   function GetVideo() {
@@ -68,7 +84,7 @@ export default function Consent() {
             PARTICIPATE. You may print a copy of this notice for your records.
           </p>
         </div>
-        <Link to="/DemographicSurvey">
+        <Link to="DemographicSurvey">
           <button className="Consent-Button" onClick={SignConsent}> Continue</button>
         </Link>
       </div>
