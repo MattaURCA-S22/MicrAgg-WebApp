@@ -5,13 +5,12 @@ import * as SurveyReact from "survey-react-ui";
 import ResponseContext from "../context/ResponseContext";
 import "./DemographicSurvey.css";
 import { useAuth } from "../context/AuthContext";
-//import { getOptions } from "showdown";
 
 export default function DemographicSurveyPage() {
   const count = useRef(0);
   const userData = useContext(ResponseContext);
   Survey.StylesManager.applyTheme("stone");
-  const { signInAnon, currentUser, initializeDoc, currentDocRef } = useAuth();
+  const { addUserData } = useAuth();
 
   console.log(userData.video);
 
@@ -410,9 +409,9 @@ export default function DemographicSurveyPage() {
   classes.error.root = "error_connor";
   model.showCompletedPage = false;
 
-  function submitData(survey) {
+  async function submitData(survey) {
     userData.demographic = survey.data;
-    console.log(userData);
+    await addUserData(userData);
     // Add function call to log data to database
   }
 

@@ -5,11 +5,13 @@ import {Link} from "react-router-dom";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
 import "./VideoPlayer.css";
+import { useAuth } from "../context/AuthContext";
 
 function VideoPlayer() {
   const [finished, setFinished] = useState(false);
   const userData = useContext(ResponseContext);
   var secondsLast = -10;
+  const { addUserData } = useAuth();
 
   console.log(userData.video)
 
@@ -84,7 +86,7 @@ function VideoPlayer() {
         {/* Button Only Appears on video finish*/}
         {finished && 
         <Link to="/SurveyPage">
-          <button class="VideoPlayer-button" style={{height: 40}}>Continue</button>
+          <button class="VideoPlayer-button" onClick={async () => await addUserData(userData)} style={{height: 40}}>Continue</button>
         </Link>
         }
       </div>

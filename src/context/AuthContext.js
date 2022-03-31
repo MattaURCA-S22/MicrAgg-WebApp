@@ -26,8 +26,6 @@ export function AuthProvider ({ children }) {
     }
 
     function addUserData(newAnswers) {
-        console.log(currentUser.uid);
-        console.log(currentDocRef);
         return setDoc(currentDocRef, newAnswers);
     }
 

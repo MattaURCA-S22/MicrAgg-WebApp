@@ -1,4 +1,4 @@
-import React, { useContext} from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
@@ -11,6 +11,7 @@ export default function Consent() {
   const { signInAnon, currentUser, initializeDoc, currentDocRef } = useAuth();
 
   function SignConsent() {
+    userData.isDataComplete = false;
     userData.consent = true;
     userData.video = GetVideo();
     console.log(userData.video)
@@ -25,8 +26,6 @@ export default function Consent() {
 
   async function giveUserDoc() {
     await initializeDoc();
-    console.log(currentDocRef)
-
   }
 
   function GetVideo() {

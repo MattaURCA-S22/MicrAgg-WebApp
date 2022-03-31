@@ -237,6 +237,7 @@ export default function SurveyPage() {
   };
 
   async function sendDataToServer(survey) {
+    userData.isDataComplete = true;
     userData.postSurvey = survey.data;
     await addUserData(userData);
   }
