@@ -2,8 +2,7 @@ import Vimeo from "@vimeo/player";
 import React from "react";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
-import VideoConfigureSensitive from "../components/VideoConfigureSensitive";
-import VideoConfigureInsensitive from "../components/VideoConfigureInsensitive";
+import VideoConfigureTimes from "../components/VideoConfigureTimes";
 import "./VideoConfigure.css";
 
 var sensitive = [
@@ -29,17 +28,17 @@ function VideoConfigure() {
       <div className="overlay">
           <div className="VideoConfigure-contentL">
                 <h5 className=""><u>Sensitive Times</u></h5>
-              <div className="">
-                <VideoConfigureSensitive timeS={sensitive}/>
+              <div>
+                <VideoConfigureTimes which="s"/>
               </div>
                 <hr></hr>
                 <h5><u>Insensitive Times</u></h5>
-              <div className="">
-                <VideoConfigureInsensitive timeIS = {Insensitive}/>
+              <div>
+                <VideoConfigureTimes which="i"/>
               </div>
           </div>
       </div>
-      <div className="">
+      <div>
         <VideoRetrieval videoPlay={video} showChange="1"/>
       </div>
       </div>

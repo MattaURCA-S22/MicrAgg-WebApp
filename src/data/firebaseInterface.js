@@ -9,8 +9,8 @@ export async function getAllUserData() {
   return fullDataList;
 }
 
-export async function fillArray() {
-  const docRef = doc(db, "Master-times", "Sensitive");
+export async function fillArray(theDocument) {
+  const docRef = doc(db, "Master-times", theDocument);
   const docSnap = await getDoc(docRef);
   console.log(docSnap.data());
   return docSnap.data();

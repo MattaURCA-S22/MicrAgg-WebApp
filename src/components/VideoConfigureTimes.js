@@ -9,28 +9,26 @@ import { doc, setDoc, getDoc } from "firebase/firestore";
 export default function AddSensitive(props) {
 
   var sOrI = props.which;
-  var timesArray = [];
-  var document;
+  var documentData;
   var buttonText = "";
   var buttonClass1;
   var buttonClass2;
 
   if (sOrI === "s") {
-    timesArray = ["2"];
-    document = "Sensitive";
+    documentData = "Sensitive";
     buttonText = "Add Sensitive";
     buttonClass1 = "addButton";
     buttonClass2 = "configureButton-1";
+  } else if(sOrI == "i") {
+    documentData = "Insensitive";
+    buttonText = "Add Insensitive";
+    buttonClass1 = "removeButton";
+    buttonClass2 = "configureButton-2";
   }
-  var arrayFilled = 1;
+
   var readIn = {
     Times: []
   }
-
-    var sensitive = [
-      "13",
-      "12"
-    ];
 
     var player;
 
@@ -55,7 +53,7 @@ export default function AddSensitive(props) {
 
     useEffect(() => {
       const fetchData = async () => {
-        readIn = await fillArray();
+        readIn = await fillArray(documentData);
         console.log(readIn.Times);
         setValue(readIn.Times);
       };
@@ -85,12 +83,12 @@ export default function AddSensitive(props) {
       }
 
       function WriteToDb(timesList) {
-        const res = setDoc(doc(db, "Master-times", "Sensitive"), {
+        const res = setDoc(doc(db, "Master-times", {documentData}), {
           Times: timesList
         });
       }
 
-    const listItems = timeArr.map((time) => <li key={time} className = 'configureList' >{time} <button className="addButton" onClick={() => RemoveItems(time)}><b>&times;</b></button><hr className="configureHR"></hr></li>)
+    const listItems = timeArr.map((time) => <li key={time} className = 'configureList' >{time} <button className={buttonClass1} onClick={() => RemoveItems(time)}><b>&times;</b></button><hr className="configureHR"></hr></li>)
     return (
     <div>
         <button className="configureButton configureButton-1" onClick={() => UserResponse('Sensitive')}>Add Sensitive</button>

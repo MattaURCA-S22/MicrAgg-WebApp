@@ -15,6 +15,7 @@
 
 .configureList {
     align-items: baseline;
+    border-bottom-style: solid;
     
 }
 
@@ -52,10 +53,11 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: auto;
     border: 0.5vw;
-    border-style: ridge;
+    border-style: solid;
+    border-radius: 12px;
   }
 
-  .title {
-      align-items: center;
-      color: black;
-  }
+.title {
+    align-items: center;
+    color: black;
+}
