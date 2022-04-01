@@ -1,22 +1,30 @@
 import React, {useState, useContext} from "react";
 import "./VideoRetrieval.css";
 import ResponseContext from "../context/ResponseContext";
+import videoContext from "../context/videoContext";
 
+var videoList;
+
+export function GetVideoList() {
+    return videoList;
+}
 
 export default function VideoRetrieval(props) {
     const [video, setVideo] = useState(props.videoPlay);
     const userData = useContext(ResponseContext);
+    const videoLoad = useContext(videoContext);
     var showButton = props.showChange;
     var data = props.data;
     var videoLink;
     var cssType;
     var finalVar;
     var videoTitle;
-    var videoList;
 
     console.log(userData)
 
     function ChangeVideo(videoNum) {
+        videoLoad.video = videoNum;
+        console.log(videoLoad.video);
         setVideo(videoNum);
     }
 
