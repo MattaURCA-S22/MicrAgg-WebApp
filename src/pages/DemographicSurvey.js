@@ -411,7 +411,6 @@ export default function DemographicSurveyPage() {
 
   async function submitData(survey) {
     userData.demographic = survey.data;
-    await addUserData(userData);
     // Add function call to log data to database
   }
 
