@@ -1,14 +1,27 @@
 import React, {useState} from 'react';
 import Vimeo from "@vimeo/player";
 import './VideoConfigureComponent.css';
+import { db } from "../firebase";
+import { doc, setDoc, getDoc } from "firebase/firestore";
 
 export default function AddInsensitive(props) {
-
-var Insensitive = [
-    '3.21',
-    '3.31',
-    '12.2'
+  var readIn = {
+    Times: []
+  }
+  var Insensitive = [
 ];
+
+const [timeArr, setValue] = useState(['3.21', '3.31', '12.2']);
+
+async function FillArray() {
+  const docRef = doc(db, "Master-times", "Insensitive");
+  const docSnap = await getDoc(docRef);
+  readIn.Times = docSnap.data();
+  console.log(readIn.Times);
+  Insensitive = readIn.Times;
+}
+
+
 
 function RemoveItems(id) {
   console.log(id);
@@ -16,9 +29,8 @@ function RemoveItems(id) {
   console.log(newList);
   
   setValue(newList);
+  WriteToDb();
 }
-
-const [timeArr, setValue] = useState(['3.21', '3.31', '12.2']);
 
 function UserResponse(message){
     var iframe = document.querySelector('iframe');
@@ -31,6 +43,7 @@ function UserResponse(message){
         const nextList = timeArr.concat(seconds.toString());
         console.log(nextList);
         setValue(nextList);
+        WriteToDb();
         //setValue([...timeArr, seconds.toString()]);
         //console.log(sensitive);
       }
@@ -41,11 +54,16 @@ function UserResponse(message){
     console.log(message);
   }
 
-
+  function WriteToDb() {
+    const res = setDoc(doc(db, "Master-times", "Insensitive"), {
+      Times: timeArr
+    });
+  }
 
 //var newTime = props.newTime;
 var timeIS = props.timeIS;
-const listItems = timeArr.map((time) => <div><li className = 'configureList' key = {time}>{time} <button className="removeButton" onClick={() => RemoveItems(time)}><b>&times;</b></button></li><li><hr></hr></li></div>)
+FillArray();
+const listItems = timeArr.map((time) => <div><li className = 'configureList' key = {time}>{time} <button className="removeButton" onClick={() => RemoveItems(time)}><b>&times;</b></button></li><li><hr></hr></li></div>);
 return (
 <div>
     <button className="configureButton-2 configureButton" onClick={() => UserResponse('Insensitive')}>Add Insensitive</button>
