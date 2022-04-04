@@ -1,5 +1,6 @@
 .DashboardMain-Main {
-    background-color: lightgray;
+  /* background-color: lightgray; */
+  background-image: linear-gradient(#ff3333, white);
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -16,7 +17,7 @@
   background-color: whitesmoke;
   align-items: center;
   justify-content: space-around;
-  color: crimson;
+  color: rgb(73, 71, 71);
 }
 
 .eNavR{
@@ -28,7 +29,7 @@
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  color: crimson;
+  color: rgb(73, 71, 71);
 }
 
 .eNavL{
@@ -38,7 +39,7 @@
   flex-direction: column;
   background-color: whitesmoke;
   align-items: center;
-  color: crimson;
+  color: rgb(73, 71, 71);
 }
 
 .DashboardMain-VideoQuickView {
@@ -48,19 +49,21 @@
     max-height: 56.25vw;
 }
 
-.DashboardData-Button {
+.dashboardData-Button {
   border: none;
   border-radius: 12px;
-  color: black;
+  color: rgb(73, 71, 71);
   width: calc(50px + 10vw);
-  height: calc(8px + 2vh);
+  height: calc(14px + 2vh);
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: calc(16px + 0.6vh);
   margin: 1vh;
   cursor: pointer;
-  background-color: red;
+  /* background-color: grey; */
+  background-image: linear-gradient(#ff3333, white);
+  box-shadow: 20px, 20px, 5px, black;
 }
 
  .DashboardData-Body {
@@ -72,8 +75,6 @@
 .DashboardData-eNav {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-around; */
-  /* flex-wrap: wrap; */
 }
 
 .DashboardData-Body-Nav {

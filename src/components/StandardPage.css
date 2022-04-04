@@ -1,5 +1,6 @@
 .Default {
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  background-image: linear-gradient(#ff3333, white);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

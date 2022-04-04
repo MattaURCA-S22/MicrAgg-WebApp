@@ -14,9 +14,7 @@
 }
 
 .configureList {
-    align-items: baseline;
-    border-bottom-style: solid;
-    
+    border: none;
 }
 
 .configureHR {
@@ -24,7 +22,8 @@
 }
 
   .configureButton-1 {
-      background-color: #81ee84;
+      /* background-color: #81ee84; */
+      background-image: linear-gradient(0, #81ee84, white);
   }
 
   .configureButton-2 {
@@ -42,6 +41,7 @@
   .addButton {
     background: none;
     border: none;
+    /* background-image: linear-gradient(#81ee84, white); */
     color: #81ee84;
     cursor: pointer;
     font-size: calc(14px + 0.6vh);;

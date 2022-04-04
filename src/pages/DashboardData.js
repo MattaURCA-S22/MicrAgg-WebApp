@@ -31,14 +31,13 @@ function DashboardMain() {
           <div className="DashboardData-Nav">
             <h2 className="align2">Data Options</h2>
             <div className="DashboardData-Body-Nav">
-              <button className="DashboardData-Button">Data View</button>
-              <button className="DashboardData-Button">Data Analysis</button>
+              <button className="dashboardData-Button">Download CSV</button>
             </div>
           </div>
           <div className="eNavR">
             <VideoRetrieval videoPlay="1" data="true" showChange="2" />
             <Link to="/VideoConfigure">
-              <button className="DashboardData-Button">Configure Video</button>
+              <button className="dashboardData-Button">Configure Video</button>
             </Link>
           </div>
         </div>

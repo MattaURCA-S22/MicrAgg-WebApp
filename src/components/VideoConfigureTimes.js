@@ -26,22 +26,22 @@ export default function AddSensitive(props) {
     documentData = "Sensitive";
     buttonText = "Add Sensitive";
     buttonClass1 = "addButton";
-    buttonClass2 = "configureButton-1";
+    buttonClass2 = "configureButton configureButton-1";
   } else if(sOrI == "i" && (videoLoad.video === "1" || videoLoad.video === "0")) {
     documentData = "Insensitive";
     buttonText = "Add Insensitive";
     buttonClass1 = "removeButton";
-    buttonClass2 = "configureButton-2";
+    buttonClass2 = "configureButton configureButton-2";
   } else if (sOrI === "s" && videoLoad.video === "2") {
     documentData = "SensitiveB";
     buttonText = "Add Sensitive";
     buttonClass1 = "addButton";
-    buttonClass2 = "configureButton-1";
+    buttonClass2 = "configureButton configureButton-1";
   } else if(sOrI == "i" && videoLoad.video === "2") {
     documentData = "InsensitiveB";
     buttonText = "Add Insensitive";
     buttonClass1 = "removeButton";
-    buttonClass2 = "configureButton-2";
+    buttonClass2 = "configureButton configureButton-2";
   } 
 
   var readIn = {
@@ -110,7 +110,7 @@ export default function AddSensitive(props) {
     const listItems = timeArr.map((time) => <li key={time} className = 'configureList' >{time} <button className={buttonClass1} onClick={() => RemoveItems(time)}><b>&times;</b></button><hr className="configureHR"></hr></li>)
     return (
     <div>
-        <button className="configureButton configureButton-1" onClick={() => UserResponse('Sensitive')}>Add Sensitive</button>
+        <button className={buttonClass2} onClick={() => UserResponse('Sensitive')}>Add Sensitive</button>
         <div className='overlayTimes1'>
         <ul className='configureList'>{listItems}</ul>
         </div>

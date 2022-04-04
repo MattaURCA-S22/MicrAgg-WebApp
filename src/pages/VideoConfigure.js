@@ -23,7 +23,7 @@ function VideoConfigure() {
 
   return (
     <StandardPage>
-      
+      <div className="configureBackground">
       <div className="VideoConfigure-content">
       <div className="overlay">
           <div className="VideoConfigure-contentL">
@@ -42,7 +42,7 @@ function VideoConfigure() {
         <VideoRetrieval videoPlay={video} showChange="1"/>
       </div>
       </div>
-      
+      </div>
     </StandardPage>
   );
 }

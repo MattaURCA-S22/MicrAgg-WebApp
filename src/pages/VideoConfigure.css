@@ -13,7 +13,8 @@
 }
 
 .VideoConfigure-contentL {
-  background-color: rgb(73, 71, 71);
+  /* background-color: rgb(73, 71, 71); */
+  background-image: linear-gradient(rgb(73, 71, 71), grey, lightgray); 
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -23,7 +24,8 @@
 
 
 .VideoConfigure-content {
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  background-image: linear-gradient(#ff3333, white);
   display: flex;
   width: 100vw;
   gap: 1.5vw;
@@ -45,7 +47,7 @@
 .VideoPlayer-video {
   width: 115.555556vh;
   height: 65vh;
-  max-width: 100vw;
+  max-width: 60vw;
   max-height: 56.25vw;
 }
 
@@ -53,8 +55,9 @@
   opacity: 90%;  
   height: 90vh;
   width: 20vw;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  background-image: linear-gradient(rgb(73, 71, 71), grey, lightgray); 
+  /* background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.9);  */
   overflow-y: auto;
 }
 
@@ -78,5 +81,9 @@ hr {
   overflow-y: auto;
   border: 0.5vw;
   border-style: solid;
+}
+
+.configureBackground {
+  background-image: linear-gradient(#ff3333, white);
 }
   

@@ -3,8 +3,10 @@
 }
 
 .VideoPlayer-content {
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  background-image: linear-gradient(#ff3333, white);
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: top;

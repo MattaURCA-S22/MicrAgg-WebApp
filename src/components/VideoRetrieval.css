@@ -21,14 +21,15 @@
 }
 
 .VideoConfigure-Content {
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  background-image: linear-gradient(#ff3333, white);
   display: flex;
   width: 80vw;
   gap: 1.5vw;
   flex-direction: row;
   align-items: center;
   justify-content: top;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -50,12 +51,14 @@
 
 .overlay-2 {
   align-items: flex-end;
+  justify-content: space-evenly;
   justify-items: center;
   opacity: 90%;
   height: 90vh;
   width: 20vw;
-  z-index: 1; 
-  background-color: rgb(73, 71, 71);   
+  z-index: 1;
+  background-image: linear-gradient(rgb(73, 71, 71), grey, lightgray); 
+  /* background-color: rgb(73, 71, 71);    */
 }
 
 .Title {
@@ -64,13 +67,39 @@
 }
 
 .pushItems-Video {
-  margin-left: 4vw;
+  margin-left: 3vw;
 }
 
 .pushItems-Button {
-  margin-left: 7vw;
+  margin-left: 5vw;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  color: black;
+  background-image: linear-gradient(white, #ff3333);
+  /* background-color: white; */
+  width: calc(20px + 5vw);
+  height: calc(12px + 3vh);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: calc(8px + 0.6vh);
+  cursor: pointer;
 }
 
 .pushItems-Button2 {
-  margin-left: 6vw;
+  margin-left: 5vw;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  color: black;
+  /* background-color: #ff3333; */
+  background-image: linear-gradient(white, #ff3333);
+  width: calc(20px + 5vw);
+  height: calc(12px + 3vh);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: calc(8px + 0.6vh);
+  cursor: pointer;
 }

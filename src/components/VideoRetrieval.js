@@ -57,7 +57,8 @@ export default function VideoRetrieval(props) {
                 ></iframe>
             </div> 
             <div className="overlay-2">
-            <h3 className="Title">Video Name: {videoTitle}</h3>
+            <h5 className="Title">Video Name: {videoTitle}</h5>
+                <div className="videoA">
                 <div className="pushItems-Video">
                     <iframe
                     src="https://player.vimeo.com/video/693834980?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
@@ -68,8 +69,8 @@ export default function VideoRetrieval(props) {
                     ></iframe>
                 </div>
                 <button className="pushItems-Button" onClick={() => ChangeVideo("1")}>Control</button>
+                </div>
                 <br></br>
-                
                 <div className="pushItems-Video">
                     <iframe
                     src="https://player.vimeo.com/video/693835115?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"

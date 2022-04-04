@@ -50,7 +50,7 @@ function VideoPlayer() {
   }
 
   return (
-    <StandardPage>
+    <StandardPage className="VideoPlayer-content">
       <div className="VideoPlayer-content">
 
         {/*   Youtube Embed
