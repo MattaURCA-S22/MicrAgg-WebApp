@@ -6,11 +6,14 @@ import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
 import "./VideoPlayer.css";
 import { UserInfo } from "firebase-admin/lib/auth/user-record";
+import { fillArray } from "../data/firebaseInterface";
 
 function VideoPlayer() {
   const [finished, setFinished] = useState(false);
   const userData = useContext(ResponseContext);
   var secondsLast = -10;
+  var masterSensitive = fillArray("Sensitive");
+  var masterInsensitive = fillArray("Insensitive");
 
   function UserResponse(message){
     var iframe = document.querySelector('iframe');
@@ -21,10 +24,24 @@ function VideoPlayer() {
       // You can use seconds and message here to add data to the user's response data
       console.log(secondsLast);
       if ((secondsLast + lockoutTime) < seconds){
-        if (message == "Sensitive"){
+        if (message == "Sensitive"){ 
+          masterSensitive.forEach(element => {
+            if (seconds <= element + 5 && seconds >= element - 5) {
+              // Add correct sensitive time
+            } else {
+              // Add incorrect sensitive time
+            }
+          });
           userData.sTimes.push(seconds);  
         }
         else if (message == "Insensitive"){
+          masterInsensitive.forEach(element => {
+            if (seconds <= element + 5 && seconds >= element - 5) {
+              // Add correct Insensitive time
+            } else {
+              // Add incorrect Insensitive time
+            }
+          });
           userData.iTimes.push(seconds);   
         }
         secondsLast = seconds;
