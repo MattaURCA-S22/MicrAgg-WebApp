@@ -25,7 +25,7 @@
 
 .VideoConfigure-content {
   /* background-color: lightgray; */
-  background-image: linear-gradient(#ff3333, white);
+  background-image: linear-gradient(#9fbfdf, white);
   display: flex;
   width: 100vw;
   gap: 1.5vw;
@@ -84,6 +84,6 @@ hr {
 }
 
 .configureBackground {
-  background-image: linear-gradient(#ff3333, white);
+  background-image: linear-gradient(#9fbfdf, white);
 }
   
