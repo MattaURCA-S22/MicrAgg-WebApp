@@ -229,7 +229,12 @@ function handleCareer(demo){
     if (demo.PsychodramaR != null) {
       career += "Psychodramatist:" + demo.Psychodramatist + ", ";
     }
-    career += "]";
+    if (career.charAt(career.length-2) !== "[" ){
+      career = career.slice(0, career.length-2);
+    } else { 
+      return "N/A";
+    }
+    career += " ]";
     return career;
   } else {
     return "N/A";
