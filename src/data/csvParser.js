@@ -1,17 +1,30 @@
+import { credential } from "firebase-admin";
+
 export function csvParser(data) {
   //set headers here
   let csvData =
     "ID," + 
     "Consent," + 
-    "Demographic Question 1," +
-    "Demographic Question 2," +
-    "Demographic Question 3," +
-    "Demographic Question 4," +
-    "Demographic Question 5," +
-    "Demographic Question 6," + 
+    "Demographic Q1," +
+    "Demographic Q2," +
+    "Demographic Q3," +
+    "Demographic Q4," +
+    "Demographic Q5," +
+    "Demographic Q6," + 
+    "Demographic Q7," + 
+    "Demographic Q8," +
+    "Demographic Q9," +
+    "Demographic Q10," +
+    "Demographic Q11," +
+    "Demographic Q12," + 
+    "Demographic Q13," + 
     "Video," +
     "Sensitive Times," + 
     "Insensitive Times," + 
+    "Sensitive Correct," + 
+    "Sensitive Incorrect," + 
+    "Insensitive Correct," + 
+    "Insensitive Incorrect," + 
     "Q1," + 
     "Q2: Comfortable," + 
     "Q2: Awkward," + 
@@ -65,9 +78,20 @@ export function csvParser(data) {
     notNull(demo.question4) + '","' +
     notNull(demo.question5) + '","' +
     notNull(demo.question6) + '","' +
+    notNull(demo.question7) + '","' +
+    handleCredentials(demo) + '","' +
+    notNull(demo.question9) + '","' +
+    notNull(demo.question10) + '","' +
+    notNull(demo.question11) + '","' +
+    listHandler(demo.question12) + '","' +
+    notNull(demo.question13) + '","' +
     notNull(user.video) + '","' +
     timeListHandler(user.sTimes) + '","' +
     timeListHandler(user.iTimes) + '","' +
+    notNull(user.sCorrect) + '","' +
+    notNull(user.sIncorrect) + '","' +
+    notNull(user.iCorrect) + '","' +
+    notNull(user.iIncorrect) + '","' +
     notNull(survey.question1) + '","' +
     parseShorthand(notNull(survey.question2).comfortable) + '","' +
     parseShorthand(notNull(survey.question2).awkward) + '","' +
@@ -161,5 +185,55 @@ export function timeListHandler(data) {
     return string;
   } else {
     return "No Times Selected";
+  }
+}
+
+export function listHandler(data) {
+  if (data != null && data.length > 0) {
+    let string = '[ ';
+    for (var i = 0; i < data.length - 1; i++) {
+      string += data[i] + ', ';
+    }
+    string += data[data.length - 1] + ' ]';
+    return string;
+  } else {
+    return "N/A";
+  }
+}
+
+function handleCredentials(demo){
+  var credentials = "[ "
+  if (demo.question2 != null) {
+    if (demo.PsychologistR != null) {
+      credentials += "Psychologist:" + demo.Psychologist + ", ";
+    }
+    if (demo.CounselorR != null) {
+      credentials += "Counselor:" + demo.Counselor + ", ";
+    }
+    if (demo.MarriageAndFamilyTherapistR != null) {
+      credentials += "Marriage And Family Therapist:" + demo.MarriageAndFamilyTherapist + ", ";
+    }
+    if (demo.SocialWorkerR != null) {
+      credentials += "SocialWorker:" + demo.SocialWorker + ", ";
+    }
+    if (demo.ArtTherapyR != null) {
+      credentials += "ArtTherapist:" + demo.ArtTherapist + ", ";
+    }
+    if (demo.DanceTherapistR != null) {
+      credentials += "DanceTherapist:" + demo.DanceTherapist + ", ";
+    }
+    if (demo.MusicTherapistR != null) {
+      credentials += "MusicTherapist:" + demo.MusicTherapist + ", ";
+    }
+    if (demo.DramaTherapistR != null) {
+      credentials += "DramaTherapist:" + demo.DramaTherapist + ", ";
+    }
+    if (demo.PsychodramaR != null) {
+      credentials += "Psychodramatist:" + demo.Psychodramatist + ", ";
+    }
+    credentials += "]";
+    return credentials;
+  } else {
+    return "N/A";
   }
 }

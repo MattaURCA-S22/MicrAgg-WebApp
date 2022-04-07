@@ -141,10 +141,10 @@ export default function DemographicSurveyPage() {
             elements: [
               {
                 type: "expression",
-                name: "question15",
+                name: "PanelTitle",
                 visibleIf: "{question1}='Credentialed Professional'",
                 title:
-                  "Professional Identity and Credentials (please write in): Select all that apply",
+                  "Professional Identity and Credentials: Select all that apply",
               },
               {
                 type: "checkbox",
@@ -158,9 +158,10 @@ export default function DemographicSurveyPage() {
                 type: "text",
                 name: "Psychologist",
                 visibleIf: "{PsychologistR} notempty",
-                startWithNewLine: false,
+                startWithNewLine: true,
                 titleLocation: "hidden",
                 isRequired: true,
+                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -174,13 +175,14 @@ export default function DemographicSurveyPage() {
                 type: "text",
                 name: "Counselor",
                 visibleIf: "{counselorR} notempty",
-                startWithNewLine: false,
+                startWithNewLine: true,
                 titleLocation: "hidden",
                 isRequired: true,
+                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
-                name: "MarriageAndFamilyTherpistR",
+                name: "MarriageAndFamilyTherapistR",
                 visibleIf: "{question1}='Credentialed Professional'",
                 titleLocation: "hidden",
                 hideNumber: true,
@@ -188,11 +190,12 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "Marriage and Family Therapist",
-                visibleIf: "{MarriageAndFamilyTherpistR} notempty",
-                startWithNewLine: false,
+                name: "MarriageAndFamilyTherapist",
+                visibleIf: "{MarriageAndFamilyTherapistR} notempty",
+                startWithNewLine: true,
                 titleLocation: "hidden",
                 isRequired: true,
+                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -204,11 +207,12 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "Social Worker",
+                name: "SocialWorker",
                 visibleIf: "{SocialWorkerR} notempty",
-                startWithNewLine: false,
+                startWithNewLine: true,
                 titleLocation: "hidden",
                 isRequired: true,
+                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -220,11 +224,12 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "Art Therapist",
+                name: "ArtTherapist",
                 visibleIf: "{ArtTherapyR} notempty",
-                startWithNewLine: false,
+                startWithNewLine: true,
                 titleLocation: "hidden",
                 isRequired: true,
+                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -236,11 +241,12 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "Dance Therapist",
+                name: "DanceTherapist",
                 visibleIf: "{DanceTherapistR} notempty",
-                startWithNewLine: false,
+                startWithNewLine: true,
                 titleLocation: "hidden",
                 isRequired: true,
+                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -252,11 +258,12 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "Music Therapist",
+                name: "MusicTherapist",
                 visibleIf: "{MusicTherapistR} notempty",
-                startWithNewLine: false,
+                startWithNewLine: true,
                 titleLocation: "hidden",
                 isRequired: true,
+                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -268,10 +275,11 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "Drama Therapist",
+                name: "DramaTherapist",
                 visibleIf: "{DramaTherapistR} notempty",
-                startWithNewLine: false,
+                startWithNewLine: true,
                 titleLocation: "hidden",
+                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -285,9 +293,10 @@ export default function DemographicSurveyPage() {
                 type: "text",
                 name: "Psychodramatist",
                 visibleIf: "{PsychodramaR} notempty",
-                startWithNewLine: false,
+                startWithNewLine: true,
                 titleLocation: "hidden",
                 isRequired: true,
+                placeHolder: "please type credentials here",
               },
             ],
             isRequired: true,
