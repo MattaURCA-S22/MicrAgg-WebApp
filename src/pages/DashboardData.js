@@ -23,10 +23,10 @@ function DashboardMain() {
   function downloadCSV() {
     const element = document.createElement("a");
     const file = new Blob([csvParser(data)], {
-      type: "text/plain"
+      type: "text/csv"
     });
     element.href = URL.createObjectURL(file);
-    element.download = "GeorgeData.csv";
+    element.download = "SurveyData.csv";
     document.body.appendChild(element);
     element.click();
   }
