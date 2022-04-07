@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 //import IndividualData from "../components/IndividualData";
 import OverallDataTable from "../components/OverallDataTable";
 import { getAllUserData } from "../data/firebaseInterface";
+import { csvParser } from "../data/csvParser";
 
 function DashboardMain() {
   const [data, setData] = useState([]);
@@ -19,6 +20,17 @@ function DashboardMain() {
     fetchData();
   }, []);
 
+  function downloadCSV() {
+    const element = document.createElement("a");
+    const file = new Blob([csvParser(data)], {
+      type: "text/plain"
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = "GeorgeData.csv";
+    document.body.appendChild(element);
+    element.click();
+  }
+
   console.log(data);
   return (
     <StandardPage className="DashboardMain-Main">
@@ -31,8 +43,7 @@ function DashboardMain() {
           <div className="DashboardData-Nav">
             <h2 className="align2">Data Options</h2>
             <div className="DashboardData-Body-Nav">
-              <button className="DashboardData-Button">Data View</button>
-              <button className="DashboardData-Button">Data Analysis</button>
+              <button className="DashboardData-Button" onClick={downloadCSV}>Data View</button>
             </div>
           </div>
           <div className="eNavR">

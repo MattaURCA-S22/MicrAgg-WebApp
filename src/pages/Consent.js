@@ -22,6 +22,7 @@ export default function Consent() {
   async function signUserInAsAnon() {
     await signInAnon();
     console.log(currentUser.uid)
+    userData.uid = currentUser.uid;
   }
 
   async function giveUserDoc() {
