@@ -1,5 +1,3 @@
-import { credential } from "firebase-admin";
-
 export function csvParser(data) {
   //set headers here
   let csvData =
@@ -79,7 +77,7 @@ export function csvParser(data) {
     notNull(demo.question5) + '","' +
     notNull(demo.question6) + '","' +
     notNull(demo.question7) + '","' +
-    handleCredentials(demo) + '","' +
+    handleCareer(demo) + '","' +
     notNull(demo.question9) + '","' +
     notNull(demo.question10) + '","' +
     notNull(demo.question11) + '","' +
@@ -201,38 +199,38 @@ export function listHandler(data) {
   }
 }
 
-function handleCredentials(demo){
-  var credentials = "[ "
+function handleCareer(demo){
+  var career = "[ "
   if (demo.question2 != null) {
     if (demo.PsychologistR != null) {
-      credentials += "Psychologist:" + demo.Psychologist + ", ";
+      career += "Psychologist:" + demo.Psychologist + ", ";
     }
     if (demo.CounselorR != null) {
-      credentials += "Counselor:" + demo.Counselor + ", ";
+      career += "Counselor:" + demo.Counselor + ", ";
     }
     if (demo.MarriageAndFamilyTherapistR != null) {
-      credentials += "Marriage And Family Therapist:" + demo.MarriageAndFamilyTherapist + ", ";
+      career += "Marriage And Family Therapist:" + demo.MarriageAndFamilyTherapist + ", ";
     }
     if (demo.SocialWorkerR != null) {
-      credentials += "SocialWorker:" + demo.SocialWorker + ", ";
+      career += "SocialWorker:" + demo.SocialWorker + ", ";
     }
     if (demo.ArtTherapyR != null) {
-      credentials += "ArtTherapist:" + demo.ArtTherapist + ", ";
+      career += "ArtTherapist:" + demo.ArtTherapist + ", ";
     }
     if (demo.DanceTherapistR != null) {
-      credentials += "DanceTherapist:" + demo.DanceTherapist + ", ";
+      career += "DanceTherapist:" + demo.DanceTherapist + ", ";
     }
     if (demo.MusicTherapistR != null) {
-      credentials += "MusicTherapist:" + demo.MusicTherapist + ", ";
+      career += "MusicTherapist:" + demo.MusicTherapist + ", ";
     }
     if (demo.DramaTherapistR != null) {
-      credentials += "DramaTherapist:" + demo.DramaTherapist + ", ";
+      career += "DramaTherapist:" + demo.DramaTherapist + ", ";
     }
     if (demo.PsychodramaR != null) {
-      credentials += "Psychodramatist:" + demo.Psychodramatist + ", ";
+      career += "Psychodramatist:" + demo.Psychodramatist + ", ";
     }
-    credentials += "]";
-    return credentials;
+    career += "]";
+    return career;
   } else {
     return "N/A";
   }
