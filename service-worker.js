@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/MicrAgg-WebApp/precache-manifest.4ba14de6f061cdc3f08f9c7b81fc1680.js"
+  "/MicrAgg-WebApp/precache-manifest.6ed39a586e189e285354d605f3095c45.js"
 );
 
 workbox.clientsClaim();
