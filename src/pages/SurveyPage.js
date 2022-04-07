@@ -14,7 +14,7 @@ export default function SurveyPage() {
   Survey.StylesManager.applyTheme("stone");
 
 
-  // var surveyJSON = {"logoPosition":"right","pages":[{"name":"question1","elements":[{"type":"text","name":"question1","title":"Question I. Pleast list the cultural themes that emerged within the session.","isRequired":true, maxLength: 100}]},{"name":"question2","elements":[{"type":"matrix","name":"question2","title":"Question II. Overall, how comfortable did therapist appear to you in the session as it relates to dialogue around the client’s cultural identity or cultural issues?","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"comfortable","text":"1. Comfortable"},{"value":"awkward","text":"2. Awkward"},{"value":"tense","text":"3. Tense"},{"value":"nervous","text":"4. Nervous"},{"value":"confident","text":"5. Confident"},{"value":"uneasy","text":"6. Uneasy"},{"value":"relaxed","text":"7. Relaxed"},{"value":"calm","text":"8. Calm"},{"value":"edgy","text":"9. Edgy"},{"value":"genuine","text":"10. Genuine"}]}]},{"name":"question3","elements":[{"type":"matrix","name":"question3","title":"Question III. In this next section, we would like for you to rate the therapist based on the following items. These items reflect therapist’s cultural humility. As above, it is important to keep in mind the interactions specific to cultural issues in session (as opposed to general interactions). As a reminder, cultural humility is an otheroriented mind-frame that is open to explore and understand the other’s worldview and a mind frame that does not assume superiority or expertise. However, this stance does not mean that the therapist is completely deferent to the client’s view, but rather invites the dialogue (two-person philosophy). ","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"is respectful","text":"1. Is Respectful."},{"value":"open to explore","text":"2. Is open to Explore."},{"value":"assumes knows alot","text":"3. Assume he/she already knows alot."},{"value":"considerate","text":"4. Is considerate."},{"value":"genuinely interested in learning more","text":"5. Is genuinely interested in learning more."},{"value":"acts superior","text":"6. Acts superior."},{"value":"open to new perspectives","text":"7. Is open to seeing things from the client's perspective."},{"value":"makes assumptions","text":"8. Makes assumptions about the client."},{"value":"open-minded","text":"9. Is open-minded."},{"value":"is a know-it-all","text":"10. Is a know-it-all."},{"value":"therapist assumes more understanding","text":"11. The therapist seems to assume more understanding than the therapist actually does."},{"value":"asks questions when therapist uncertain","text":"12. Asks questions when the therapist is uncertain."}]}]},{"name":"question4","elements":[{"type":"matrix","name":"question4","title":"Question IV. Please rate the degree to which the therapist in the video addressed (e.g., responded to or elicited) cultural issues within the session. In many cases, there are times where clients and therapists have the opportunity to discuss certain cultural issues more in depth (e.g., a client could mention in passing that their distress has shaken their faith in God, or that they feel empowered via a local social justice group around gay rights). These opportunities come and go. Sometimes they are important and other times, they are not. Please rate the following items regarding these cultural opportunities","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"therapist encouraged client to discuss client's cultural background more","text":"1. The therapist encouraged the client to discuss the client's cultural background more."},{"value":"therapist discussed the client's cultural background in a way that worked","text":"2. The therapist discussed the client’s cultural background in a way that seemed to have worked."},{"value":"therapist avoided topics related to the client's cultural background","text":"3. The therapist avoided topics related to the client’s cultural background."},{"value":"were many chances to have deeper discussion about client's fultural background that never happened","text":"4. There were many chances to have deeper discussions about the client’s cultural background that never happened."},{"value":"therapist missed oppertunities to discuss the client's cultural background","text":"5. The therapist missed opportunities to discuss the client’s cultural background."}]}]},{"name":"question5-a","elements":[{"type":"matrix","name":"question5-a","title":"Question V To the extent that you noticed, please rate the frequencies of the following client responses to the therapist’s interventions as they related to discussing the client’s cultural identities in session. What kind of climate did the therapist establish in session that enabled the client to feel safe enough to discuss their culture? \nIn response to the therapeutic climate, clients may respond in a variety of ways in terms of their cultural identities.In the FIRST half of the session, I noticed the following","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"shut down verbally and/or non-verbally (1)","text":"1. Shut down verbally and/or non-verbally."},{"value":"was receptive to therapist's intervention (1)","text":"2. Was receptive to the therapist’s interventions."},{"value":"become hostile and/or expressed their anger (1)","text":"3. Became hostile and/or expressed their anger/upset."},{"value":"was assertive and communicative (1)","text":"4. Was assertive and communicative."},{"value":"seemed to agree with the therapist in placating manner (1)","text":"5. Seemed to agree with the therapist in a placating manner."}]},{"type":"matrix","name":"question5-b","title":"In the SECOND half of the session, I noticed the following:","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"shut down verbally and/or non-verbally (2)","text":"1. Shut down verbally and/or non-verbally."},{"value":"was receptive to therapist's intervention (2)","text":"2. Was receptive to the therapist’s interventions."},{"value":"become hostile and/or expressed their anger (2)","text":"3. Became hostile and/or expressed their anger/upset."},{"value":"was assertive and communicative (2)","text":"4. Was assertive and communicative."},{"value":"seemed to agree with the therapist in placating manner (2)","text":"5. Seemed to agree with the therapist in a placating manner."}]}]}]}
+  // var surveyJSON = {"logoPosition":"right","pages":[{"name":"question1","elements":[{"type":"text","name":"question1","title":"Question I. Pleast list the cultural themes that emerged within the session.","isRequired":true, maxLength: 100}]},{"name":"question2","elements":[{"type":"matrix","name":"question2","title":"Question II. Overall, how comfortable did therapist appear to you in the session as it relates to dialogue around the client’s cultural identity or cultural issues?","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"comfortable","text":"1. Comfortable"},{"value":"awkward","text":"2. Awkward"},{"value":"tense","text":"3. Tense"},{"value":"nervous","text":"4. Nervous"},{"value":"confident","text":"5. Confident"},{"value":"uneasy","text":"6. Uneasy"},{"value":"relaxed","text":"7. Relaxed"},{"value":"calm","text":"8. Calm"},{"value":"edgy","text":"9. Edgy"},{"value":"genuine","text":"10. Genuine"}]}]},{"name":"question3","elements":[{"type":"matrix","name":"question3","title":"Question III. In this next section, we would like for you to rate the therapist based on the following items. These items reflect therapist’s cultural humility. As above, it is important to keep in mind the interactions specific to cultural issues in session (as opposed to general interactions). As a reminder, cultural humility is an otheroriented mind-frame that is open to explore and understand the other’s worldview and a mind frame that does not assume superiority or expertise. However, this stance does not mean that the therapist is completely deferent to the client’s view, but rather invites the dialogue (two-person philosophy). ","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"is respectful","text":"1. Is Respectful."},{"value":"open to explore","text":"2. Is open to Explore."},{"value":"assumes knows alot","text":"3. Assume he/she already knows alot."},{"value":"considerate","text":"4. Is considerate."},{"value":"genuinely interested in learning more","text":"5. Is genuinely interested in learning more."},{"value":"acts superior","text":"6. Acts superior."},{"value":"open to new perspectives","text":"7. Is open to seeing things from the client's perspective."},{"value":"makes assumptions","text":"8. Makes assumptions about the client."},{"value":"open-minded","text":"9. Is open-minded."},{"value":"is a know-it-all","text":"10. Is a know-it-all."},{"value":"therapist assumes more understanding","text":"11. The therapist seems to assume more understanding than the therapist actually does."},{"value":"asks questions when therapist uncertain","text":"12. Asks questions when the therapist is uncertain."}]}]},{"name":"question4","elements":[{"type":"matrix","name":"question4","title":"Question IV. Please rate the degree to which the therapist in the video addressed (e.g., responded to or elicited) cultural issues within the session. In many cases, there are times where clients and therapists have the opportunity to discuss certain cultural issues more in depth (e.g., a client could mention in passing that their distress has shaken their faith in God, or that they feel empowered via a local social justice group around gay rights). These opportunities come and go. Sometimes they are important and other times, they are not. Please rate the following items regarding these cultural opportunities","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"therapist encouraged client to discuss client's cultural background more","text":"1. The therapist encouraged the client to discuss the client's cultural background more."},{"value":"therapist discussed the client's cultural background in a way that worked","text":"2. The therapist discussed the client’s cultural background in a way that seemed to have worked."},{"value":"therapist avoided topics related to the client's cultural background","text":"3. The therapist avoided topics related to the client’s cultural background."},{"value":"were many chances to have deeper discussion about client's fultural background that never happened","text":"4. There were many chances to have deeper discussions about the client’s cultural background that never happened."},{"value":"therapist missed oppertunities to discuss the client's cultural background","text":"5. The therapist missed opportunities to discuss the client’s cultural background."}]}]},{"name":"question5a","elements":[{"type":"matrix","name":"question5a","title":"Question V To the extent that you noticed, please rate the frequencies of the following client responses to the therapist’s interventions as they related to discussing the client’s cultural identities in session. What kind of climate did the therapist establish in session that enabled the client to feel safe enough to discuss their culture? \nIn response to the therapeutic climate, clients may respond in a variety of ways in terms of their cultural identities.In the FIRST half of the session, I noticed the following","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"shut down verbally and/or non-verbally (1)","text":"1. Shut down verbally and/or non-verbally."},{"value":"was receptive to therapist's intervention (1)","text":"2. Was receptive to the therapist’s interventions."},{"value":"become hostile and/or expressed their anger (1)","text":"3. Became hostile and/or expressed their anger/upset."},{"value":"was assertive and communicative (1)","text":"4. Was assertive and communicative."},{"value":"seemed to agree with the therapist in placating manner (1)","text":"5. Seemed to agree with the therapist in a placating manner."}]},{"type":"matrix","name":"question5b","title":"In the SECOND half of the session, I noticed the following:","isRequired":true,"columns":[{"value":"strongly disagree","text":"Strongly Disagree"},{"value":"mildly disagree","text":"Mildly Disagree"},{"value":"neutral","text":"Neutral"},{"value":"mildly agree","text":"Mildly Agree"},{"value":"strongly agree","text":"Strongly Agree"}],"rows":[{"value":"shut down verbally and/or non-verbally (2)","text":"1. Shut down verbally and/or non-verbally."},{"value":"was receptive to therapist's intervention (2)","text":"2. Was receptive to the therapist’s interventions."},{"value":"become hostile and/or expressed their anger (2)","text":"3. Became hostile and/or expressed their anger/upset."},{"value":"was assertive and communicative (2)","text":"4. Was assertive and communicative."},{"value":"seemed to agree with the therapist in placating manner (2)","text":"5. Seemed to agree with the therapist in a placating manner."}]}]}]}
   var surveyJSON = {
     logoPosition: "right",
     pages: [
@@ -75,36 +75,51 @@ export default function SurveyPage() {
               { value: "sa", text: "Strongly Agree" },
             ],
             rows: [
-              { value: "is respectful", text: "1. Is Respectful." },
-              { value: "open to explore", text: "2. Is open to Explore." },
+              { 
+                value: "_3a", 
+                text: "1. Is Respectful." 
+              },
+              { 
+                value: "_3b", 
+                text: "2. Is open to Explore." 
+              },
               {
-                value: "assumes knows alot",
+                value: "_3c",
                 text: "3. Assume he/she already knows alot.",
               },
-              { value: "considerate", text: "4. Is considerate." },
+              { 
+                value: "_3d", 
+                text: "4. Is considerate." },
               {
-                value: "genuinely interested in learning more",
+                value: "_3e",
                 text: "5. Is genuinely interested in learning more.",
               },
-              { value: "acts superior", text: "6. Acts superior." },
-              {
-                value: "open to new perspectives",
-                text:
-                  "7. Is open to seeing things from the client's perspective.",
+              { 
+                value: "_3f", 
+                text: "6. Acts superior." 
               },
               {
-                value: "makes assumptions",
+                value: "_3g",
+                text: "7. Is open to seeing things from the client's perspective.",
+              },
+              {
+                value: "_3h",
                 text: "8. Makes assumptions about the client.",
               },
-              { value: "open-minded", text: "9. Is open-minded." },
-              { value: "is a know-it-all", text: "10. Is a know-it-all." },
-              {
-                value: "therapist assumes more understanding",
-                text:
-                  "11. The therapist seems to assume more understanding than the therapist actually does.",
+              { 
+                value: "_3i", 
+                text: "9. Is open-minded." 
+              },
+              { 
+                value: "_3j", 
+                text: "10. Is a know-it-all." 
               },
               {
-                value: "asks questions when therapist uncertain",
+                value: "_3k",
+                text: "11. The therapist seems to assume more understanding than the therapist actually does.",
+              },
+              {
+                value: "_3l",
                 text: "12. Asks questions when the therapist is uncertain.",
               },
             ],
@@ -124,40 +139,30 @@ export default function SurveyPage() {
             ],
             rows: [
               {
-                value:
-                  "therapist encouraged client to discuss client's cultural background more",
-                text:
-                  "1. The therapist encouraged the client to discuss the client's cultural background more.",
+                value: "_4a",
+                text: "1. The therapist encouraged the client to discuss the client's cultural background more.",
               },
               {
-                value:
-                  "therapist discussed the client's cultural background in a way that worked",
-                text:
-                  "2. The therapist discussed the client’s cultural background in a way that seemed to have worked.",
+                value: "_4b",
+                text: "2. The therapist discussed the client’s cultural background in a way that seemed to have worked.",
               },
               {
-                value:
-                  "therapist avoided topics related to the client's cultural background",
-                text:
-                  "3. The therapist avoided topics related to the client’s cultural background.",
+                value: "_4c",
+                text: "3. The therapist avoided topics related to the client’s cultural background.",
               },
               {
-                value:
-                  "were many chances to have deeper discussion about client's fultural background that never happened",
-                text:
-                  "4. There were many chances to have deeper discussions about the client’s cultural background that never happened.",
+                value: "_4d",
+                text: "4. There were many chances to have deeper discussions about the client’s cultural background that never happened.",
               },
               {
-                value:
-                  "therapist missed oppertunities to discuss the client's cultural background",
-                text:
-                  "5. The therapist missed opportunities to discuss the client’s cultural background.",
+                value: "_4e",
+                text: "5. The therapist missed opportunities to discuss the client’s cultural background.",
               },
             ],
           },
           {
             type: "matrix",
-            name: "question5-a",
+            name: "question5a",
             title:
               "To the extent that you noticed, please rate the frequencies of the following client responses to the therapist’s interventions as they related to discussing the client’s cultural identities in session. What kind of climate did the therapist establish in session that enabled the client to feel safe enough to discuss their culture?<br/> <br/>In response to the therapeutic climate, clients may respond in a variety of ways in terms of their cultural identities.<br/> <br/>In the FIRST half of the session, I noticed the following:",
             isRequired: true,
@@ -170,32 +175,30 @@ export default function SurveyPage() {
             ],
             rows: [
               {
-                value: "shut down verbally and/or non-verbally (1)",
+                value: "_5aa",
                 text: "1. Shut down verbally and/or non-verbally.",
               },
               {
-                value: "was receptive to therapist's intervention (1)",
+                value: "_5ab",
                 text: "2. Was receptive to the therapist’s interventions.",
               },
               {
-                value: "become hostile and/or expressed their anger (1)",
+                value: "_5ac",
                 text: "3. Became hostile and/or expressed their anger/upset.",
               },
               {
-                value: "was assertive and communicative (1)",
+                value: "_5ad",
                 text: "4. Was assertive and communicative.",
               },
               {
-                value:
-                  "seemed to agree with the therapist in placating manner (1)",
-                text:
-                  "5. Seemed to agree with the therapist in a placating manner.",
+                value: "_5ae",
+                text: "5. Seemed to agree with the therapist in a placating manner.",
               },
             ],
           },
           {
             type: "matrix",
-            name: "question5-b",
+            name: "question5b",
             title:
               "In the SECOND half of the session, I noticed the following:",
             isRequired: true,
@@ -208,26 +211,24 @@ export default function SurveyPage() {
             ],
             rows: [
               {
-                value: "shut down verbally and/or non-verbally (2)",
+                value: "_5ba",
                 text: "1. Shut down verbally and/or non-verbally.",
               },
               {
-                value: "was receptive to therapist's intervention (2)",
+                value: "_5bb",
                 text: "2. Was receptive to the therapist’s interventions.",
               },
               {
-                value: "become hostile and/or expressed their anger (2)",
+                value: "_5bc",
                 text: "3. Became hostile and/or expressed their anger/upset.",
               },
               {
-                value: "was assertive and communicative (2)",
+                value: "_5bd",
                 text: "4. Was assertive and communicative.",
               },
               {
-                value:
-                  "seemed to agree with the therapist in placating manner (2)",
-                text:
-                  "5. Seemed to agree with the therapist in a placating manner.",
+                value: "_5be",
+                text: "5. Seemed to agree with the therapist in a placating manner.",
               },
             ],
           },
@@ -249,9 +250,9 @@ export default function SurveyPage() {
   q.isAllRowRequired = true;
   q = model.getQuestionByName("question4");
   q.isAllRowRequired = true;
-  q = model.getQuestionByName("question5-a");
+  q = model.getQuestionByName("question5a");
   q.isAllRowRequired = true;
-  q = model.getQuestionByName("question5-b");
+  q = model.getQuestionByName("question5b");
   q.isAllRowRequired = true;
 
   var showdown = require("showdown");
