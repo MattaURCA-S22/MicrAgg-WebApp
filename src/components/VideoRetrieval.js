@@ -29,6 +29,7 @@ export default function VideoRetrieval(props) {
     }
 
     console.log(userData)
+    console.log(video);
 
     if (video === "A"){
         videoLink = "https://player.vimeo.com/video/693834980?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
