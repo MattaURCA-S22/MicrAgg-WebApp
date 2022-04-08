@@ -7,6 +7,7 @@ import VideoRetrieval from "../components/VideoRetrieval";
 import "./VideoPlayer.css";
 import { UserInfo } from "firebase-admin/lib/auth/user-record";
 import { fillArray } from "../data/firebaseInterface";
+import { useAuth } from "../context/AuthContext";
 
 function VideoPlayer() {
   const [finished, setFinished] = useState(false);
@@ -14,6 +15,9 @@ function VideoPlayer() {
   var secondsLast = -10;
   var masterSensitive = fillArray("Sensitive");
   var masterInsensitive = fillArray("Insensitive");
+  const { addUserData } = useAuth();
+
+  console.log(userData.video)
 
   function UserResponse(message){
     var iframe = document.querySelector('iframe');
@@ -58,14 +62,6 @@ function VideoPlayer() {
     console.log(message);
   }
 
-  var thistime = "1";
-  function GetVideoNum() {
-    thistime = Math.floor(Math.random() * 3);
-    console.log(thistime);
-    return thistime.toString();
-
-  }
-
   return (
     <StandardPage className="VideoPlayer-content">
       <div className="VideoPlayer-content">
@@ -89,7 +85,7 @@ function VideoPlayer() {
             title="MVI_0566"
           ></iframe>
         </div> */}
-        <VideoRetrieval videoPlay={GetVideoNum} />
+        <VideoRetrieval videoPlay={userData.video} />
         
         <i className="VideoPlayer-hint">*Tap or Click Video to Play - Please Avoid Fullscreen</i>
       
@@ -108,7 +104,7 @@ function VideoPlayer() {
         {/* Button Only Appears on video finish*/}
         {finished && 
         <Link to="/SurveyPage">
-          <button class="VideoPlayer-button" style={{height: 40}}>Continue</button>
+          <button class="VideoPlayer-button" onClick={async () => await addUserData(userData)} style={{height: 40}}>Continue</button>
         </Link>
         }
       </div>

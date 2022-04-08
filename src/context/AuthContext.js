@@ -1,13 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { auth, db } from '../firebase';
-import { collection, addDoc } from "firebase/firestore";
+import { collection, updateDoc, doc, setDoc } from "firebase/firestore";
 
 const AuthContext = React.createContext();
-
-export const addNewUserData = async (newAnswers) => {
-    const docRef = await addDoc(collection(db, "User-answers"), newAnswers);
-    console.log("Document written with ID: " + docRef.id);
-}
 
 export function useAuth() {
     return useContext(AuthContext);
@@ -15,11 +10,25 @@ export function useAuth() {
 
 export function AuthProvider ({ children }) {
     const [currentUser, setCurrentUser] = useState();
+    const [currentDocRef, setDocRef] = useState();
 
     function login(email, password) {
-        console.log(email + " " + password);
         return auth.signInWithEmailAndPassword(email, password)
     }
+
+    function signInAnon() {
+        return auth.signInAnonymously();
+    }
+
+    function initializeDoc() {
+        const docRef = doc(db, "User-answers", currentUser.uid);
+        setDocRef(docRef);
+    }
+
+    function addUserData(newAnswers) {
+        return setDoc(currentDocRef, newAnswers);
+    }
+
     useEffect(() => {
         const unsub = auth.onAuthStateChanged(user => {
             setCurrentUser(user);
@@ -30,7 +39,11 @@ export function AuthProvider ({ children }) {
 
     const value = {
         currentUser,
-        login
+        currentDocRef,
+        login,
+        signInAnon,
+        initializeDoc,
+        addUserData
     };
 
     return (

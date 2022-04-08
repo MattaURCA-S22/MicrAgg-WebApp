@@ -21,7 +21,7 @@ export default function Login() {
             setLoading(true);
             console.log(emailRef.current.value + " " +  passwordRef.current.value)
             await login(emailRef.current.value, passwordRef.current.value);
-            navigate("/");
+            navigate("/DashboardData");
         } catch {
             setError("Failed to log in");
         }

@@ -1,15 +1,38 @@
-import React, { useContext} from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
 import ResponseContext from "../context/ResponseContext";
+import { useAuth } from "../context/AuthContext";
 
 export default function Consent() {
   const userData = useContext(ResponseContext);
+  const { signInAnon, currentUser, initializeDoc, currentDocRef } = useAuth();
 
   function SignConsent() {
+    userData.isDataComplete = false;
     userData.consent = true;
+    userData.video = GetVideo();
+    console.log(userData.video)
+    signUserInAsAnon();
+    giveUserDoc();
+  }
+
+  async function signUserInAsAnon() {
+    await signInAnon();
+    console.log(currentUser.uid)
+    userData.uid = currentUser.uid;
+  }
+
+  async function giveUserDoc() {
+    await initializeDoc();
+  }
+
+  function GetVideo() {
+    var chosenValue = Math.random() < 0.5 ? "A" : "B";
+    console.log(chosenValue + " Chosen");
+    return chosenValue;
   }
 
   return (
@@ -61,7 +84,7 @@ export default function Consent() {
             PARTICIPATE. You may print a copy of this notice for your records.
           </p>
         </div>
-        <Link to="/DemographicSurvey">
+        <Link to="DemographicSurvey">
           <button className="Consent-Button" onClick={SignConsent}> Continue</button>
         </Link>
       </div>

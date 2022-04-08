@@ -1,4 +1,3 @@
-import Vimeo from "@vimeo/player";
 import React from "react";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
@@ -17,7 +16,7 @@ var Insensitive = [
   "12.13"
 ];
 
-var video = "1";
+var video = "A";
 
 function VideoConfigure() {
 

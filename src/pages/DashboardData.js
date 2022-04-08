@@ -3,9 +3,10 @@ import "./DashboardData.css";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
 import { Link } from "react-router-dom";
-import IndividualData from "../components/IndividualData";
+//import IndividualData from "../components/IndividualData";
 import OverallDataTable from "../components/OverallDataTable";
 import { getAllUserData } from "../data/firebaseInterface";
+import { csvParser } from "../data/csvParser";
 
 function DashboardMain() {
   const [data, setData] = useState([]);
@@ -19,6 +20,17 @@ function DashboardMain() {
     fetchData();
   }, []);
 
+  function downloadCSV() {
+    const element = document.createElement("a");
+    const file = new Blob([csvParser(data)], {
+      type: "text/csv"
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = "SurveyData.csv";
+    document.body.appendChild(element);
+    element.click();
+  }
+
   console.log(data);
   return (
     <StandardPage className="DashboardMain-Main">
@@ -31,11 +43,11 @@ function DashboardMain() {
           <div className="DashboardData-Nav">
             <h2 className="align2">Data Options</h2>
             <div className="DashboardData-Body-Nav">
-              <button className="dashboardData-Button">Download CSV</button>
+              <button className="DashboardData-Button" onClick={downloadCSV}>Download CSV</button>
             </div>
           </div>
           <div className="eNavR">
-            <VideoRetrieval videoPlay="1" data="true" showChange="2" />
+            <VideoRetrieval videoPlay="A" data="true" showChange="2" />
             <Link to="/VideoConfigure">
               <button className="dashboardData-Button">Configure Video</button>
             </Link>

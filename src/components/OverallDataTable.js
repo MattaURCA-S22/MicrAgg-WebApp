@@ -1,5 +1,6 @@
 import React from "react";
 import "./IndividualData.css";
+import { timeListHandler } from "../data/csvParser";
 
 export default function OverallDataTable(props) {
   function returnRows() {
@@ -16,8 +17,8 @@ export default function OverallDataTable(props) {
           <td>{user.sIncorrect}</td>
           <td>{user.iCorrect}</td>
           <td>{user.iIncorrect}</td>
-          <td>{user.sTimes}</td>
-          <td>{user.iTimes}</td>
+          <td>{timeListHandler(user.sTimes)}</td>
+          <td>{timeListHandler(user.iTimes)}</td>
         </tr>
       );
     }

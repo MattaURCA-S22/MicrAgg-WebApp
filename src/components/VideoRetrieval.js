@@ -28,7 +28,9 @@ export default function VideoRetrieval(props) {
         setVideo(videoNum);
     }
 
-    if (video === "1" || video === "0"){
+    console.log(userData)
+
+    if (video === "A"){
         videoLink = "https://player.vimeo.com/video/693834980?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
         if (data === "true"){
             cssType = "DashboardData-VideoQuickView";
@@ -37,7 +39,7 @@ export default function VideoRetrieval(props) {
             cssType = "VideoPlayer-video";
             videoTitle = "Control";
         }
-    } else if (video === "2"){
+    } else if (video === "B"){
         videoLink = "https://player.vimeo.com/video/693835115?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
         cssType = "VideoPlayer-video";
         videoTitle = "Experimental";
@@ -50,7 +52,7 @@ export default function VideoRetrieval(props) {
             <div>
                 <iframe
                     src={videoLink}
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay;"
                     className={cssType}
                     title={videoTitle}
@@ -62,26 +64,31 @@ export default function VideoRetrieval(props) {
                 <div className="pushItems-Video">
                     <iframe
                     src="https://player.vimeo.com/video/693834980?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay;"
                     className="DashboardData-VideoQuickView"
                     title="MVI_0566"
                     ></iframe>
                 </div>
-                <button className="pushItems-Button" onClick={() => ChangeVideo("1")}>Control</button>
-                </div>
+                <button className="pushItems-Button" onClick={() => setVideo("A")}>Control</button>
                 <br></br>
                 <div className="pushItems-Video">
                     <iframe
                     src="https://player.vimeo.com/video/693835115?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay;"
                     className="DashboardData-VideoQuickView"
                     title="MVI_0566"
                     ></iframe>
                 </div>
-                <button className="pushItems-Button2" onClick={() => ChangeVideo("2")}>Experimental</button>
+                <button className="pushItems-Button2" onClick={() => setVideo("B")}>Experimental</button>
+                {/* <div className="dropdown-content">
+                    <button onClick={() => setVideo("1")}>Control video</button>
+                    <button onClick={() => setVideo("2")}>Experimental Video</button>
+                </div> */}
+            {/* </div> */}
             </div>
+        </div>
         </div>
         )
     } else {
@@ -89,7 +96,7 @@ export default function VideoRetrieval(props) {
             <div>
             <iframe
             src={videoLink}
-            frameborder="0"
+            frameBorder="0"
             allow="autoplay;"
             className={cssType}
             title="MVI_0566"
