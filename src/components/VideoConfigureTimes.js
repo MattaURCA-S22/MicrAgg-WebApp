@@ -52,6 +52,23 @@ export default function AddSensitive(props) {
 
     const [timeArr, setValue] = useState([]);
 
+    // async function FillArray() {
+    //   if (arrayFilled == 1) {
+    //   const docRef = doc(db, "Master-times", "Sensitive");
+    //   const docSnap = await getDoc(docRef);
+    //   readIn = docSnap.data();
+    //   arrayFilled = 0;
+    //   setValue(readIn.Times);
+    //   console.log("marker");
+    //   console.log(readIn.Times);
+    //   }
+    // }
+
+    // useEffect(() => {
+    //   var iframe = document.querySelector('iframe');
+    //   player = new Vimeo(iframe);
+    // });
+
     useEffect(() => {
       const fetchData = async () => {
         readIn = await fillArray(documentData);
@@ -76,7 +93,7 @@ export default function AddSensitive(props) {
       player = new Vimeo(iframe);
         player.getCurrentTime().then(function(seconds){
           if (message === "Sensitive"){
-            const nextList = timeArr.concat(seconds);
+            const nextList = timeArr.concat(seconds.toString());
             console.log(nextList);
             WriteToDb(nextList);
             setValue(nextList);

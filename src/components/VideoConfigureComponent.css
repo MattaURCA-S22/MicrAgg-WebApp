@@ -22,7 +22,8 @@
 }
 
   .configureButton-1 {
-      background-color: #81ee84;
+      /* background-color: #81ee84; */
+      background-image: linear-gradient(0, #81ee84, white);
   }
 
   .configureButton-2 {

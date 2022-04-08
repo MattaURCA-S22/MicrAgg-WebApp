@@ -61,8 +61,8 @@
   font-size: calc(16px + 0.6vh);
   margin: 1vh;
   cursor: pointer;
-  background-color: grey;
-  /* background-image: linear-gradient(#ff3333, white); */
+  /* background-color: grey; */
+  background-image: linear-gradient(#ff3333, white);
   box-shadow: 20px, 20px, 5px, black;
 }
 
