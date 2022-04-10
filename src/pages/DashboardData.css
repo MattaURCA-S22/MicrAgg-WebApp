@@ -73,8 +73,11 @@
 } 
 
 .DashboardData-eNav {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: auto auto auto;
+  place-items: center;
+  background-color: whitesmoke;
 }
 
 .DashboardData-Body-Nav {
@@ -114,4 +117,28 @@ li {
 
 .align2{
   margin-left: 10vw;
+}
+
+.name {
+  grid-area: name;
+}
+
+.video {
+  grid-area: video;
+}
+
+.welcome {
+  grid-area: welcome;
+}
+
+.data {
+  grid-area: data;
+}
+
+.button1{
+  grid-area: button1;
+}
+
+.button2 {
+  grid-area: button2;
 }

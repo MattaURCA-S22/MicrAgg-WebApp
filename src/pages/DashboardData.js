@@ -36,22 +36,22 @@ function DashboardMain() {
     <StandardPage className="DashboardMain-Main">
       <div className="">
         <div className="DashboardData-eNav">
-          <div className="eNavL">
-            <h3 className="align">Dashboard</h3>
-            <h4 className="align">Welcome Dr. George</h4>
-          </div>
-          <div className="DashboardData-Nav">
-            <h2 className="align2">Data Options</h2>
-            <div className="DashboardData-Body-Nav">
-              <button className="DashboardData-Button" onClick={downloadCSV}>Download CSV</button>
-            </div>
-          </div>
-          <div className="eNavR">
-            <VideoRetrieval videoPlay="A" data="true" showChange="2" />
+          {/* <div className="eNavL"> */}
+            <h3 className="">Dashboard</h3>
+          {/* </div> */}
+          {/* <div className="DashboardData-Nav"> */}
+            <h2 className="">Data Options</h2>
+            {/* <div className="DashboardData-Body-Nav"> */}
+            {/* </div> */}
+          {/* </div> */}
+          {/* <div className="eNavR"> */}
+            <VideoRetrieval className="video" videoPlay="A" data="true" showChange="2" />
+            <h4 className="">Welcome Dr. George</h4>
+            <button className="DashboardData-Button" onClick={downloadCSV}>Download CSV</button>
             <Link to="/VideoConfigure">
               <button className="dashboardData-Button">Configure Video</button>
             </Link>
-          </div>
+          {/* </div> */}
         </div>
         {/**<IndividualData/>**/}
         <OverallDataTable data={data} />

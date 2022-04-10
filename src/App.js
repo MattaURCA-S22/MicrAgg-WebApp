@@ -30,7 +30,6 @@ function App() {
   return (
     <AuthProvider>
       <ResponseContext.Provider value={userData}>
-        <videoContext.Provider value={videoLoad}>
         <HashRouter>
           <Routes>
             <Route path="/" element={<Consent/>}/>
@@ -45,7 +44,6 @@ function App() {
             <Route path="/SurveyComplete" element={<SurveyComplete/>}/>
           </Routes>
         </HashRouter>
-        </videoContext.Provider>
       </ResponseContext.Provider>
     </AuthProvider>
   );
