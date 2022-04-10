@@ -1,6 +1,6 @@
 import Vimeo from "@vimeo/player";
 import ResponseContext from "../context/ResponseContext";
-import React, { useState , useContext } from "react";
+import React, { useState , useContext, useEffect } from "react";
 import {Link} from "react-router-dom";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
@@ -12,12 +12,34 @@ import { useAuth } from "../context/AuthContext";
 function VideoPlayer() {
   const [finished, setFinished] = useState(false);
   const userData = useContext(ResponseContext);
+  var masterSensitive = [];
+  var masterInsensitive = [];
   var secondsLast = -10;
-  var masterSensitive = fillArray("Sensitive");
-  var masterInsensitive = fillArray("Insensitive");
+  var numCorrectS;
+  var numIncorrectS;
+  var numCorrectI;
+  var numIncorrectI;
   const { addUserData } = useAuth();
 
   console.log(userData.video)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      console.log(userData.video);
+      if (userData.video == "A") {
+        masterSensitive = await fillArray("Sensitive");
+        masterInsensitive = await fillArray("Insensitive");
+      } else {
+        masterSensitive = await fillArray("SensitiveB");
+        masterInsensitive = await fillArray("InsensitiveB");
+      }
+    };
+
+    fetchData();
+  }, [])
+
+  console.log(masterSensitive);
+  console.log(masterInsensitive);
 
   function UserResponse(message){
     var iframe = document.querySelector('iframe');
@@ -31,9 +53,9 @@ function VideoPlayer() {
         if (message == "Sensitive"){ 
           masterSensitive.forEach(element => {
             if (seconds <= element + 5 && seconds >= element - 5) {
-              // Add correct sensitive time
+              numCorrectS++;
             } else {
-              // Add incorrect sensitive time
+              numIncorrectS++;
             }
           });
           userData.sTimes.push(seconds);  
@@ -41,9 +63,9 @@ function VideoPlayer() {
         else if (message == "Insensitive"){
           masterInsensitive.forEach(element => {
             if (seconds <= element + 5 && seconds >= element - 5) {
-              // Add correct Insensitive time
+              numCorrectI++;
             } else {
-              // Add incorrect Insensitive time
+              numIncorrectI++;
             }
           });
           userData.iTimes.push(seconds);   

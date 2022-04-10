@@ -11,39 +11,45 @@ import videoContext from "../context/videoContext";
 export default function AddSensitive(props) {
 
   const videoLoad = useContext(videoContext);
-  var check = videoLoad.video;
-  console.log(videoLoad.video);
   var video = GetVideoList();
-  console.log(video);
+  var whichVideo = props.whichVideo;
+  console.log(whichVideo);
 
-  var sOrI = props.which;
+  var sOrI = props.whichType;
+  console.log(sOrI);
   var documentData;
   var buttonText = "";
   var buttonClass1;
   var buttonClass2;
 
-  if (sOrI === "s" && (videoLoad.video === "1" || videoLoad.video === "0")) {
+  if (whichVideo == null) {
+    whichVideo = "A";
+  }
+
+  if (sOrI === "s" && whichVideo === "A") {
+    console.log("Sensitve A");
     documentData = "Sensitive";
     buttonText = "Add Sensitive";
     buttonClass1 = "addButton";
     buttonClass2 = "configureButton configureButton-1";
-  } else if(sOrI == "i" && (videoLoad.video === "1" || videoLoad.video === "0")) {
+  } else if(sOrI === "i" && whichVideo === "A") {
     documentData = "Insensitive";
     buttonText = "Add Insensitive";
     buttonClass1 = "removeButton";
     buttonClass2 = "configureButton configureButton-2";
-  } else if (sOrI === "s" && videoLoad.video === "2") {
+  } else if (sOrI === "s" && whichVideo === "B") {
     documentData = "SensitiveB";
     buttonText = "Add Sensitive";
     buttonClass1 = "addButton";
     buttonClass2 = "configureButton configureButton-1";
-  } else if(sOrI == "i" && videoLoad.video === "2") {
+  } else if(sOrI == "i" && whichVideo === "B") {
     documentData = "InsensitiveB";
     buttonText = "Add Insensitive";
     buttonClass1 = "removeButton";
     buttonClass2 = "configureButton configureButton-2";
   } 
 
+  console.log(documentData);
   var readIn = {
     Times: []
   }
