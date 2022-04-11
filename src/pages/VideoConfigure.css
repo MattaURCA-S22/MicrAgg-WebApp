@@ -110,11 +110,17 @@ hr {
 .pushItems-Button {
   margin-left: 5vw;
   align-items: center;
-  border: 1px solid black;
+  border: solid white;
+  border-bottom: 2px, white;
+  border-right: 2px, white;
+  border-top: 0.5px;
+  border-left: 0.5px;
+  border-style: inset;
+  /* border-style: ridge; */
   border-radius: 12px;
-  color: black;
+  color: white;
   /* background-image: linear-gradient(white, #ff3333); */
-  background-color: white;
+  background-color: #3973ac;
   width: calc(20px + 5vw);
   height: calc(12px + 3vh);
   text-align: center;
@@ -127,10 +133,11 @@ hr {
 .pushItems-Button2 {
   margin-left: 5vw;
   align-items: center;
-  border: 1px solid black;
+  border: solid;
+  border-style: ridge;
   border-radius: 12px;
-  color: black;
-  background-color: #ff3333;
+  color: white;
+  background-color: #3973ac;
   /* background-image: linear-gradient(white, #ff3333); */
   width: calc(20px + 5vw);
   height: calc(12px + 3vh);
@@ -140,4 +147,7 @@ hr {
   font-size: calc(8px + 0.6vh);
   cursor: pointer;
 }
-  
+
+.buttonShadow {
+  filter: drop-shadow(-1px 6px 3px rgba(0, 0, 0, 0.5));
+}

@@ -34,28 +34,22 @@ function DashboardMain() {
   console.log(data);
   return (
     <StandardPage className="DashboardMain-Main">
-      <div className="">
-        <div className="DashboardData-eNav">
-          {/* <div className="eNavL"> */}
-            <h3 className="">Dashboard</h3>
-          {/* </div> */}
-          {/* <div className="DashboardData-Nav"> */}
-            <h2 className="">Data Options</h2>
-            {/* <div className="DashboardData-Body-Nav"> */}
-            {/* </div> */}
-          {/* </div> */}
-          {/* <div className="eNavR"> */}
-            <VideoRetrieval className="video" videoPlay="A" data="true" showChange="2" />
+        <div className="DashboardData-TopNav">
+            <h3 className="DashboardData-TitleText">Dashboard</h3>
+            <h2 className="DashboardData-TitleText">Data Options</h2>
+            <VideoRetrieval videoPlay="A" data="true" showChange="2" />
             <h4 className="">Welcome Dr. George</h4>
-            <button className="DashboardData-Button" onClick={downloadCSV}>Download CSV</button>
+            <div className="shadow">
+              <button className="DashboardData-Buttons" onClick={downloadCSV}>Download CSV</button>
+            </div>
             <Link to="/VideoConfigure">
-              <button className="dashboardData-Button">Configure Video</button>
+              <div className="shadow">
+                <button className="DashboardData-Buttons">Configure Video</button>
+              </div>
             </Link>
-          {/* </div> */}
         </div>
         {/**<IndividualData/>**/}
         <OverallDataTable data={data} />
-      </div>
     </StandardPage>
   );
 }

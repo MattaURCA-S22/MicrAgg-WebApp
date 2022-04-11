@@ -10,36 +10,11 @@
 
 
 .DashboardData-Nav {
-  width: 70vw;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: auto auto auto;
+  place-items: center;
   background-color: whitesmoke;
-  align-items: center;
-  justify-content: space-around;
-  color: rgb(73, 71, 71);
-}
-
-.eNavR{
-  width: 20vw;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  background-color: whitesmoke;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  color: rgb(73, 71, 71);
-}
-
-.eNavL{
-  width: 10vw;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  background-color: whitesmoke;
-  align-items: center;
-  color: rgb(73, 71, 71);
 }
 
 .DashboardMain-VideoQuickView {
@@ -49,8 +24,9 @@
     max-height: 56.25vw;
 }
 
-.dashboardData-Button {
-  border: none;
+.DashboardData-Button {
+  border: solid;
+  border-style: groove;
   border-radius: 12px;
   color: rgb(73, 71, 71);
   width: calc(50px + 10vw);
@@ -110,35 +86,35 @@ li {
   width: 25vw;
 }
 
-.align {
-  align-self: baseline;
-  margin-left: 2vw;
+.DashboardData-TopNav {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: auto auto auto;
+  place-items: center;
+  background-color: whitesmoke;
 }
 
-.align2{
-  margin-left: 10vw;
+.DashboardData-Buttons {
+  border: solid;
+  border-style: ridge;
+  border-radius: 12px;
+  color: whitesmoke;
+  width: calc(50px + 10vw);
+  height: calc(14px + 2vh);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: calc(16px + 0.6vh);
+  margin: 1vh;
+  cursor: pointer;
+  background-color: #3973ac;
+  /* background-image: linear-gradient(#ff3333, white); */
 }
 
-.name {
-  grid-area: name;
+.shadow {
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
-.video {
-  grid-area: video;
-}
-
-.welcome {
-  grid-area: welcome;
-}
-
-.data {
-  grid-area: data;
-}
-
-.button1{
-  grid-area: button1;
-}
-
-.button2 {
-  grid-area: button2;
+.DashboardData-TitleText {
+  color: #3973ac;
 }
