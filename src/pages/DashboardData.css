@@ -8,90 +8,13 @@
   justify-content: top;
 }
 
-
-.DashboardData-Nav {
-  display: grid;
-  width: 100vw;
-  grid-template-columns: auto auto auto;
-  place-items: center;
-  background-color: whitesmoke;
-}
-
-.DashboardMain-VideoQuickView {
-    width: 20vw;
-    height: 10vh;
-    max-width: 100vw;
-    max-height: 56.25vw;
-}
-
-.DashboardData-Button {
-  border: solid;
-  border-style: groove;
-  border-radius: 12px;
-  color: rgb(73, 71, 71);
-  width: calc(50px + 10vw);
-  height: calc(14px + 2vh);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: calc(16px + 0.6vh);
-  margin: 1vh;
-  cursor: pointer;
-  background-color: grey;
-  /* background-image: linear-gradient(#ff3333, white); */
-  box-shadow: 20px, 20px, 5px, black;
-}
-
- .DashboardData-Body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-} 
-
-.DashboardData-eNav {
-  display: grid;
-  width: 100vw;
-  grid-template-columns: auto auto auto;
-  place-items: center;
-  background-color: whitesmoke;
-}
-
-.DashboardData-Body-Nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 2vw; 
-  margin-left: 10vw;
-}
-
-
-.Dashboard {
-    align-self: flex-start;
-}
-
-.DashboardMain-Content-Video {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; 
-}
-
-
-li {
-    display: inline;
-}
-
-.DashboardData-Table {
-  border-style: double;
-  width: 25vw;
-}
-
 .DashboardData-TopNav {
   display: grid;
   width: 100vw;
   grid-template-columns: auto auto auto;
   place-items: center;
   background-color: whitesmoke;
+  color: #3973ac;
 }
 
 .DashboardData-Buttons {
@@ -108,13 +31,13 @@ li {
   margin: 1vh;
   cursor: pointer;
   background-color: #3973ac;
-  /* background-image: linear-gradient(#ff3333, white); */
+  transition: transform 0.3s;
+}
+
+.DashboardData-Buttons:hover {
+  transform: scale(1.1);
 }
 
 .shadow {
   filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
-}
-
-.DashboardData-TitleText {
-  color: #3973ac;
 }

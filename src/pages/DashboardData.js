@@ -35,10 +35,10 @@ function DashboardMain() {
   return (
     <StandardPage className="DashboardMain-Main">
         <div className="DashboardData-TopNav">
-            <h3 className="DashboardData-TitleText">Dashboard</h3>
-            <h2 className="DashboardData-TitleText">Data Options</h2>
+            <h2>Dashboard</h2>
+            <h2>Data Options</h2>
             <VideoRetrieval videoPlay="A" data="true" showChange="2" />
-            <h4 className="">Welcome Dr. George</h4>
+            <h4></h4>
             <div className="shadow">
               <button className="DashboardData-Buttons" onClick={downloadCSV}>Download CSV</button>
             </div>

@@ -16,7 +16,6 @@ export default function AddSensitive(props) {
   console.log(whichVideo);
 
   var sOrI = props.whichType;
-  console.log(sOrI);
   var documentData;
   var buttonText = "";
   var buttonClass1;
@@ -27,7 +26,6 @@ export default function AddSensitive(props) {
   }
 
   if (sOrI === "s" && whichVideo === "A") {
-    console.log("Sensitve A");
     documentData = "Sensitive";
     buttonText = "Add Sensitive";
     buttonClass1 = "addButton";
@@ -49,7 +47,6 @@ export default function AddSensitive(props) {
     buttonClass2 = "configureButton configureButton-2";
   } 
 
-  console.log(documentData);
   var readIn = {
     Times: []
   }
@@ -64,15 +61,13 @@ export default function AddSensitive(props) {
         console.log(readIn.Times);
         setValue(readIn.Times);
       };
-  
+      
+      console.log("Fetching Data")
       fetchData();
-    }, []);
+    }, [whichVideo]);
 
     function RemoveItems(id) {
       const newList = timeArr.filter((item) => item !== id);
-      console.log(newList);
-      console.log(videoLoad.video);
-      console.log(video);
       WriteToDb(newList);
       setValue(newList);
     }
@@ -83,7 +78,6 @@ export default function AddSensitive(props) {
         player.getCurrentTime().then(function(seconds){
           if (message === "Sensitive"){
             const nextList = timeArr.concat(seconds);
-            console.log(nextList);
             WriteToDb(nextList);
             setValue(nextList);
           }

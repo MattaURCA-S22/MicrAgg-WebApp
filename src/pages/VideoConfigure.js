@@ -4,29 +4,10 @@ import VideoRetrieval from "../components/VideoRetrieval";
 import VideoConfigureTimes from "../components/VideoConfigureTimes";
 import "./VideoConfigure.css";
 
-var sensitive = [
-  "1.80",
-  "2.74",
-  "5.86"
-];
-
-var Insensitive = [
-  "2.45",
-  "6.34",
-  "12.13"
-];
-
 function VideoConfigure() {
 
   const [video, setVideo] = useState("A");
-
-  function ChangeVideo(videoNum) {
-    console.log(videoNum);
-    setVideo(videoNum);
-  }
   console.log(video);
-
-  
 
   return (
     <StandardPage>
@@ -38,7 +19,6 @@ function VideoConfigure() {
               <div>
                 <VideoConfigureTimes whichType="s" whichVideo={video}/>
               </div>
-                <hr></hr>
                 <h5><u>Insensitive Times</u></h5>
               <div>
                 <VideoConfigureTimes whichType="i" whichVideo={video}/>
