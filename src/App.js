@@ -11,7 +11,6 @@ import DashboardLogin from './pages/DashboardLogin';
 import VideoConfigure from './pages/VideoConfigure';
 import { AuthProvider } from './context/AuthContext';
 import ResponseContext from './context/ResponseContext.js';
-import videoContext from './context/videoContext';
 import DemographicSurvey from './pages/DemographicSurvey';
 import SurveyComplete from './pages/SurveyCompletePage';
 
@@ -19,10 +18,6 @@ const userData = {
   consent: 'false',
   sTimes: [],
   iTimes: [],
-}
-
-const videoLoad = {
-  video: "1"
 }
 
 //Just Launches the App

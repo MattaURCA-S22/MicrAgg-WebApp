@@ -1,17 +1,3 @@
-.VideoPlayer {
-  text-align: center;
-}
-
-.VideoConfigure-content2 {
-  background-color: lightgray;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: top;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .VideoConfigure-contentL {
   /* background-color: rgb(73, 71, 71); */
   background-image: linear-gradient(rgb(73, 71, 71), grey, lightgray); 
@@ -34,14 +20,6 @@
   justify-content: top;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.VideoConfigure-navBar {
-  width: 100vw;
-  height: 10vh;
-  display: flex;
-  flex-direction: row;
-  background-color: whitesmoke;
 }
 
 .VideoPlayer-video {

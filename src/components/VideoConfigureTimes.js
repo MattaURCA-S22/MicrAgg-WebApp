@@ -5,12 +5,9 @@ import { fillArray } from "../data/firebaseInterface";
 import { db } from "../firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 import { GetVideoList } from "./VideoRetrieval";
-import videoContext from "../context/videoContext";
 
 
 export default function AddSensitive(props) {
-
-  const videoLoad = useContext(videoContext);
   var video = GetVideoList();
   var whichVideo = props.whichVideo;
   console.log(whichVideo);

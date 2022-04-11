@@ -14,21 +14,6 @@
   color: white;
 }
 
-.VideoPlayer-navBar {
-  width: 100vw;
-  height: 10vh;
-  display: flex;
-  flex-direction: row;
-  background-color: whitesmoke;
-}
-
-.VideoPlayer-video {
-  width: 115.555556vh;
-  height: 65vh;
-  max-width: 100vw;
-  max-height: 56.25vw;
-}
-
 .VideoPlayer-hint {
   font-size: calc(10px + 0.6vh);
   color: black;

@@ -7,7 +7,6 @@ import "./VideoConfigure.css";
 function VideoConfigure() {
 
   const [video, setVideo] = useState("A");
-  console.log(video);
 
   return (
     <StandardPage>
@@ -26,7 +25,7 @@ function VideoConfigure() {
           </div>
       </div>
       <div>
-        <VideoRetrieval videoPlay={video} showChange="1"/>
+        <VideoRetrieval videoPlay={video}/>
       </div>
       <div className="">
             <div className="overlay-2">
