@@ -15,10 +15,13 @@ function VideoPlayer() {
   var masterSensitive = [];
   var masterInsensitive = [];
   var secondsLast = -10;
-  var numCorrectS;
-  var numIncorrectS;
-  var numCorrectI;
-  var numIncorrectI;
+  var numCorrectS = 0;
+  var numIncorrectS = 0;
+  var numCorrectI = 0;
+  var numIncorrectI = 0;
+  var readIn = {
+    Times: []
+  }
   const { addUserData } = useAuth();
 
   console.log(userData.video)
@@ -26,20 +29,21 @@ function VideoPlayer() {
   useEffect(() => {
     const fetchData = async () => {
       console.log(userData.video);
-      if (userData.video == "A") {
-        masterSensitive = await fillArray("Sensitive");
-        masterInsensitive = await fillArray("Insensitive");
+      if (userData.video === "A") {
+        readIn = await fillArray("Sensitive");
+        masterSensitive = readIn.Times;
+        readIn = await fillArray("Insensitive");
+        masterInsensitive = readIn.Times;
       } else {
-        masterSensitive = await fillArray("SensitiveB");
-        masterInsensitive = await fillArray("InsensitiveB");
+        readIn = await fillArray("SensitiveB");
+        masterSensitive = readIn.Times;
+        readIn = await fillArray("InsensitiveB");
+        masterInsensitive = readIn.Times;
       }
     };
 
     fetchData();
   }, [])
-
-  console.log(masterSensitive);
-  console.log(masterInsensitive);
 
   function UserResponse(message){
     var iframe = document.querySelector('iframe');
@@ -50,33 +54,45 @@ function VideoPlayer() {
       // You can use seconds and message here to add data to the user's response data
       console.log(secondsLast);
       if ((secondsLast + lockoutTime) < seconds){
-        if (message == "Sensitive"){ 
-          masterSensitive.forEach(element => {
-            if (seconds <= element + 5 && seconds >= element - 5) {
+        if (message === "Sensitive"){ 
+          for (var i = 0; i < masterSensitive.length; i++) {
+            if (seconds <= masterSensitive[i] + 5 && seconds >= masterSensitive[i] - 5) {
               numCorrectS++;
+              break;
             } else {
               numIncorrectS++;
+              break;
             }
-          });
+          } 
           userData.sTimes.push(seconds);  
         }
-        else if (message == "Insensitive"){
-          masterInsensitive.forEach(element => {
-            if (seconds <= element + 5 && seconds >= element - 5) {
+        else if (message === "Insensitive"){
+          for (var i = 0; i < masterInsensitive.length; i++) {
+            if (seconds <= masterInsensitive[i] + 5 && seconds >= masterInsensitive[i] - 5) {
               numCorrectI++;
+              break;
             } else {
               numIncorrectI++;
+              break;
             }
-          });
+          }
           userData.iTimes.push(seconds);   
         }
         secondsLast = seconds;
       }
+      console.log(numCorrectI);
+      console.log(numCorrectS);
+      console.log(numIncorrectI);
+      console.log(numIncorrectS);
       console.log(userData);
       console.log(secondsLast);
     });
 
     player.on('ended', function() {
+      userData.sCorrect = numCorrectS;
+      userData.sIncorrect = numIncorrectS;
+      userData.iCorrect = numCorrectI;
+      userData.iIncorrect = numIncorrectI;
       console.log('Finished.');
       setFinished(true);
     });

@@ -18,6 +18,10 @@ const userData = {
   consent: 'false',
   sTimes: [],
   iTimes: [],
+  sCorrect: 0,
+  sIncorrect: 0,
+  iCorrect: 0,
+  iIncorrect: 0
 }
 
 //Just Launches the App
