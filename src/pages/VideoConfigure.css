@@ -14,7 +14,7 @@
   background-image: linear-gradient(#9fbfdf, white);
   display: flex;
   width: 100vw;
-  gap: 1.5vw;
+  justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
   justify-content: top;
@@ -25,7 +25,7 @@
 .VideoPlayer-video {
   width: 115.555556vh;
   height: 65vh;
-  max-width: 60vw;
+  max-width: 65vw;
   max-height: 56.25vw;
 }
 
@@ -66,9 +66,11 @@ hr {
 }
 
 .overlay-2 {
-  align-items: flex-end;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: unset;
+  flex-direction: column;
   justify-items: center;
+  align-items: center;
   opacity: 90%;
   height: 90vh;
   width: 15vw;
@@ -78,16 +80,9 @@ hr {
 
 .Title {
   color: white;
-  margin-left: 0.5vw;
-}
-
-.pushItems-Video {
-  margin-left: 3vw;
 }
 
 .pushItems-Button {
-  margin-left: 5vw;
-  align-items: center;
   border: solid white;
   border-bottom: 2px, white;
   border-right: 2px, white;
@@ -109,7 +104,7 @@ hr {
 }
 
 .pushItems-Button2 {
-  margin-left: 5vw;
+  
   align-items: center;
   border: solid;
   border-style: ridge;
@@ -129,3 +124,25 @@ hr {
 .buttonShadow {
   filter: drop-shadow(-1px 6px 3px rgba(0, 0, 0, 0.5));
 }
+
+.videoTitle {
+  animation-name: videoSwitch;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes videoSwitch {
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+

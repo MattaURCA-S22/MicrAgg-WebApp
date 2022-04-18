@@ -112,7 +112,7 @@ function VideoPlayer() {
         {/* Button Only Appears on video finish*/}
         {finished && 
         <Link to="/SurveyPage">
-          <button class="VideoPlayer-button" onClick={async () => await addUserData(userData)} style={{height: 40}}>Continue</button>
+          <button class="VideoPlayer-button VideoPlayer-button3" onClick={async () => await addUserData(userData)} style={{height: 40}}>Continue</button>
         </Link>
         }
       </div>

@@ -14,11 +14,11 @@ function VideoConfigure() {
       <div className="VideoConfigure-content">
       <div className="overlay">
           <div className="VideoConfigure-contentL">
-                <h5 className=""><u>Sensitive Times</u></h5>
+                <h5 className="Title"><u>Sensitive Times</u></h5>
               <div>
                 <VideoConfigureTimes whichType="s" whichVideo={video}/>
               </div>
-                <h5><u>Insensitive Times</u></h5>
+                <h5 className="Title"><u>Insensitive Times</u></h5>
               <div>
                 <VideoConfigureTimes whichType="i" whichVideo={video}/>
               </div>
@@ -29,7 +29,7 @@ function VideoConfigure() {
       </div>
       <div className="">
             <div className="overlay-2">
-            <h5 className="Title">Video Name: Title</h5>
+            <h5 className="Title">Video {video}</h5>
               <div>
                 <div className="videoA">
                 <div className="pushItems-Video">

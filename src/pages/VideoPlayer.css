@@ -41,6 +41,30 @@
   cursor: pointer;
 }
 
+.VideoPlayer-button3 {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  background-color: #3973ac;
+  color: whitesmoke;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+  
+  100% {
+    transform: scale(1.0);
+  }
+}
+
 .VideoPlayer-button1 {background-color: #81ee84;} /* Green */
 .VideoPlayer-button1:active {background-color: #59a55c;} /* Green */
 

@@ -26,7 +26,7 @@ export default function NavBar() {
       </Link>
 
       <Link to="/DashboardData">
-        <button className="NavBar-Button">DashboardData</button>
+        <button className="NavBar-Button">Dashboard Data</button>
       </Link>
     </div>
   );
