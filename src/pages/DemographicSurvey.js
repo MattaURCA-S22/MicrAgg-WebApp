@@ -5,12 +5,14 @@ import * as SurveyReact from "survey-react-ui";
 import ResponseContext from "../context/ResponseContext";
 import "./DemographicSurvey.css";
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function DemographicSurveyPage() {
   const count = useRef(0);
   const userData = useContext(ResponseContext);
   Survey.StylesManager.applyTheme("stone");
   const { addUserData } = useAuth();
+  const navigate = useNavigate();
 
   console.log(userData.video);
 
@@ -455,6 +457,7 @@ export default function DemographicSurveyPage() {
   async function submitData(survey) {
     userData.demographic = survey.data;
     // Add function call to log data to database
+    navigate("/Instructions")
   }
 
   return (
@@ -465,7 +468,7 @@ export default function DemographicSurveyPage() {
         rel="stylesheet"
       />
       <script src="https://unpkg.com/survey-jquery@1.9.20/survey.jquery.min.js"></script>
-      <SurveyReact.Survey model={model} onComplete={submitData} navigateToUrl={"../MicrAgg-WebApp/#/Instructions"}/>
+      <SurveyReact.Survey model={model} onComplete={submitData}/>
     </StandardPage>
   );
 }
