@@ -3,13 +3,19 @@
     height: 10vh;
     display: flex;
     flex-direction: row;
-    background-color: lightgrey;
-    color: black;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    color: #3973ac;
+    border: black;
+    border-top-style: solid;
+    border-bottom-style: solid;
 }
 
 .DashboardLogin-Body {
     display: block;
     text-align: center;
+    background-image: linear-gradient(#9fbfdf, white);
 }
 
 .DashboardLogin-Credentials {
@@ -40,7 +46,7 @@ input[name="email"], input[name="password"] {
 .submitLogin {
     border-radius: 12px;
     color: white;
-    background-color: red;
+    background-color: #3973ac;
     border: none;
     padding: 8px 60px;
     font-size: 14px;

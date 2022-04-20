@@ -32,7 +32,7 @@ export default function Login() {
     return (
         <StandardPage className="DashboardLogin-Login">
             <div className="DashboardLogin-Entry">
-                <h3>Dashboard Login</h3>
+                <h2>Dashboard Login</h2>
             </div>
             <div className="DashboardLogin-Body">
                 <div className="DashboardLogin-Credentials">
