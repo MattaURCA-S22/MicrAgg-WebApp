@@ -4,6 +4,7 @@ import StandardPage from "../components/StandardPage";
 import * as Survey from "survey-react";
 import * as SurveyReact from "survey-react-ui";
 import "survey-react/survey.css";
+import { addNewUserData } from "../context/AuthContext.js"
 import { useAuth } from "../context/AuthContext.js";
 import ResponseContext from "../context/ResponseContext";
 import { useNavigate } from "react-router-dom";
@@ -253,9 +254,9 @@ export default function SurveyPage() {
   q.isAllRowRequired = true;
   q = model.getQuestionByName("question4");
   q.isAllRowRequired = true;
-  q = model.getQuestionByName("question5-a");
+  q = model.getQuestionByName("question5a");
   q.isAllRowRequired = true;
-  q = model.getQuestionByName("question5-b");
+  q = model.getQuestionByName("question5b");
   q.isAllRowRequired = true;
 
   model.showCompletedPage = false;

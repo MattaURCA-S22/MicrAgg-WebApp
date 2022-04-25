@@ -1,5 +1,6 @@
 .Survey-Main {
     background-color: lightgray;
+    background-image: linear-gradient(#9fbfdf, white);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,7 +30,7 @@
 .Consent-Button {
   border: none;
   border-radius: 12px;
-  color: black;
+  color: white;
   width: calc(96px + 2vw);
   height: calc(2px + 6vh);
   text-align: center;
@@ -38,7 +39,7 @@
   font-size: calc(16px + 0.6vh);
   margin: 1vh;
   cursor: pointer;
-  background-color: gray;
+  background-color: #3973ac;
 }
 
 .Survey-Body {

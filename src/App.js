@@ -10,7 +10,7 @@ import Instructions from './pages/Instructions';
 import DashboardLogin from './pages/DashboardLogin';
 import VideoConfigure from './pages/VideoConfigure';
 import { AuthProvider } from './context/AuthContext';
-import ResponseContext from './context/ResponseContext.js'
+import ResponseContext from './context/ResponseContext.js';
 import DemographicSurvey from './pages/DemographicSurvey';
 import SurveyCompletePage from './pages/SurveyComplete';
 import StudentCompletionPage from './pages/StudentCompletionPage';
@@ -19,6 +19,10 @@ const userData = {
   consent: 'false',
   sTimes: [],
   iTimes: [],
+  sCorrect: 0,
+  sIncorrect: 0,
+  iCorrect: 0,
+  iIncorrect: 0
 }
 
 //Just Launches the App
