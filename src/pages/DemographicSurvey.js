@@ -65,7 +65,7 @@ var surveyJSON = {"title":"Demographic Questionnaire","logoPosition":"right","pa
       //userData.demographic = survey.data;
       // Add function call to log data to database
 
-      //navigate("/Instructions")
+      navigate("/Instructions")
     }
   }
 

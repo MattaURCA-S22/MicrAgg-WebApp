@@ -254,9 +254,9 @@ export default function SurveyPage() {
   q.isAllRowRequired = true;
   q = model.getQuestionByName("question4");
   q.isAllRowRequired = true;
-  q = model.getQuestionByName("question5a");
+  q = model.getQuestionByName("question5-a");
   q.isAllRowRequired = true;
-  q = model.getQuestionByName("question5b");
+  q = model.getQuestionByName("question5-b");
   q.isAllRowRequired = true;
 
   model.showCompletedPage = false;
