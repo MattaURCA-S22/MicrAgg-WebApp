@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "c2a771fcd419ad180671",
-    "url": "/MicrAgg-WebApp/static/css/main.d8b87cbc.chunk.css"
+    "revision": "444f5b3c1bcee06937e3",
+    "url": "/MicrAgg-WebApp/static/css/main.bc70e68f.chunk.css"
   },
   {
-    "revision": "c2a771fcd419ad180671",
-    "url": "/MicrAgg-WebApp/static/js/main.c2a771fc.chunk.js"
+    "revision": "444f5b3c1bcee06937e3",
+    "url": "/MicrAgg-WebApp/static/js/main.444f5b3c.chunk.js"
   },
   {
     "revision": "15c53034dcbdea72b049",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/MicrAgg-WebApp/static/js/runtime~main.4879713c.js"
   },
   {
-    "revision": "6382fc3d5612e406fa90f69bae2509ad",
+    "revision": "1f090d3a2e9127b054d99e8d861bba11",
     "url": "/MicrAgg-WebApp/index.html"
   }
 ];
