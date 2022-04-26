@@ -34,28 +34,22 @@ function DashboardMain() {
   console.log(data);
   return (
     <StandardPage className="DashboardMain-Main">
-      <div className="">
-        <div className="DashboardData-eNav">
-          <div className="eNavL">
-            <h3 className="align">Dashboard</h3>
-            <h4 className="align">Welcome Dr. George</h4>
-          </div>
-          <div className="DashboardData-Nav">
-            <h2 className="align2">Data Options</h2>
-            <div className="DashboardData-Body-Nav">
-              <button className="DashboardData-Button" onClick={downloadCSV}>Data View</button>
-            </div>
-          </div>
-          <div className="eNavR">
+        <div className="DashboardData-TopNav">
+            <h2>Dashboard</h2>
+            <h2>Data Options</h2>
             <VideoRetrieval videoPlay="A" data="true" showChange="2" />
+            <h4></h4>
+            <div className="shadow">
+              <button className="DashboardData-Buttons" onClick={downloadCSV}>Download CSV</button>
+            </div>
             <Link to="/VideoConfigure">
-              <button className="DashboardData-Button">Configure Video</button>
+              <div className="shadow">
+                <button className="DashboardData-Buttons">Configure Video</button>
+              </div>
             </Link>
-          </div>
         </div>
         {/**<IndividualData/>**/}
         <OverallDataTable data={data} />
-      </div>
     </StandardPage>
   );
 }

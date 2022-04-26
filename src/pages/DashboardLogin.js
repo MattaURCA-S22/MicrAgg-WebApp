@@ -32,7 +32,7 @@ export default function Login() {
     return (
         <StandardPage className="DashboardLogin-Login">
             <div className="DashboardLogin-Entry">
-                <h3>Dashboard Login</h3>
+                <h2>Dashboard Login</h2>
             </div>
             <div className="DashboardLogin-Body">
                 <div className="DashboardLogin-Credentials">
@@ -52,7 +52,7 @@ export default function Login() {
                         </div>
                         <input type="password" id="password" ref={passwordRef} name="password"/>
                         <br/>
-                        <input type="submit" disabled={loading} name="submit" value="Login" />
+                        <input type="submit" className = "submitLogin" disabled={loading} name="submit" value="Login" />
                     </form>
                 </div>
             </div>

@@ -1,0 +1,27 @@
+.surveyCompleteHead {
+    text-align: center;
+    margin-top: 25px;
+    color: #808080;
+}
+
+.surveyCompleteBody {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.goToSurvey {
+    background-color: #808080;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 8px 30px;
+    font-size: 14px;
+    margin: 20px 1px;
+    color: white;
+}
+
+.goToSurvey:active {
+    position: relative;
+    top: 1px;
+}

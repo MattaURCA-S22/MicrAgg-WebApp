@@ -14,8 +14,7 @@
 }
 
 .configureList {
-    align-items: baseline;
-    
+    border: none;
 }
 
 .configureHR {
@@ -41,6 +40,7 @@
   .addButton {
     background: none;
     border: none;
+    /* background-image: linear-gradient(#81ee84, white); */
     color: #81ee84;
     cursor: pointer;
     font-size: calc(14px + 0.6vh);;
@@ -52,10 +52,11 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: auto;
     border: 0.5vw;
-    border-style: ridge;
+    border-style: solid;
+    border-radius: 12px;
   }
 
-  .title {
-      align-items: center;
-      color: black;
-  }
+.title {
+    align-items: center;
+    color: black;
+}
