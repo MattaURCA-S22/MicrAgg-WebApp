@@ -144,19 +144,19 @@ function notNull(data) {
 
 function parseShorthand(shorthand){
   if (shorthand === "sd") {
-    return "Strongly Disagree";
+    return "1";
   }
   else if (shorthand === "md") {
-    return "Mildly Disagree";
+    return "2";
   }
   else if (shorthand === "n") {
-    return "Neutral";
+    return "3";
   }
   else if (shorthand === "ma") {
-    return "Mildly Agree";
+    return "4";
   }
   else if (shorthand === "sa") {
-    return "Strongly Agree";
+    return "5";
   }
   else {
     return "N/A";
