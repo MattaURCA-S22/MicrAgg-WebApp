@@ -30,7 +30,7 @@
 }
 
 .overlay {
-  opacity: 90%;  
+  /* opacity: 90%;   */
   height: 90vh;
   width: 20vw;
   background-image: linear-gradient(rgb(73, 71, 71), grey, lightgray); 
@@ -71,7 +71,7 @@ hr {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  opacity: 90%;
+  /* opacity: 90%; */
   height: 90vh;
   width: 15vw;
   background-image: linear-gradient(rgb(73, 71, 71), grey, lightgray); 
