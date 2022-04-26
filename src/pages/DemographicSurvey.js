@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef, useContext, useDebugValue } from "react";
 import StandardPage from "../components/StandardPage";
 import * as Survey from "survey-react";
 import * as SurveyReact from "survey-react-ui";
@@ -18,23 +18,6 @@ export default function DemographicSurveyPage() {
 
   // var surveyJSON = {"title":"Demographic Questionnaire","logoPosition":"right","pages":[{"name":"page1","elements":[{"type":"radiogroup","name":"question1","title":"Please indicate your professional status:","isRequired":true,"choices":[{"value":"Student","text":"Student        (Thank you, you can end the survey now)"},{"value":"Credentialed professional","text":"Credentialed professional with at lease a Master's degree"}]},{"type":"radiogroup","name":"question2","visibleIf":"{question1}='Credentialed professional'","title":"Age (Check one):","isRequired":true,"choices":["20-24","25-29","30-39","40-49","50-59","60-69","70-79","80+"]},{"type":"radiogroup","name":"question3","visibleIf":"{question1}='Credentialed professional'","title":"Gender (Check one):","isRequired":true,"choices":["Cisgender Male","Cisgender Female","Transgender/gender independent","Other","Do not wish to identify"]},{"type":"radiogroup","name":"question4","visibleIf":"{question1}='Credentialed professional'","title":"Race/Ethnicity (Choose the one that best fits):","isRequired":true,"choices":["White (non Hispanic)","American Indian","African American","Hispanic/Latinx","Asian/Pacific Islander","Bi or Multi Racial","Do not wish to identify"]},{"type":"radiogroup","name":"question5","visibleIf":"{question1}='Credentialed professional'","title":"Sexual Orientation:","isRequired":true,"choices":["Heterosexual","Gay/Lesbian/Bisexual/Questioning/Asexual/Queer","Do not wish to identify"]},{"type":"radiogroup","name":"question6","visibleIf":"{question1}='Credentialed professional'","title":"Religious/Spiritual Affiliation (Select the one that fits best):","isRequired":true,"choices":["Agnostic/Atheist/none","Buddhist","Christian","Hindu","Jain","Jewish","Muslim","Sikh","Zoroastrian"],"hasOther":true},{"type":"radiogroup","name":"question7","visibleIf":"{question1}='Credentialed professional'","title":"What is your current political party affiliation? (Check one)","isRequired":true,"choices":["Republican","Independent","Democrat",{"value":"affiliation","text":"No affiliation"}],"hasOther":true,"otherText":"Other (please specify):"},{"type":"checkbox","name":"question9","visibleIf":"{question1}='Credentialed professional'","title":"Professional Identity (Select all that apply):","isRequired":true,"choices":["Psychologist","Counselor","Marriage and Family Therapist","Social Worker","Art Therapist","Dance Therapist","Music Therapist","Drama Therapist","Psychodramatist"],"hasOther":true,"otherText":"Other (Describe Professional Identity and Credentials):"},{"type":"text","name":"Psychologist credentials","visibleIf":"{question9} contains 'psychologist'","title":"Please write in your credentials in Psychology","isRequired":true},{"type":"text","name":"Counselor credentials","visibleIf":"{question9} contains 'Counselor'","title":"Please write in your credentials in Counselor","isRequired":true},{"type":"text","name":"Marriage and Family Therapist credentials","visibleIf":"{question9} contains 'Marriage and Family Therapist'","title":"Please write in your credentials in Marriage and Family Therapy","isRequired":true},{"type":"text","name":"Social worker credentials","visibleIf":"{question9} contains 'Social Worker'","title":"Please write in your credentials in Social Working","isRequired":true},{"type":"text","name":"Art therapist credentials","visibleIf":"{question9} contains 'Art Therapist'","title":"Please write in your credentials in Art Therapy","isRequired":true},{"type":"text","name":"Dance therapist credentials","visibleIf":"{question9} contains 'Dance Therapist'","title":"Please write in your credentials in Dance Therapy","isRequired":true},{"type":"text","name":"Music therapist credentials","visibleIf":"{question9} contains 'Music Therapist'","title":"Please write in your credentials in Music Therapy","isRequired":true},{"type":"text","name":"Drama therapist credentials","visibleIf":"{question9} contains 'Drama Therapist'","title":"Please write in your credentials in Drama Therapy","isRequired":true},{"type":"text","name":"Psychodramatist credentials","visibleIf":"{question9} contains 'Psychodramatist'","title":"Please write in your credentials in Psychodrama","isRequired":true},{"type":"radiogroup","name":"question8","visibleIf":"{question1}='Credentialed professional'","title":"Number of years in professional experience as a mental health clinician","isRequired":true,"choices":["Less than a year","1 - 5 years","6 - 10 years","11 - 20 years","20+ years"]},{"type":"radiogroup","name":"question10","visibleIf":"{question1}='Credentialed professional'","title":"Number of graduate courses in multicultural counseling or social and cultural dimensions in therapy","isRequired":true,"choices":["None","One course","Two courses","Three courses","Infused throughout the curriculum"]},{"type":"radiogroup","name":"question11","visibleIf":"{question1}='Credentialed professional'","title":"Number of post-graduate continuing educations units and/or workshops in multicultural counseling or social and cultural dimensions in therapy (make your best judgement):","isRequired":true,"choices":["None","1-5 CEUs/workshops","6-10 CEUs/workshops","11+ CEUs/workshops"]},{"type":"checkbox","name":"question12","visibleIf":"{question1}='Credentialed professional'","title":"In which setting do you work? (Select all that apply):","isRequired":true,"choices":["Clinic/Hospital/Rehabilitation/Inpatient or Outpatient mental health","University Counseling","Educator","Private Practice"],"hasOther":true},{"type":"radiogroup","name":"question13","visibleIf":"{question1}='Credentialed professional'","title":"Region in which you practice (Check one):","isRequired":true,"choices":["West (Washington, Oregon, California, Alaska, Nevada, Utah, Idaho, Hawaii)","Great Plains (Montana, Wyoming, Colorado, Oklahoma, Kansas, Nebraska, South Dakota, North Dakota)","Southwest (Arizona, New Mexico, Texas)","Southeast (Louisiana, Arkansas, Missouri, Mississippi, Alabama, Georgia, Tennessee, Florida, Kentucky, Virginia, North Carolina, South Carolina)","Northeast (West Virginia, Maryland, Delaware, Pennsylvania, New Jersey, New York, Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut)","Midwest (Illinois, Wisconsin, Michigan, Minnesota, Iowa, Indiana, Ohio)"]}]}]};
 
-    // var c = model.getPageByName("page1")
-    // var cl = c.cssClasses;
-    // cl.row = "row_connor"
-    // model.onErrorCustomText.add(function (sender, options) {
-    //     if (options.obj.name === "Psychologist" ||
-    //         options.obj.name === "Counselor" ||
-    //         options.obj.name === "Marriage and Family Therapist" ||
-    //         options.obj.name === "Social Worker" ||
-    //         options.obj.name === "Art Therapist" ||
-    //         options.obj.name === "Dance Therapist" ||
-    //         options.obj.name === "Music Therapist" ||
-    //         options.obj.name === "Drama Therapist" ||
-    //         options.obj.name === "Psychodramatist") {
-    //             options.obj.clearErrors()  
-    //             setError()
-    //     } 
-    // })
   var surveyJSON = {
     title: "Demographic Questionnaire",
     logoPosition: "right",
@@ -139,6 +122,64 @@ export default function DemographicSurveyPage() {
             hasOther: true,
           },
           {
+            type: "panel",
+            name: "panel2",
+            elements: [
+              {
+                type: "text",
+                name: "question8",
+                visibleIf: "{question1}='Credentialed Professional'",
+                title:
+                  "There are several different aspects of one’s cultural background that may be important to a person, including (but not limited to) race, ethnicity, nationality, gender, age, sexual orientation, religion, disability, socioeconomic status, indigenous heritage, religion, geographic location and size. Some things may be more central or important to one’s identity as a person, whereas other things may be less central or important.<br/><br/>Please identify the aspect of your cultural background that is most central or important to you:",
+                isRequired: true,
+              },
+              {
+                type: "matrix",
+                name: "question16",
+                visibleIf: "{question1}='Credentialed Professional'",
+                title:
+                  "How important is this aspect of your cultural background?",
+                hideNumber: true,
+                isRequired: true,
+                columns: [
+                  { value: "Column 1", text: "Not at all important" },
+                  { value: "Column 2", text: " " },
+                  { value: "Column 3", text: "Somewhat important" },
+                  { value: "Column 4", text: " " },
+                  { value: "Column 5", text: "Very important" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "panel",
+            name: "panel3",
+            elements: [
+              {
+                type: "text",
+                name: "question14",
+                visibleIf: "{question1}='Credentialed Professional'",
+                title:
+                  "If there is a 2nd aspect of your cultural background that is important to you, please list:",
+              },
+              {
+                type: "matrix",
+                name: "question17",
+                visibleIf: "{question1}='Credentialed Professional'",
+                title:
+                  "How important is this aspect of your cultural background?",
+                hideNumber: true,
+                columns: [
+                  { value: "Column 1", text: "Not at all important" },
+                  { value: "Column 2", text: " " },
+                  { value: "Column 3", text: "Somewhat important" },
+                  { value: "Column 4", text: " " },
+                  { value: "Column 5", text: "Very important" },
+                ],
+              },
+            ],
+          },
+          {
             type: "radiogroup",
             name: "question7",
             visibleIf: "{question1}='Credentialed Professional'",
@@ -160,10 +201,10 @@ export default function DemographicSurveyPage() {
             elements: [
               {
                 type: "expression",
-                name: "PanelTitle",
+                name: "question15",
                 visibleIf: "{question1}='Credentialed Professional'",
                 title:
-                  "Professional Identity and Credentials: Select all that apply",
+                  "Professional Identity and Credentials (please write in): Select all that apply",
               },
               {
                 type: "checkbox",
@@ -177,10 +218,9 @@ export default function DemographicSurveyPage() {
                 type: "text",
                 name: "Psychologist",
                 visibleIf: "{PsychologistR} notempty",
-                startWithNewLine: true,
+                startWithNewLine: false,
                 titleLocation: "hidden",
                 isRequired: true,
-                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -194,14 +234,13 @@ export default function DemographicSurveyPage() {
                 type: "text",
                 name: "Counselor",
                 visibleIf: "{counselorR} notempty",
-                startWithNewLine: true,
+                startWithNewLine: false,
                 titleLocation: "hidden",
                 isRequired: true,
-                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
-                name: "MarriageAndFamilyTherapistR",
+                name: "MarriageAndFamilyTherpistR",
                 visibleIf: "{question1}='Credentialed Professional'",
                 titleLocation: "hidden",
                 hideNumber: true,
@@ -209,12 +248,11 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "MarriageAndFamilyTherapist",
-                visibleIf: "{MarriageAndFamilyTherapistR} notempty",
-                startWithNewLine: true,
+                name: "Marriage and Family Therapist",
+                visibleIf: "{MarriageAndFamilyTherpistR} notempty",
+                startWithNewLine: false,
                 titleLocation: "hidden",
                 isRequired: true,
-                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -226,12 +264,11 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "SocialWorker",
+                name: "Social Worker",
                 visibleIf: "{SocialWorkerR} notempty",
-                startWithNewLine: true,
+                startWithNewLine: false,
                 titleLocation: "hidden",
                 isRequired: true,
-                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -243,12 +280,11 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "ArtTherapist",
+                name: "Art Therapist",
                 visibleIf: "{ArtTherapyR} notempty",
-                startWithNewLine: true,
+                startWithNewLine: false,
                 titleLocation: "hidden",
                 isRequired: true,
-                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -260,12 +296,11 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "DanceTherapist",
+                name: "Dance Therapist",
                 visibleIf: "{DanceTherapistR} notempty",
-                startWithNewLine: true,
+                startWithNewLine: false,
                 titleLocation: "hidden",
                 isRequired: true,
-                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -277,12 +312,11 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "MusicTherapist",
+                name: "Music Therapist",
                 visibleIf: "{MusicTherapistR} notempty",
-                startWithNewLine: true,
+                startWithNewLine: false,
                 titleLocation: "hidden",
                 isRequired: true,
-                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -294,11 +328,10 @@ export default function DemographicSurveyPage() {
               },
               {
                 type: "text",
-                name: "DramaTherapist",
+                name: "Drama Therapist",
                 visibleIf: "{DramaTherapistR} notempty",
-                startWithNewLine: true,
+                startWithNewLine: false,
                 titleLocation: "hidden",
-                placeHolder: "please type credentials here",
               },
               {
                 type: "checkbox",
@@ -312,10 +345,9 @@ export default function DemographicSurveyPage() {
                 type: "text",
                 name: "Psychodramatist",
                 visibleIf: "{PsychodramaR} notempty",
-                startWithNewLine: true,
+                startWithNewLine: false,
                 titleLocation: "hidden",
                 isRequired: true,
-                placeHolder: "please type credentials here",
               },
             ],
             isRequired: true,
@@ -401,43 +433,26 @@ export default function DemographicSurveyPage() {
 
   var model = new Survey.Model(surveyJSON);
 
-  //   function setError() {
-  //       if (count.current !== 0) return
-  //       q.errors.push(new Survey.SurveyError("Please fill in credentials."))
-  //       count.current++;
-  // var c = model.getPageByName("page1");
-  // var cl = c.cssClasses;
-  // cl.row = "row_connor";
-  // model.onErrorCustomText.add(function(sender, options) {
-  //   if (
-  //     options.obj.name === "Psychologist" ||
-  //     options.obj.name === "Counselor" ||
-  //     options.obj.name === "Marriage and Family Therapist" ||
-  //     options.obj.name === "Social Worker" ||
-  //     options.obj.name === "Art Therapist" ||
-  //     options.obj.name === "Dance Therapist" ||
-  //     options.obj.name === "Music Therapist" ||
-  //     options.obj.name === "Drama Therapist" ||
-  //     options.obj.name === "Psychodramatist"
-  //   ) {
-  //     options.obj.clearErrors();
-  //     setError();
-  //   }
-  // });
-
-    // var q = model.getPanelByName('panel1');
-    // var classes = q.cssClasses;
-    // classes.row = "row_connor_panel";
-    // classes.error.root = "error_connor"
-
-    // model.showCompletedPage = false;
-    // model.navigateToUrl = "/#/Instructions";
-
-    function sendDataToServer(survey) {
-        // alert(JSON.stringify(survey.data));
-        
-        // Add function call to log data to database
+  var c = model.getPageByName("page1");
+  var cl = c.cssClasses;
+  cl.row = "row_connor";
+  model.onErrorCustomText.add(function(sender, options) {
+    if (
+      options.obj.name === "Psychologist" ||
+      options.obj.name === "Counselor" ||
+      options.obj.name === "Marriage and Family Therapist" ||
+      options.obj.name === "Social Worker" ||
+      options.obj.name === "Art Therapist" ||
+      options.obj.name === "Dance Therapist" ||
+      options.obj.name === "Music Therapist" ||
+      options.obj.name === "Drama Therapist" ||
+      options.obj.name === "Psychodramatist"
+    ) {
+      options.obj.clearErrors();
+      setError();
     }
+  });
+
   model.onValidatePanel.add(function(sender, options) {
     count.current = 0;
   });
@@ -455,10 +470,28 @@ export default function DemographicSurveyPage() {
   model.showCompletedPage = false;
 
   async function submitData(survey) {
-    userData.demographic = survey.data;
-    // Add function call to log data to database
-    navigate("/Instructions")
+    if (survey.data.question1 == "Student") {
+      navigate("/StudentCompletePage");
+    } else {
+      //userData.demographic = survey.data;
+      // Add function call to log data to database
+
+      navigate("/Instructions")
+    }
   }
+
+  var showdown = require("showdown");
+  var converter = new showdown.Converter();
+  model.onTextMarkdown.add(function(survey, options) {
+    var str = converter.makeHtml(options.text);
+
+    var index = str.indexOf(">");
+    str = str.substring(index + 1);
+    index = str.lastIndexOf("<");
+    str = str.substring(0, index);
+
+    options.html = str;
+  });
 
   return (
     <StandardPage>
@@ -472,4 +505,3 @@ export default function DemographicSurveyPage() {
     </StandardPage>
   );
 }
-
