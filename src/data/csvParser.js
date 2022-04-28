@@ -9,13 +9,17 @@ export function csvParser(data) {
     "Demographic Q4," +
     "Demographic Q5," +
     "Demographic Q6," + 
-    "Demographic Q7," + 
-    "Demographic Q8," +
+    "Demographic Q7a," +
+    "Demographic Q7b," + 
+    "Demographic Q8a," +
+    "Demographic Q8b," +
     "Demographic Q9," +
     "Demographic Q10," +
     "Demographic Q11," +
     "Demographic Q12," + 
     "Demographic Q13," + 
+    "Demographic Q14," + 
+    "Demographic Q15," + 
     "Video," +
     "Sensitive Times," + 
     "Insensitive Times," + 
@@ -49,7 +53,8 @@ export function csvParser(data) {
     "Q4: The therapist encouraged the client to discuss the client's cultural background more," +
     "Q4: The therapist discussed the client’s cultural background in a way that seemed to have worked," +
     "Q4: The therapist avoided topics related to the client’s cultural background," +
-    "Q4: There were many chances to have deeper discussions about the client’s cultural background that never happened," +
+    "Q4: The therapist delved more deeply into theclient’s cultural background," +
+    "Q4: There were many chances to have deeperdiscussions about the client’s culturalbackground that never happened," +
     "Q4: The therapist missed opportunities to discuss the client’s cultural background," +
     "Q5a: Shut down verbally and/or non-verbally," +
     "Q5a: Was receptive to the therapist’s interventions," +
@@ -66,6 +71,7 @@ export function csvParser(data) {
     let user = data[i];
     let demo = notNull(user.demographic);
     let survey = notNull(user.postSurvey);
+
     //set data here
     csvData += '"' +
     notNull(user.uid) + '","' + 
@@ -76,13 +82,17 @@ export function csvParser(data) {
     notNull(demo.question4) + '","' +
     notNull(demo.question5) + '","' +
     notNull(demo.question6) + '","' +
-    notNull(demo.question7) + '","' +
-    handleCareer(demo) + '","' +
+    notNull(demo.question7a) + '","' +
+    parseShorthand(notNull(demo.question7b)) + '","' + 
+    notNull(demo.question8a) + '","' + 
+    parseShorthand(notNull(demo.question8b))+ '","' +
     notNull(demo.question9) + '","' +
-    notNull(demo.question10) + '","' +
+    handleCareer(demo) + '","' +
     notNull(demo.question11) + '","' +
-    listHandler(demo.question12) + '","' +
+    notNull(demo.question12) + '","' +
     notNull(demo.question13) + '","' +
+    listHandler(demo.question14) + '","' +
+    notNull(demo.question15) + '","' +
     notNull(user.video) + '","' +
     timeListHandler(user.sTimes) + '","' +
     timeListHandler(user.iTimes) + '","' +
@@ -118,6 +128,7 @@ export function csvParser(data) {
     parseShorthand(notNull(survey.question4)._4c) + '","' +
     parseShorthand(notNull(survey.question4)._4d) + '","' +
     parseShorthand(notNull(survey.question4)._4e) + '","' +
+    parseShorthand(notNull(survey.question4)._4f) + '","' +
     parseShorthand(notNull(survey.question5a)._5aa) + '","' +
     parseShorthand(notNull(survey.question5a)._5ab) + '","' +
     parseShorthand(notNull(survey.question5a)._5ac) + '","' +
@@ -134,32 +145,39 @@ export function csvParser(data) {
 }
 
 function notNull(data) {
+  console.log(data)
+  if (data != null && data.question3 != null) {
+    console.log(data.question3);
+    console.log((data.question3)._3a);
+    console.log(data.question3._3f);
+  }
   if (data != null) {
     return data;
   } else {
-    return "N/A";
+    return "N/A11111111";
   }
 }
 
 
 function parseShorthand(shorthand){
-  if (shorthand === "sd") {
+  // console.log(shorthand)
+  if (shorthand === "sd" || shorthand === "ni") {
     return "1";
   }
-  else if (shorthand === "md") {
+  else if (shorthand === "md" || shorthand === "n-s") {
     return "2";
   }
-  else if (shorthand === "n") {
+  else if (shorthand === "n" || shorthand === "si") {
     return "3";
   }
-  else if (shorthand === "ma") {
+  else if (shorthand === "ma" || shorthand === "s-v") {
     return "4";
   }
-  else if (shorthand === "sa") {
+  else if (shorthand === "sa" || shorthand === "vi") {
     return "5";
   }
   else {
-    return "N/A";
+    return "N/A22222222222";
   }
 }
 
