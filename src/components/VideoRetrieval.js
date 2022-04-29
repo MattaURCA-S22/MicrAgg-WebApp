@@ -1,6 +1,5 @@
 import React, {useState, useContext} from "react";
 import "./VideoRetrieval.css";
-import ResponseContext from "../context/ResponseContext";
 
 var videoList;
 
@@ -10,7 +9,6 @@ export function GetVideoList() {
 
 export default function VideoRetrieval(props) {
     const video = props.videoPlay;
-    const userData = useContext(ResponseContext);
     var data = props.data;
     var videoLink;
     var cssType;

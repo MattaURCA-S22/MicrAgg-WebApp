@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
-import ResponseContext from "../context/ResponseContext";
+import { useResponse } from "../context/ResponseContext";
 
 export default function Instructions() {
-  const userData = useContext(ResponseContext);
-  console.log(userData.video)
+  const { response } = useResponse();
+  console.log(response);
   return (
     <StandardPage className="Survey-Main">
       <div className="Consent-Body">

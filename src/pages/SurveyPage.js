@@ -1,21 +1,37 @@
-import React, { useContext } from "react";
+import React, { useEffect } from "react";
 import "./SurveyPage.css";
 import StandardPage from "../components/StandardPage";
 import * as Survey from "survey-react";
 import * as SurveyReact from "survey-react-ui";
 import "survey-react/survey.css";
-import { addNewUserData } from "../context/AuthContext.js"
 import { useAuth } from "../context/AuthContext.js";
-import ResponseContext from "../context/ResponseContext";
 import { useNavigate } from "react-router-dom";
+import { useResponse } from "../context/ResponseContext";
 
 export default function SurveyPage() {
-  const userData = useContext(ResponseContext);
-  const { addUserData } = useAuth();
+  const { addUserData, checkForUserDoc } = useAuth();
   const navigate = useNavigate();
+  const { response, checkForValidContext, setNewContext } = useResponse();
 
   Survey.StylesManager.applyTheme("stone");
 
+  useEffect(() => {
+    if(!checkForValidContext()) {
+      let userDoc = checkForUserDoc();
+      userDoc.then(value => {
+        if(value != null) {
+          setNewContext(value);
+          if (value.isDataComplete == true || value.consent == false) {
+              navigate("/");
+          }
+        } else {
+          navigate("/");
+        }
+      })
+    }
+  }, [])
+
+  console.log(response);
 
   var surveyJSON = {
     logoPosition: "right",
@@ -250,9 +266,9 @@ export default function SurveyPage() {
   };
 
   async function sendDataToServer(survey) {
-    userData.isDataComplete = true;
-    userData.postSurvey = survey.data;
-    await addUserData(userData);
+    response.isDataComplete = true;
+    response.postSurvey = survey.data;
+    await addUserData(response);
     navigate("/SurveyComplete")
   }
   var model = new Survey.Model(surveyJSON);

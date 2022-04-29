@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { auth, db } from '../firebase';
-import { collection, updateDoc, doc, setDoc } from "firebase/firestore";
+import { collection, updateDoc, doc, setDoc, DocumentSnapshot, getDoc, DocumentReference } from "firebase/firestore";
+import { useResponse } from './ResponseContext';
 
 const AuthContext = React.createContext();
 
@@ -12,6 +13,26 @@ export function AuthProvider ({ children }) {
     const [currentUser, setCurrentUser] = useState();
     const [currentDocRef, setDocRef] = useState();
 
+    async function checkForUserDoc() {
+        const user = await signInAnon();
+        console.log(user.user.uid)
+        if(user != null) { 
+            console.log("adf")
+            const docRef = doc(db, "User-answers", user.user.uid);
+            const docSnap = await getDoc(docRef);
+            console.log(docSnap);
+            if(docSnap.exists()) {
+                console.log("Valid document found, set document");
+                console.log(docRef);
+                setDocRef(docRef);
+                return docSnap.data();
+            } else {
+                console.log("No valid document found, send to consent page");
+                return null;
+            }
+        }
+    }
+
     function login(email, password) {
         return auth.signInWithEmailAndPassword(email, password)
     }
@@ -22,6 +43,7 @@ export function AuthProvider ({ children }) {
 
     function initializeDoc() {
         const docRef = doc(db, "User-answers", currentUser.uid);
+        console.log(docRef);
         setDocRef(docRef);
     }
 
@@ -43,7 +65,8 @@ export function AuthProvider ({ children }) {
         login,
         signInAnon,
         initializeDoc,
-        addUserData
+        addUserData,
+        checkForUserDoc
     };
 
     return (

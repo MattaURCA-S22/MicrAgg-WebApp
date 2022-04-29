@@ -1,21 +1,34 @@
-import React, { useRef, useContext, useDebugValue } from "react";
+import React, { useRef, useContext, useDebugValue, useEffect } from "react";
 import StandardPage from "../components/StandardPage";
 import * as Survey from "survey-react";
 import * as SurveyReact from "survey-react-ui";
-import ResponseContext from "../context/ResponseContext";
 import "./DemographicSurvey.css";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { useResponse } from "../context/ResponseContext";
 
 export default function DemographicSurveyPage() {
   const count = useRef(0);
-  const userData = useContext(ResponseContext);
   Survey.StylesManager.applyTheme("stone");
-  const { addUserData } = useAuth();
+  const { addUserData, checkForUserDoc } = useAuth();
+  const { response, checkForValidContext, setNewContext } = useResponse();
   const navigate = useNavigate();
 
-  console.log(userData.video);
-
+  useEffect(() => {
+    if(!checkForValidContext()) {
+      let userDoc = checkForUserDoc();
+      userDoc.then(value => {
+        if(value != null) {
+          setNewContext(value);
+          if (value.isDataComplete == true || value.consent == false) {
+              navigate("/");
+          }
+        } else {
+          navigate("/");
+        }
+      })
+    }
+  }, [])
 
   var surveyJSON = {
     title: "Demographic Questionnaire",
@@ -472,10 +485,11 @@ export default function DemographicSurveyPage() {
     if (survey.data.question1 == "Student") {
       navigate("/StudentCompletePage");
     } else {
-      userData.demographic = survey.data;
+      response.demographic = survey.data;
+      await addUserData(response);
       // Add function call to log data to database
 
-      navigate("/Instructions")
+      navigate("/Instructions");
     }
   }
 

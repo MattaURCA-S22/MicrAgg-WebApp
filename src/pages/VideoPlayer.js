@@ -1,17 +1,19 @@
 import Vimeo from "@vimeo/player";
-import ResponseContext from "../context/ResponseContext";
 import React, { useState , useContext, useEffect } from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
 import "./VideoPlayer.css";
 import { UserInfo } from "firebase-admin/lib/auth/user-record";
 import { fillArray } from "../data/firebaseInterface";
 import { useAuth } from "../context/AuthContext";
+import { useResponse } from "../context/ResponseContext";
 
 function VideoPlayer() {
   const [finished, setFinished] = useState(false);
-  const userData = useContext(ResponseContext);
+  const [rendered, setRendered] = useState(false);
+  const { response, checkForValidContext, setNewContext } = useResponse();
+  const navigate = useNavigate();
   var masterSensitive = [];
   var masterInsensitive = [];
   var secondsLast = -10;
@@ -22,14 +24,31 @@ function VideoPlayer() {
   var readIn = {
     Times: []
   }
-  const { addUserData } = useAuth();
+  const { addUserData, checkForUserDoc } = useAuth();
 
-  console.log(userData.video)
+  // console.log(userData.video);
+  console.log(response);
+
+  useEffect(() => {
+    if(!checkForValidContext()) {
+      let userDoc = checkForUserDoc();
+      userDoc.then(value => {
+        if(value != null) {
+          setNewContext(value);
+          console.log(value.isDataComplete);
+          if (value.isDataComplete == true || value.consent == false) {
+              navigate("/");
+          }
+        } else {
+          navigate("/");
+        }
+      })
+    }
+  }, [])
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log(userData.video);
-      if (userData.video === "A") {
+      if (response.video === "A") {
         readIn = await fillArray("Sensitive");
         masterSensitive = readIn.Times;
         readIn = await fillArray("Insensitive");
@@ -64,7 +83,7 @@ function VideoPlayer() {
               break;
             }
           } 
-          userData.sTimes.push(seconds);  
+          response.sTimes.push(seconds);  
         }
         else if (message === "Insensitive"){
           for (var i = 0; i < masterInsensitive.length; i++) {
@@ -76,7 +95,7 @@ function VideoPlayer() {
               break;
             }
           }
-          userData.iTimes.push(seconds);   
+          response.iTimes.push(seconds);   
         }
         secondsLast = seconds;
       }
@@ -84,15 +103,15 @@ function VideoPlayer() {
       console.log(numCorrectS);
       console.log(numIncorrectI);
       console.log(numIncorrectS);
-      console.log(userData);
+      console.log(response);
       console.log(secondsLast);
     });
 
     player.on('ended', function() {
-      userData.sCorrect = numCorrectS;
-      userData.sIncorrect = numIncorrectS;
-      userData.iCorrect = numCorrectI;
-      userData.iIncorrect = numIncorrectI;
+      response.sCorrect = numCorrectS;
+      response.sIncorrect = numIncorrectS;
+      response.iCorrect = numCorrectI;
+      response.iIncorrect = numIncorrectI;
       console.log('Finished.');
       setFinished(true);
     });
@@ -103,7 +122,7 @@ function VideoPlayer() {
   return (
     <StandardPage className="VideoPlayer-content">
       <div className="VideoPlayer-content">
-        <VideoRetrieval videoPlay={userData.video} />
+        <VideoRetrieval videoPlay={response.video} />
         <i className="VideoPlayer-hint">*Tap or Click Video to Play - Please Avoid Fullscreen</i>
         <div className="VideoPlayer-controls">
           <button class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Sensitive')}>Sensitive</button>
@@ -112,7 +131,7 @@ function VideoPlayer() {
         {/* Button Only Appears on video finish*/}
         {finished && 
         <Link to="/SurveyPage">
-          <button class="VideoPlayer-button VideoPlayer-button3" onClick={async () => await addUserData(userData)} style={{height: 40}}>Continue</button>
+          <button class="VideoPlayer-button VideoPlayer-button3" onClick={async () => await addUserData(response)} style={{height: 40}}>Continue</button>
         </Link>
         }
       </div>

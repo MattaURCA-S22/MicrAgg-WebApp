@@ -3,26 +3,28 @@ import { Link } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
-import ResponseContext from "../context/ResponseContext";
 import { useAuth } from "../context/AuthContext";
+import { useResponse } from "../context/ResponseContext";
 
 export default function Consent() {
-  const userData = useContext(ResponseContext);
-  const { signInAnon, currentUser, initializeDoc, currentDocRef } = useAuth();
+  const { signInAnon, currentUser, initializeDoc, currentDocRef, checkForUserDoc } = useAuth();
+  const { response, initializeResponseContext, setNewContext } = useResponse();
+
+  useEffect(() => {
+    initializeResponseContext();
+  }, [])
 
   function SignConsent() {
-    userData.isDataComplete = false;
-    userData.consent = true;
-    userData.video = GetVideo();
-    console.log(userData.video)
+    response.isDataComplete = false;
+    response.consent = true;
+    response.video = GetVideo();
     signUserInAsAnon();
     giveUserDoc();
   }
-
   async function signUserInAsAnon() {
     await signInAnon();
     console.log(currentUser.uid)
-    userData.uid = currentUser.uid;
+    response.uid = currentUser.uid;
   }
 
   async function giveUserDoc() {
