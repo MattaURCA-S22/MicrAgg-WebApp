@@ -1,4 +1,3 @@
-import "./ThankYouPage.css";
 import StandardPage from "../components/StandardPage";
 import React from "react";
 
