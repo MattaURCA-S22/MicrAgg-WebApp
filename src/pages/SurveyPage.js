@@ -16,18 +16,28 @@ export default function SurveyPage() {
   Survey.StylesManager.applyTheme("stone");
 
   useEffect(() => {
-    if(!checkForValidContext()) {
+    if (!checkForValidContext()) {
       let userDoc = checkForUserDoc();
       userDoc.then(value => {
-        if(value != null) {
+        if (value != null) {
           setNewContext(value);
-          if (value.isDataComplete == true || value.consent == false) {
-              navigate("/");
+          if (value.consent == undefined || value.consent == false) {
+            navigate("/");
+          } else if (value.isDataComplete == true) {
+            navigate("/ThankYouPage");
+          } else if (value.isStudent != undefined && value.isStudent == true) {
+            navigate("/StudentCompletePage");
           }
         } else {
           navigate("/");
         }
       })
+    } else if (response.consent == false) {
+      navigate("/");
+    } else if(response.isStudent != undefined && response.isStudent == true) {
+      navigate("/StudentCompletePage");
+    } else if (response.isDataComplete == true) {
+      navigate("/ThankYouPage");
     }
   }, [])
 

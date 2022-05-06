@@ -2,29 +2,52 @@ import "./SurveyComplete.css"
 import StandardPage from "../components/StandardPage";
 import React, { useEffect } from "react";
 import { useAuth } from "../context/AuthContext.js";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useResponse } from "../context/ResponseContext";
 
 export default function SurveyCompletePage() {
     const { response, checkForValidContext, setNewContext } = useResponse();
-    const { checkForUserDoc } = useAuth();
+    const { checkForUserDoc, addUserData } = useAuth();
     const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
-        if(!checkForValidContext()) {
-          let userDoc = checkForUserDoc();
-          userDoc.then(value => {
-            if(value != null) {
-              setNewContext(value);
-              if (value.consent == false) {
-                  navigate("/");
-              }
-            } else {
+      console.log("this is happening");
+      console.log(response);
+      if (!checkForValidContext()) {
+        console.log("this is happening in the first if")
+        let userDoc = checkForUserDoc();
+        userDoc.then(value => {
+          if (value != null) {
+            setNewContext(value);
+            if (value.consent == undefined || value.consent == false) {
               navigate("/");
+            } else if(value.hasButtonBeenPressed == true && value.isDataComplete == true) {
+              navigate("/ThankYouPage");
+            } else if (value.isStudent != undefined && value.isStudent == true) {
+              navigate("/StudentCompletePage");
             }
-          })
-        }
-      }, [])
+          } else {
+            navigate("/");
+          }
+        })
+      } else if (response.consent == false) {
+        console.log("this is happening in the second if")
+        navigate("/");
+      } else if(response.isStudent != undefined && response.isStudent == true) {
+        console.log("this is happening in the third if")
+        navigate("/StudentCompletePage");
+      } else if (response.hasButtonBeenPressed == true && response.isDataComplete == true) {
+        console.log("this is happening in the fourth if")
+        navigate("/ThankYouPage");
+      }
+    }, [])
+
+    async function handleSurveyClick() {
+      response.hasButtonBeenPressed = true;
+      await addUserData(response);
+      window.location.href="https://siue.co1.qualtrics.com/jfe/form/SV_40gPJn6Xt8J4Cxw";
+    }
 
     return (
         <StandardPage className="Survey-Main">
@@ -41,7 +64,9 @@ export default function SurveyCompletePage() {
                     The first 126 people to complete the survey below will win a $20 Amazon giftcard.
                 </p>
                 <p>Your results will remain anonymous.</p>
-                <a href=" https://siue.co1.qualtrics.com/jfe/form/SV_40gPJn6Xt8J4Cxw">Survey link</a>
+              <button className="surveyButton" type="button" onClick={handleSurveyClick}>
+                Go to survey
+              </button>
             </div>
         </StandardPage>
     )

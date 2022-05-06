@@ -15,18 +15,28 @@ export default function DemographicSurveyPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if(!checkForValidContext()) {
+    if (!checkForValidContext()) {
       let userDoc = checkForUserDoc();
       userDoc.then(value => {
-        if(value != null) {
+        if (value != null) {
           setNewContext(value);
-          if (value.isDataComplete == true || value.consent == false) {
-              navigate("/");
+          if (value.consent == undefined || value.consent == false) {
+            navigate("/");
+          } else if (value.isDataComplete == true) {
+            navigate("/ThankYouPage");
+          } else if (value.isStudent != undefined && value.isStudent == true) {
+            navigate("/StudentCompletePage");
           }
         } else {
           navigate("/");
         }
       })
+    } else if (response.consent == false) {
+      navigate("/");
+    } else if(response.isStudent != undefined && response.isStudent == true) {
+      navigate("/StudentCompletePage");
+    } else if (response.isDataComplete == true) {
+      navigate("/ThankYouPage");
     }
   }, [])
 
@@ -483,6 +493,8 @@ export default function DemographicSurveyPage() {
 
   async function submitData(survey) {
     if (survey.data.question1 == "Student") {
+      response.isStudent = true;
+      await addUserData(response);
       navigate("/StudentCompletePage");
     } else {
       response.demographic = survey.data;

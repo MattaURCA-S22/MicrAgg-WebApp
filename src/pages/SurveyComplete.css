@@ -11,3 +11,18 @@
     text-align: center;
     color: black;
 }
+
+.surveyButton {
+    border: none;
+    border-radius: 12px;
+    color: black;
+    width: calc(12px + 10vw);
+    height: calc(2px + 6vh);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+    margin: 1vh;
+    cursor: pointer;
+    background-color: gray;
+}

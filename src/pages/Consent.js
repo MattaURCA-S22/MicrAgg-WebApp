@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
 import StandardPage from "../components/StandardPage";
@@ -8,9 +8,29 @@ import { useResponse } from "../context/ResponseContext";
 
 export default function Consent() {
   const { signInAnon, currentUser, initializeDoc, currentDocRef, checkForUserDoc } = useAuth();
-  const { response, initializeResponseContext, setNewContext } = useResponse();
+  const { response, initializeResponseContext, setNewContext, checkForValidContext } = useResponse();
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (!checkForValidContext()) {
+      let userDoc = checkForUserDoc();
+      userDoc.then(value => {
+        if (value != null) {
+          setNewContext(value);
+          if (value.consent == undefined || value.consent == false) {
+            navigate("/");
+          } else if (value.isDataComplete == true) {
+            navigate("/ThankYouPage");
+          } else if (value.isStudent != undefined && value.isStudent == true) {
+            navigate("/StudentCompletePage");
+          }
+        }
+      })
+    } else if(response.isStudent != undefined && response.isStudent == true) {
+      navigate("/StudentCompletePage");
+    } else if (response.isDataComplete == true) {
+      navigate("/ThankYouPage");
+    }
     initializeResponseContext();
   }, [])
 

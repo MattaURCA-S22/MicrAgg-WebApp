@@ -14,6 +14,8 @@ import { ResponseProvider } from './context/ResponseContext.js';
 import DemographicSurvey from './pages/DemographicSurvey';
 import SurveyCompletePage from './pages/SurveyComplete';
 import StudentCompletionPage from './pages/StudentCompletionPage';
+import ThankYouPage from './pages/ThankYouPage';
+
 
 //Just Launches the App
 function App() {
@@ -33,6 +35,7 @@ function App() {
             <Route path="/DemographicSurvey" element={<DemographicSurvey/>}/>
             <Route path="/SurveyComplete" element={<SurveyCompletePage/>}/>
             <Route path="/StudentCompletePage" element={<StudentCompletionPage/>}/>
+            <Route path="ThankYouPage" element={<ThankYouPage/>}/>
           </Routes>
         </HashRouter>
       </ResponseProvider>
