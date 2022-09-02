@@ -62,52 +62,131 @@ export default function Consent() {
       <div className="Consent-Body">
         <br />
         <div className="Consent-Content Consent-Text">
-          <h4>WELCOME AND NOTE ON INFORMED CONSENT</h4>
+          <h2 align="center">
+              Acknowledgment of Informed Consent
+          </h2>
+          <p align="center">
+              <u>For participants who are 18 or older</u>
+              <u></u>
+          </p>
+          <h3>
+              Section I: Participant Rights and Information:
+          </h3>
           <p>
-            You are invited to participate in a survey to explore the impact of
-            the COVID-19 pandemic and digitalization on scientists. Your
-            participation will provide valuable insight into how the pandemic
-            and digitalization have impacted you and your scientific work. As
-            part of this survey, stressors and other psychological ailments you
-            experience in your work may be evoked. Answering this survey should
-            take about 15-20 minutes of your time.
+              1) <strong><u>Identification of Project and Responsible Investigator</u></strong>
           </p>
           <p>
-            The expected outcome of this survey is a peer-reviewed article in a
-            reputable scientific journal. You will have the option at the end of
-            the survey to go to another page and indicate if you would like to
-            be sent a copy of the published study.
+              I hereby agree to participate in a research project entitled “An
+              Experimental Study of Therapist Sensitivity in the Therapist-Client
+              Relationship” (Protocol 1483) to be conducted by Jayashree George in the
+              SIUE Department of Art and Design, as principal investigator. The
+              co-investigators are Drs. Yancey, Boddie, Matta, Nieto and Professor
+              Bentley. Protocol 1483 has been approved by SIUE.
           </p>
           <p>
-            Your information is anonymous (except for IP address and other
-            metadata) and confidential.
+              It is important that you understand this research so that you can decide
+              whether or not you want to take part. This process is called informed
+              consent. To make your decision, please consider all the information
+              included in this document.
+          </p><br/>
+          <p>
+              2) <strong><u>Voluntary Participation</u></strong>
           </p>
           <p>
-            Participation is voluntary. If you choose to participate, you are
-            free to withdraw your consent and stop participating at any time.
+              You do not have to participate in this research. It is your choice whether
+              or not you want to participate. If you choose not to participate, or choose
+              to stop participation at any time, there will be no penalty to you or loss
+              of benefits to which you are otherwise entitled. If you choose to join our
+              research project, your participation will be voluntary. However, should you
+              ask to withdraw from the research project after submitting your response,
+              we will not be able to find your data due to anonymity.
+          </p><br/>
+          <p>
+              3) <strong><u>Purpose of the Research:</u></strong>
           </p>
           <p>
-            The survey display is optimized for laptop or desktop computer
-            screens. However, you can also answer the survey on your cell phone
-            or tablet computer.
+              The purpose of this study is to examine moments of therapist sensitivity or
+              insensitivity in their interactions with the client. Participants will be
+              randomly assigned to two groups (Control and Experimental). Both groups
+              will respond to a demographic survey, watch a short video of 2 clips of a
+              therapy session and respond to a questionnaire evaluating the therapist in
+              the video and the client’s responses. Following this, participants will
+              have the option to provide contact information so that they can receive
+              their incentive payment.
           </p>
           <p>
-            Upon completion, you can choose charities to receive a donation on
-            your behalf, and you may have the chance of winning a $100 gift
-            card.
+              The whole experience should take approximately 30 minutes. Upon a fully
+              complete survey, participants will be eligible to receive an incentive of
+              $20 if they are among the first 126 respondents to participate in this
+              study.
+          </p><br/>
+          <p>
+              4) <strong><u>Description of Risks:</u></strong>
           </p>
           <p>
-            If you have any questions, please contact Ass.-Prof. Dr. Magdalena
-            Bekk at bekk@wiso.uni-koeln.de or magdalena.bekk@uni-seeburg.at
+              The risks in this study are minimal. Sometimes, it can be difficult to
+              watch perceived insensitivities. If you feel that you are noticing such
+              discomfort, you may use the open question in the survey to write down your
+              thoughts as a way of dissipating your discomfort.
+          </p><br/>
+          <p>
+              5) <strong><u>Description of Benefits:</u></strong>
           </p>
           <p>
-            YOU MAKE A DECISION WHETHER YOU WANT TO PARTICIPATE OR NOT. IF YOU
-            CLICK ON THE “CONTINUE” BUTTON, THIS MEANS THAT YOU HAVE DECIDED TO
-            PARTICIPATE. You may print a copy of this notice for your records.
+              The indirect benefit to the participants is that they get to participate in
+              clarifying what makes for therapist sensitivity in the therapist-client
+              relationship. The research on therapeutic alliance is growing and
+              experimental studies are few and far between. The benefits of this research
+              have implications not only for clinical practice but also to the training
+              of mental health practitioners.
+          </p><br/>
+          <p>
+              6) <strong><u>Disclosure of Alternative Procedures:</u></strong>
+          </p>
+          <p>
+              There are no alternative procedures.
+          </p><br/>
+          <p>
+              7) <strong><u>Anonymity of Records:</u></strong>
+          </p>
+          <p>
+              Direct identifiers such as names of subjects, or indirect identifiers, such
+              as codes, are never recorded with the research data and therefore cannot be
+              linked to the participants. Once you click on the button, agreeing to
+              participate, you will be taken to a website where you can record your
+              responses, which will not have any identifiers connecting you to your
+              responses.
+          </p><br/>
+          <p>
+              8) <strong><u>Available Assistance:</u></strong>
+          </p>
+          <p>
+              As the risk is mild, participants will receive a short debriefing statement
+              at the end of their participation.
+          </p><br/>
+          <p>
+              9) <strong><u>Contact Information:</u></strong>
+          </p>
+          <p>
+              If you have any questions about our research project or about your rights
+              and activities as a participant, then please contact the project’s
+              principal investigator, Dr. Jayashree George. You can call Dr. George
+              (618-650-3109), e-mail her at jaygeor@siue.edu or write her at Campus Box
+              1774, SIUE, Edwardsville, IL 62026-1774. If you have any questions about
+              your rights or any other concerns, you may also contact the SIUE
+          Institutional Review Board at (618) 650-3010 or    <a href="mailto:irbtraining@siue.edu">irbtraining@siue.edu</a>.
+          </p><br/>
+          <p>
+              <strong>
+                  <u>
+                      Clicking on the Agree button signifies that you have read the
+                      consent form and agree to participate.
+                  </u>
+              </strong>
           </p>
         </div>
         <Link to="DemographicSurvey">
-          <button className="Consent-Button" onClick={SignConsent}> Continue</button>
+          <button className="Consent-Button" onClick={SignConsent}>Agree</button>
         </Link>
       </div>
     </StandardPage>

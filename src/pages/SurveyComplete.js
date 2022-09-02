@@ -60,10 +60,13 @@ export default function SurveyCompletePage() {
                 </p>
             </div>
             <div className="SurveyComplete-body">
+                <br/>
                 <p>
                     The first 126 people to complete the survey below will win a $20 Amazon giftcard.
                 </p>
+                <br/>
                 <p>Your results will remain anonymous.</p>
+                <br/>
               <button className="surveyButton" type="button" onClick={handleSurveyClick}>
                 Go to survey
               </button>
