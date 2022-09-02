@@ -34,7 +34,7 @@ function VideoConfigure() {
                 <div className="videoA">
                 <div className="pushItems-Video">
                     <iframe
-                    src="https://player.vimeo.com/video/693834980?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
+                    src="https://player.vimeo.com/video/745639164?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
                     frameBorder="0"
                     allow="autoplay;"
                     className="DashboardData-VideoQuickView"
@@ -48,7 +48,7 @@ function VideoConfigure() {
                 <br></br>
                 <div className="pushItems-Video">
                     <iframe
-                    src="https://player.vimeo.com/video/693835115?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
+                    src="https://player.vimeo.com/video/745639562?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
                     frameBorder="0"
                     allow="autoplay;"
                     className="DashboardData-VideoQuickView"
