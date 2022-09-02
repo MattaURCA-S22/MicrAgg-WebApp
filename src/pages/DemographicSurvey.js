@@ -60,7 +60,7 @@ export default function DemographicSurveyPage() {
               {
                 value: "Credentialed Professional",
                 text:
-                  "Credentialed Professional with at lease a Master's degree",
+                  "Credentialed Professional with at least a Master's degree",
               },
             ],
           },
