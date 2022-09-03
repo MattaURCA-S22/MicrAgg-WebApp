@@ -131,7 +131,7 @@ hr {
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }
-
+/*
 @keyframes videoSwitch {
   0% {
     opacity: 100%;
@@ -145,4 +145,5 @@ hr {
     opacity: 100%;
   }
 }
+*/
 
