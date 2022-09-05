@@ -132,8 +132,9 @@ export default function DemographicSurveyPage() {
             isRequired: true,
             choices: [
               "Agnostic/Atheist/none",
+              "Baha'i",
               "Buddhist",
-              "Christian",
+              "Christian/Catholic/other denominations",
               "Hindu",
               "Jain",
               "Jewish",
