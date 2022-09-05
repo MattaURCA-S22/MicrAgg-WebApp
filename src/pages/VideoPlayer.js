@@ -83,27 +83,31 @@ function VideoPlayer() {
       // You can use seconds and message here to add data to the user's response data
       console.log(secondsLast);
       if ((secondsLast + lockoutTime) < seconds){
-        if (message === "Sensitive"){ 
+        if (message === "Sensitive"){
+          let incorrect = true; 
           for (var i = 0; i < masterSensitive.length; i++) {
-            if (seconds <= masterSensitive[i] + 5 && seconds >= masterSensitive[i] - 5) {
+            if (seconds <= masterSensitive[i] + 5 && seconds >= masterSensitive[i]) {
               numCorrectS++;
+              incorrect = false;
               break;
-            } else {
-              numIncorrectS++;
-              break;
-            }
+            } 
           } 
+          if (incorrect) {
+            numIncorrectS++;
+          }
           response.sTimes.push(seconds);  
         }
         else if (message === "Insensitive"){
+          let incorrect = true; 
           for (var i = 0; i < masterInsensitive.length; i++) {
-            if (seconds <= masterInsensitive[i] + 5 && seconds >= masterInsensitive[i] - 5) {
+            if (seconds <= masterInsensitive[i] + 5 && seconds >= masterInsensitive[i]) {
               numCorrectI++;
-              break;
-            } else {
-              numIncorrectI++;
+              incorrect = false;
               break;
             }
+          }
+          if (incorrect) {
+            numIncorrectI++;
           }
           response.iTimes.push(seconds);   
         }
