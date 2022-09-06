@@ -28,6 +28,7 @@
 }
 
 .Consent-Button {
+  box-shadow: 0px 4px 3px 0px grey;
   border: none;
   border-radius: 12px;
   color: white;
@@ -40,6 +41,12 @@
   margin: 1vh;
   cursor: pointer;
   background-color: #3973ac;
+  transition: all 0.2s;
+}
+
+.Consent-Button:focus {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 3px 0px grey;
 }
 
 .Survey-Body {

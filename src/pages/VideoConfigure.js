@@ -41,7 +41,7 @@ function VideoConfigure() {
                     title="MVI_0566"
                     ></iframe>
                 </div>
-                <div className="buttonShadow">
+                <div className="buttonShadow" style={{display: "flex", justifyContent: "center"}}>
                   <button className="pushItems-Button" onClick={() => setVideo("A")}>Control</button>
                 </div>
                 </div>
@@ -55,7 +55,7 @@ function VideoConfigure() {
                     title="MVI_0566"
                     ></iframe>
                 </div>
-                <div className="buttonShadow">
+                <div className="buttonShadow" style={{display: "flex", justifyContent: "center"}}>
                   <button className="pushItems-Button2" onClick={() => setVideo("B")}>Experimental</button>
                 </div>
             </div>
