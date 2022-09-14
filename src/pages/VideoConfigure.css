@@ -83,12 +83,10 @@ hr {
 }
 
 .pushItems-Button {
-  border: solid white;
-  border-bottom: 2px, white;
-  border-right: 2px, white;
-  border-top: 0.5px;
-  border-left: 0.5px;
-  border-style: inset;
+  border: none;
+  /* border-top: 0.5px;
+  border-left: 0.5px; */
+  /* border-style: inset; */
   /* border-style: ridge; */
   border-radius: 12px;
   color: white;
@@ -104,10 +102,8 @@ hr {
 }
 
 .pushItems-Button2 {
-  
+  border: none;
   align-items: center;
-  border: solid;
-  border-style: ridge;
   border-radius: 12px;
   color: white;
   background-color: #3973ac;

@@ -18,8 +18,9 @@
 }
 
 .DashboardData-Buttons {
-  border: solid;
-  border-style: ridge;
+  border: none;
+  /* border-style: ridge; */
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
   border-radius: 12px;
   color: whitesmoke;
   width: calc(50px + 10vw);
