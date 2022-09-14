@@ -65,6 +65,7 @@
 }
 
 .Consent-Content{
+  border-radius: 6px;
     align-items: left;
     display: flex;
     flex-direction: column;
