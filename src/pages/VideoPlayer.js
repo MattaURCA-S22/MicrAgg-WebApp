@@ -86,7 +86,7 @@ function VideoPlayer() {
         if (message === "Sensitive"){
           let incorrect = true; 
           for (var i = 0; i < masterSensitive.length; i++) {
-            if (seconds <= masterSensitive[i] + 5 && seconds >= masterSensitive[i]) {
+            if (seconds <= masterSensitive[i][1] + 5 && seconds >= masterSensitive[i][0]) {
               numCorrectS++;
               incorrect = false;
               break;
@@ -100,7 +100,7 @@ function VideoPlayer() {
         else if (message === "Insensitive"){
           let incorrect = true; 
           for (var i = 0; i < masterInsensitive.length; i++) {
-            if (seconds <= masterInsensitive[i] + 5 && seconds >= masterInsensitive[i]) {
+            if (seconds <= masterInsensitive[i][1] + 5 && seconds >= masterInsensitive[i][0]) {
               numCorrectI++;
               incorrect = false;
               break;
