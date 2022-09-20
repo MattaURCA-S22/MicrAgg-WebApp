@@ -108,11 +108,11 @@ export default function SurveyPage() {
               { value: "sa", text: "Strongly Agree" },
             ],
             rows: [
-              { value: "_3a", text: "1. Is Respectful." },
-              { value: "_3b", text: "2. Is open to Explore." },
+              { value: "_3a", text: "1. Is respectful." },
+              { value: "_3b", text: "2. Is open to explore." },
               {
                 value: "_3c",
-                text: "3. Assume he/she already knows alot.",
+                text: "3. Assume she already knows alot.",
               },
               { value: "_3d", text: "4. Is considerate." },
               {
@@ -134,12 +134,12 @@ export default function SurveyPage() {
               {
                 value: "_3k",
                 text:
-                  "11. The therapist seems to assume moreunderstanding than the therapist actuallyhas.",
+                  "11. The therapist seems to assume more understanding than the therapist actually has.",
               },
               {
                 value: "_3l",
                 text:
-                  "12. The therapist asks questions when thetherapist is uncertain.",
+                  "12. The therapist asks questions when the therapist is uncertain.",
               },
             ],
           },
@@ -178,13 +178,13 @@ export default function SurveyPage() {
               {
                 value: "_4d",
                 text:
-                  "4. The therapist delved more deeply into theclient’s cultural background.",
+                  "4. The therapist delved more deeply into the client’s cultural background.",
               },
               {
                 value:
                   "_4e",
                 text:
-                  "5. There were many chances to have deeperdiscussions about the client’s culturalbackground that never happened.",
+                  "5. There were many chances to have deeper discussions about the client’s cultural background that never happened.",
               },
               {
                 value:
