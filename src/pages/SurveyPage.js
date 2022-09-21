@@ -53,7 +53,7 @@ export default function SurveyPage() {
             type: "html",
             name: "question5",
             html:
-              '<div className="surveyDiv">\n<strong>It is important to know that there are no right or wrong answers here. Rather, therapists are human and they have a range of emotions and reactions. We are trying to get a sense of how the therapist was with the client in this session. In some cases, therapists may be uncomfortable and avoid discussions; whereas in other cases, they may be very comfortable and navigate the conversation with ease (and likely a range between these extremes). It is also important to note that there may be no salient culturally related dialogue in the session. In these situations, we ask for you to just indicate that in the space below. </strong></div>',
+              '<div className="surveyDiv">\n<strong>It is important to know that there are no right or wrong answers here. Rather, therapists are human and they have a range of emotions and reactions. We are trying to get a sense of how the therapist was with the client in this session. In some cases, therapists may be uncomfortable and avoid discussions; whereas in other cases, they may be very comfortable and navigate the conversation with ease (and likely a range between these extremes).</strong></div>',
           },
           {
             type: "text",
@@ -112,7 +112,7 @@ export default function SurveyPage() {
               { value: "_3b", text: "2. Is open to explore." },
               {
                 value: "_3c",
-                text: "3. Assume she already knows alot.",
+                text: "3. Assume she already knows a lot.",
               },
               { value: "_3d", text: "4. Is considerate." },
               {
@@ -198,7 +198,7 @@ export default function SurveyPage() {
             type: "matrix",
             name: "question5a",
             title:
-              "To the extent that you noticed, please rate the frequencies of the following client responses to the therapist’s interventions as they related to discussing the client’s cultural identities in session. What kind of climate did the therapist establish in session that enabled the client to feel safe enough to discuss their culture?<br/> <br/>In response to the therapeutic climate, clients may respond in a variety of ways in terms of their cultural identities.<br/> <br/>In PART 1 of the session, I noticed the following:<br/><br/>In terms of the client’s cultural identities, the client",
+              "To the extent that you noticed, please rate the frequencies of the following <u>CLIENT RESPONSES</u> to the therapist’s interventions as they related to discussing the client’s cultural identities in session. What kind of climate did the therapist establish in session that enabled the client to feel safe enough to discuss their culture?<br/> <br/>In response to the therapeutic climate, clients may respond in a variety of ways in terms of their cultural identities.<br/> <br/>In PART 1 of the session, I noticed the following:<br/><br/>In terms of the client’s cultural identities, the client",
             isRequired: true,
             columns: [
               { value: "sd", text: "Never" },
