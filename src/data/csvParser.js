@@ -22,9 +22,11 @@ export function csvParser(data) {
     "Demographic Q15," + 
     "Video," +
     "Sensitive Times," + 
-    "Insensitive Times," + 
+    "Insensitive Times," +
+    "Sensitive Lines Identified," + 
     "Sensitive Correct," + 
     "Sensitive Incorrect," + 
+    "Insensitive Lines Identified," +
     "Insensitive Correct," + 
     "Insensitive Incorrect," + 
     "Q1," + 
@@ -96,8 +98,10 @@ export function csvParser(data) {
     notNull(user.video) + '","' +
     timeListHandler(user.sTimes) + '","' +
     timeListHandler(user.iTimes) + '","' +
+    listHandler(user.sLinesCorrect) + '","' +
     notNull(user.sCorrect) + '","' +
     notNull(user.sIncorrect) + '","' +
+    listHandler(user.iLinesCorrect) + '","' +
     notNull(user.iCorrect) + '","' +
     notNull(user.iIncorrect) + '","' +
     notNull(survey.question1) + '","' +
@@ -154,7 +158,7 @@ function notNull(data) {
   if (data != null) {
     return data;
   } else {
-    return "N/A11111111";
+    return "N/A";
   }
 }
 
