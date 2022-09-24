@@ -3,8 +3,20 @@
     color: black;
 }
 
+.Survey-Main {
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
 .paragraph-head {
-    font-size: 14px;
+    /* font-size: 14px; */
+}
+
+.divider-line {
+    height: 1vh;
+    width: 10vw;
+    background-color: #3973ac;
+    border-radius: 6px;
 }
 
 .SurveyComplete-body {
@@ -27,4 +39,14 @@
     cursor: pointer;
     color: white;
     background-color: #3973ac;
+}
+
+@media screen and (max-width: 500px) {
+    .surveyButton {
+        height: calc(6px + 6vh);;
+    }
+
+    .divider-line {
+        width: 20vw;
+    }
 }

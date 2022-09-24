@@ -59,11 +59,17 @@ export default function SurveyCompletePage() {
                 We acknowledge that some of you may have felt discomfort in watching moments of insensitivity in the session. We so appreciate your responses as they help bolster the purpose of our study, which is to investigate therapist sensitivity and insensitivity and how we can use the results from this study to better train mental health professionals to be more empathic. Your contribution is vital and we are grateful for your participation.
                 </p>
             </div>
+            <br></br>
+            <div className="divider-line"></div>
             <div className="SurveyComplete-body">
                 <br/>
                 <p>
                     The first 126 people to complete the survey and enter their contact information on the paged linked below will recieve a $20 Amazon giftcard.
                 </p>
+            </div>
+                <br></br>
+                <div className="divider-line"></div>
+            <div className="SurveyComplete-body">
                 <br/>
                 <p>Your contact information will NOT be connected to your survey results.</p>
                 <p>Your results will remain anonymous.</p>

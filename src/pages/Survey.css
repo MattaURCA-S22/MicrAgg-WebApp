@@ -89,9 +89,37 @@
   gap: 20px; 
 }
 
+.divider-line {
+  height: 1vh;
+  width: 10vw;
+  background-color: #3973ac;
+  border-radius: 6px;
+}
+
 .Survey-Survey {
   height: "80vh";
   width: "60vw";
   max-width: 100vw;
   max-height: 56.25vw;
+}
+
+.instruction-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vw;
+}
+
+@media  screen and (max-width: 500px) {
+  .Consent-Button {
+    width: calc(105px + 2vw);
+  }
+
+  .divider-line {
+    width: 20vw;
+  }
+
+  .second-instruction {
+    margin-top: 3vw;
+  }
 }
