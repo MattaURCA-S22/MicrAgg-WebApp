@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./StandardPage.css";
 // import NavBar from "../components/NavBar";
 import DemoBar from "../components/DemoBar";
@@ -10,6 +10,11 @@ export default function StandardPage(props) {
   if (props.className != null) {
     style = props.className;
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={style}>
       {/* Switch the below component between DemoBar and NavBar as needed */}

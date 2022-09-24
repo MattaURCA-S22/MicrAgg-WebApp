@@ -65,14 +65,15 @@
 }
 
 .Consent-Content{
-  border-radius: 6px;
-    align-items: left;
+    overflow-y: scroll;
+    border-radius: 6px;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content:flex-start; 
     background-color: aliceblue;
     width: 80vw;
-    height: 70vh;
+    height: 100vh;
     border: 10px;
     padding: 16px;
     border-color: red;

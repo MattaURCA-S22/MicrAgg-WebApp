@@ -14,15 +14,17 @@
 
 .surveyButton {
     border: none;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
     border-radius: 12px;
     color: black;
-    width: calc(12px + 10vw);
+    width: calc(96px + 10vw);
     height: calc(2px + 6vh);
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.5vw;
+    font-size: calc(16px + 0.6vh);
     margin: 1vh;
     cursor: pointer;
-    background-color: gray;
+    color: white;
+    background-color: #3973ac;
 }
