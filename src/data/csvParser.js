@@ -251,6 +251,9 @@ function handleCareer(demo){
     if (demo.PsychodramaR != null) {
       career += "Psychodramatist:" + demo.Psychodramatist + ", ";
     }
+    if (demo.OtherR != null) {
+      career += "Other:" + demo.Other + ", ";
+    }
     if (career.charAt(career.length-2) !== "[" ){
       career = career.slice(0, career.length-2);
     } else { 
