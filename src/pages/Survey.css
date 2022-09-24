@@ -1,4 +1,5 @@
 .Survey-Main {
+  zoom: 100% !important;
     background-color: lightgray;
     background-image: linear-gradient(#9fbfdf, white);
   min-height: 100vh;
