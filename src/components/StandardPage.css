@@ -13,3 +13,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  zoom: 100%;
+}

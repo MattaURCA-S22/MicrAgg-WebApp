@@ -32,6 +32,7 @@ function VideoPlayer() {
   console.log(response);
 
   useEffect(() => {
+    document.body.style.zoom = "100%";
     if (!checkForValidContext()) {
       let userDoc = checkForUserDoc();
       userDoc.then(value => {
