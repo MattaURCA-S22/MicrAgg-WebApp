@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Survey.css";
 import "./SurveyPage.css"
@@ -9,6 +9,9 @@ import { useResponse } from "../context/ResponseContext";
 export default function Instructions() {
   const { response } = useResponse();
   console.log(response);
+  useEffect(() => {
+    document.body.style.zoom = "100%";
+  });
   return (
     <StandardPage className="Survey-Main">
       <div className="Consent-Body">
