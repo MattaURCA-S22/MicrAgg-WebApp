@@ -1,4 +1,4 @@
-.VideoPlayer-video {
+.VideoPlayer-video1 {
   border-radius: 5%;
   width: 115.555556vh;
   height: 65vh;
@@ -41,7 +41,6 @@
   font-size: calc(8px + 0.6vh);
   cursor: pointer;
 }
-
 /* .overlay-2 {
   align-items: flex-end;
   justify-content: space-evenly;

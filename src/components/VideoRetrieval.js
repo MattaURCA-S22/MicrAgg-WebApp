@@ -21,12 +21,12 @@ export default function VideoRetrieval(props) {
             cssType = "DashboardData-VideoQuickView";
             videoTitle = "Control";
         } else {
-            cssType = "VideoPlayer-video";
+            cssType = "VideoPlayer-video1";
             videoTitle = "Control";
         }
     } else if (video === "B"){
         videoLink = "https://player.vimeo.com/video/745639562?h=8bec22d9fe&title=0&badge=0&portrait=0&byline=0&autoplay=0&texttrack=en&player_id=0&VideoPlayer_id=58479"
-        cssType = "VideoPlayer-video";
+        cssType = "VideoPlayer-video1";
         videoTitle = "Experimental";
     }
 
@@ -37,7 +37,7 @@ export default function VideoRetrieval(props) {
             frameBorder="0"
             allow="autoplay;"
             className={cssType}
-            title="MVI_0566"
+            title={videoTitle}
             ></iframe>
         </div>
         )

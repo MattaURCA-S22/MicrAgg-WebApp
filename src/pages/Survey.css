@@ -112,7 +112,7 @@
 
 @media  screen and (max-width: 500px) {
   .Consent-Button {
-    width: calc(105px + 2vw);
+    width: auto
   }
 
   .divider-line {
