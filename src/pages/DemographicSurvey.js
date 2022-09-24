@@ -141,6 +141,7 @@ export default function DemographicSurveyPage() {
               "Muslim",
               "Sikh",
               "Zoroastrian",
+              "Do not wish to identify",
             ],
             hasOther: true,
           },
@@ -372,6 +373,22 @@ export default function DemographicSurveyPage() {
                 titleLocation: "hidden",
                 isRequired: true,
               },
+              {
+                type: "checkbox",
+                name: "OtherR",
+                visibleIf: "{question1}='Credentialed Professional'",
+                titleLocation: "hidden",
+                hideNumber: true,
+                choices: ["Other"],
+              },
+              {
+                type: "text",
+                name: "Other",
+                visibleIf: "{OtherR} notempty",
+                startWithNewLine: false,
+                titleLocation: "hidden",
+                isRequired: true,
+              },
             ],
             isRequired: true,
           },
@@ -469,7 +486,8 @@ export default function DemographicSurveyPage() {
       options.obj.name === "Dance Therapist" ||
       options.obj.name === "Music Therapist" ||
       options.obj.name === "Drama Therapist" ||
-      options.obj.name === "Psychodramatist"
+      options.obj.name === "Psychodramatist" ||
+      options.obj.name === "Other"
     ) {
       options.obj.clearErrors();
       setError();

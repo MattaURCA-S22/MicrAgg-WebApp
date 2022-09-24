@@ -14,6 +14,8 @@ export function ResponseProvider ({children}) {
             consent: 'false',
             sTimes: [],
             iTimes: [],
+            sLinesCorrect: [],
+            iLinesCorrect: [],
             sCorrect: 0,
             sIncorrect: 0,
             iCorrect: 0,
