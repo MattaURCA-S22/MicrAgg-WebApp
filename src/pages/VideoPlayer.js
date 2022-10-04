@@ -81,6 +81,7 @@ function VideoPlayer() {
     var iframe = document.querySelector('iframe');
     var player = new Vimeo(iframe);
     let lockoutTime = 2;
+    let lastLine = "";
 
     player.getCurrentTime().then(function(seconds){
       // You can use seconds and message here to add data to the user's response data
@@ -90,8 +91,10 @@ function VideoPlayer() {
           let incorrect = true; 
           for (var i = 0; i < masterSensitive.length; i++) {
             if (seconds <= masterSensitive[i]['end'] + 5 && seconds >= masterSensitive[i]['start']) {
-              numCorrectS++;
-              response.sLinesCorrect.push(masterSensitive[i]['line']);
+              if(lastLine != masterSensitive[i]['line']){
+                numCorrectS++;
+                response.sLinesCorrect.push(masterSensitive[i]['line']);
+              }
               incorrect = false;
               break;
             } 
