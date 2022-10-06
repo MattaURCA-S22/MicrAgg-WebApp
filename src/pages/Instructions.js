@@ -26,10 +26,10 @@ export default function Instructions() {
             <br></br>
             <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center"}}>
               <div className="instruction-text">
-                <p style={{textAlign: "center"}}>Click or tap this button <br></br> <button class="VideoPlayer-button VideoPlayer-button1">Sensitive</button> <br></br>if you see the therapist in the video say something sensitive.</p>
+                <p style={{textAlign: "center"}}>Click or tap this button <br></br> <button class="VideoPlayer-button VideoPlayer-button1">Sensitive</button> <br></br>EVERY TIME you see the therapist in the video say something sensitive.</p>
               </div>
               <div className="instruction-text second-instruction">
-                <p style={{textAlign: "center"}}>Click or tap this button <br></br><button class="VideoPlayer-button VideoPlayer-button2">Insensitive</button> <br></br>if you see the therapist in the video say something insensitive.</p>
+                <p style={{textAlign: "center"}}>Click or tap this button <br></br><button class="VideoPlayer-button VideoPlayer-button2">Insensitive</button> <br></br>EVERY TIME you see the therapist in the video say something insensitive.</p>
               </div>
             </div>
             <br></br>
