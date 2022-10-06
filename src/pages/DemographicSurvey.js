@@ -198,7 +198,7 @@ export default function DemographicSurveyPage() {
                   { value: "n-s", text: " " },
                   { value: "si", text: "Somewhat important" },
                   { value: "s-v", text: " " },
-                  { value: "si", text: "Very important" },
+                  { value: "vi", text: "Very important" },
                 ],
               },
             ],
