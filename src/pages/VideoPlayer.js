@@ -158,8 +158,10 @@ function VideoPlayer() {
           <button id="sensitive" class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Sensitive')}>Sensitive</button>
           <button id="insensitive" class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Insensitive')}>Insensitive</button>
         </div>
+        <div style={{overflow: "hidden"}}>
         <div className={cssClass} onAnimationEnd={() => setCssClass("invisible")}>
           <Confirmation message={message}/>
+        </div>
         </div>
         {/* Button Only Appears on video finish*/}
         {finished && 

@@ -80,7 +80,7 @@ body {
 .show {
   display: block;
   animation-name: in-out;
-  animation-duration: 3s;
+  animation-duration: 5s;
 }
 
 @keyframes fadeIn {
@@ -94,17 +94,17 @@ body {
 }
 
 @keyframes in-out {
-  0% {
-      opacity: 0%;
-  }
+    0% {
+        transform: translateY(5vw);
+    }
 
-  50% {
-      opacity: 100%;
-  }
+    25% {
+       transform: translateY(0vw);
+    }
 
-  100% {
-      opacity: 0%;
-  }
+    95% {
+      transform: translateY(0vw);
+    }
 }
 
 .VideoPlayer-button1 {background-color: #81ee84;} /* Green */
