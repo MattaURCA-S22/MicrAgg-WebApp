@@ -8,10 +8,13 @@ import { UserInfo } from "firebase-admin/lib/auth/user-record";
 import { fillArray } from "../data/firebaseInterface";
 import { useAuth } from "../context/AuthContext";
 import { useResponse } from "../context/ResponseContext";
+import Confirmation from "../components/Confirmation";
 
 function VideoPlayer() {
   const [finished, setFinished] = useState(false);
   const [rendered, setRendered] = useState(false);
+  const [message, setMessage] = useState("");
+  const [cssClass, setCssClass] = useState("invisible");
   const { response, checkForValidContext, setNewContext } = useResponse();
   const navigate = useNavigate();
   var masterSensitive = [];
@@ -77,7 +80,13 @@ function VideoPlayer() {
     fetchData();
   }, [])
 
+  function handleAnimationEnd(whichClass) {
+    setCssClass(whichClass);
+  }
+
   function UserResponse(message){
+    setCssClass("show");
+    setMessage(message);
     var iframe = document.querySelector('iframe');
     var player = new Vimeo(iframe);
     let lockoutTime = 2;
@@ -134,7 +143,6 @@ function VideoPlayer() {
       console.log('Finished.');
       setFinished(true);
     });
-
     console.log(message);
   }
 
@@ -144,8 +152,11 @@ function VideoPlayer() {
         <VideoRetrieval videoPlay={response.video} />
         <i className="VideoPlayer-hint">*Tap or Click Video to Play - Please Avoid Fullscreen</i>
         <div className="VideoPlayer-controls">
-          <button class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Sensitive')}>Sensitive</button>
-          <button class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Insensitive')}>Insensitive</button>
+          <button id="sensitive" class="VideoPlayer-button VideoPlayer-button1" onClick={() => UserResponse('Sensitive')}>Sensitive</button>
+          <button id="insensitive" class="VideoPlayer-button VideoPlayer-button2" onClick={() => UserResponse('Insensitive')}>Insensitive</button>
+        </div>
+        <div className={cssClass} onAnimationEnd={() => setCssClass("invisible")}>
+          <Confirmation message={message}/>
         </div>
         {/* Button Only Appears on video finish*/}
         {finished && 

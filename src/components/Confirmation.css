@@ -1,0 +1,34 @@
+.invisible {
+    display: none;
+}
+
+.confirmation-bar {
+    opacity: 100%;
+    padding: 1vw;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.sensitive {
+    background-color: rgba(129, 238, 133, 0.416);
+    color: green;
+}
+
+.insensitive {
+    background-color: rgba(255, 112, 112, 0.416);
+    color: red;
+}
+
+@keyframes in-out {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
