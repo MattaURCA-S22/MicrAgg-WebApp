@@ -53,7 +53,7 @@ export default function SurveyPage() {
             type: "html",
             name: "question5",
             html:
-              '<div className="surveyDiv">\n<strong>It is important to know that there are no right or wrong answers here. Rather, therapists are human and they have a range of emotions and reactions. We are trying to get a sense of how the therapist was with the client in this session. In some cases, therapists may be uncomfortable and avoid discussions; whereas in other cases, they may be very comfortable and navigate the conversation with ease (and likely a range between these extremes).</strong></div>',
+              '<div className="surveyDiv">\n<strong>It is important to know that there are no right or wrong answers here. Rather, therapists are human and they have a range of emotions and reactions. We are trying to get a sense of how the therapist was with the client in this session. In some cases, therapists may be uncomfortable and avoid discussions; whereas in other cases, they may be very comfortable and navigate the conversation with ease (and likely a range between these extremes). It is also important to note that there may be no salient culturally related dialogue in the sessions. In these situations, we ask for you to just indicate that in the space below. </strong></div>',
           },
           {
             type: "text",
@@ -112,7 +112,7 @@ export default function SurveyPage() {
               { value: "_3b", text: "2. Is open to explore." },
               {
                 value: "_3c",
-                text: "3. Assume she already knows a lot.",
+                text: "3. Assumes she already knows a lot.",
               },
               { value: "_3d", text: "4. Is considerate." },
               {
