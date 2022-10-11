@@ -17,7 +17,7 @@ export default function Instructions() {
       <div className="Consent-Body">
         <br />
         <div className="Consent-Content Consent-Text">
-          <h4>INSTRUCTIONS</h4>
+          <h2>INSTRUCTIONS</h2>
           <p>
             You will be shown a video of a therapy session where you will
             observe interactions between a therapist and a client. 
@@ -26,10 +26,10 @@ export default function Instructions() {
             <br></br>
             <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center"}}>
               <div className="instruction-text">
-                <p style={{textAlign: "center"}}>EVERY SINGLE TIME you see the therapist in the video say something sensitive,click or tap<br></br> <button class="VideoPlayer-button VideoPlayer-button1">Sensitive</button> <br></br>You may choose to click multiple times when the therapist is speaking.</p>
+                <p style={{textAlign: "center"}}><b>EVERY SINGLE TIME</b> you see the therapist in the video say something <b>sensitive</b>, click or tap<br></br> <button class="VideoPlayer-button VideoPlayer-button1">Sensitive</button> <br></br>You may choose to click multiple times when the therapist is speaking.</p>
               </div>
               <div className="instruction-text second-instruction">
-                <p style={{textAlign: "center"}}>EVERY SINGLE TIME you see the therapist in the video say something insensitive,click or tap<br></br><button class="VideoPlayer-button VideoPlayer-button2">Insensitive</button> <br></br>You may choose to click multiple times when the therapist is speaking.</p>
+                <p style={{textAlign: "center"}}><b>EVERY SINGLE TIME</b> you see the therapist in the video say something <b>insensitive</b>, click or tap<br></br><button class="VideoPlayer-button VideoPlayer-button2">Insensitive</button> <br></br>You may choose to click multiple times when the therapist is speaking.</p>
               </div>
             </div>
             <br></br>
