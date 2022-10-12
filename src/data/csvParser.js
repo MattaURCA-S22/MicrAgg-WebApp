@@ -181,7 +181,7 @@ function parseShorthand(shorthand){
     return "5";
   }
   else {
-    return "N/A22222222222";
+    return "N/A";
   }
 }
 
