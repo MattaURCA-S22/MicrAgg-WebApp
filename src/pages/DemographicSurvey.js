@@ -104,7 +104,7 @@ export default function DemographicSurveyPage() {
             choices: [
               "White (non Hispanic)",
               "American Indian",
-              "African American",
+              "African American/Black",
               "Hispanic/Latinx",
               "Asian/Pacific Islander",
               "Bi or Multi Racial",
