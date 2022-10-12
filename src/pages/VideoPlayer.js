@@ -22,6 +22,7 @@ function VideoPlayer() {
   var sLinesCorrect = [];
   var iLinesCorrect = [];
   var secondsLast = -10;
+  var lastLine = "";
   var numCorrectS = 0;
   var numIncorrectS = 0;
   var numCorrectI = 0;
@@ -90,12 +91,11 @@ function VideoPlayer() {
     var iframe = document.querySelector('iframe');
     var player = new Vimeo(iframe);
     let lockoutTime = 2;
-    let lastLine = "";
 
     player.getCurrentTime().then(function(seconds){
       // You can use seconds and message here to add data to the user's response data
       console.log(secondsLast);
-      if ((secondsLast + lockoutTime) < seconds){
+      if ((secondsLast + lockoutTime) <= seconds){
         if (message === "Sensitive"){
           let incorrect = true; 
           for (var i = 0; i < masterSensitive.length; i++) {
