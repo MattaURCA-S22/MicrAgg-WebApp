@@ -53,7 +53,7 @@ export default function SurveyPage() {
             type: "html",
             name: "question5",
             html:
-              '<div className="surveyDiv">\n<strong>It is important to know that there are no right or wrong answers here. Rather, therapists are human and they have a range of emotions and reactions. We are trying to get a sense of how the therapist was with the client in this session. In some cases, therapists may be uncomfortable and avoid discussions; whereas in other cases, they may be very comfortable and navigate the conversation with ease (and likely a range between these extremes). It is also important to note that there may be no salient culturally related dialogue in the sessions. In these situations, we ask for you to just indicate that in the space below. </strong></div>',
+              '<div className="surveyDiv">\n<strong>It is important to know that there are no right or wrong answers here. Rather, therapists are human, and they have a range of emotions and reactions. We are trying to get a sense of how the therapist was with the client in these sessions (Parts 1 & 2). In some cases, therapists may be uncomfortable and avoid discussions; whereas in other cases, they may be very comfortable and navigate the conversation with ease (and likely a range between these extremes). It is also important to note that there may be no salient culturally related dialogue in the sessions. In these situations, we ask for you to just indicate that in the space below. </strong></div>',
           },
           {
             type: "text",
@@ -72,7 +72,7 @@ export default function SurveyPage() {
             type: "matrix",
             name: "question2",
             title:
-              "Overall, how comfortable did therapist appear to you in the session as it relates to dialogue around the client’s cultural identity or cultural issues?",
+              "In your overall assessment, how comfortable did the therapist appear to you in the sessions (Parts 1 & 2) as they relate to dialogue around the client’s cultural identity or cultural issues?",
             isRequired: true,
             columns: [
               { value: "sd", text: "Strongly Disagree" },
@@ -98,7 +98,7 @@ export default function SurveyPage() {
             type: "matrix",
             name: "question3",
             title:
-              "In this next section, we would like for you to rate the therapist based on the following items. These items reflect therapist’s cultural humility. As above, it is important to keep in mind the interactions specific to cultural issues in session (as opposed to general interactions). As a reminder, cultural humility is an other oriented mind-frame that is open to explore and understand the other’s worldview and a mind frame that does not assume superiority or expertise. However, this stance does not mean that the therapist is completely deferent to the client’s view, but rather invites the dialogue (two-person philosophy).<br/><br/>Regarding the client’s cultural background, the therapist….",
+              "In this next section, we would like for you to rate the therapist based on the following items. These items reflect the therapist’s cultural humility. As above, it is important to keep in mind the interactions specific to cultural issues in session (as opposed to general interactions). As a reminder, cultural humility is an other oriented mind-frame that is open to explore and understand the other’s worldview and a mind frame that does not assume superiority or expertise. However, this stance does not mean that the therapist is completely deferent to the client’s view, but rather invites the dialogue (two-person philosophy).<br/><br/>Overall, regarding the client’s cultural background, the therapist….",
             isRequired: true,
             columns: [
               { value: "sd", text: "Strongly Disagree" },
@@ -147,7 +147,7 @@ export default function SurveyPage() {
             type: "matrix",
             name: "question4",
             title:
-              "Please rate the degree to which the therapist in the video addressed (e.g., responded to or elicited) cultural issues within the session. In many cases, there are times where clients and therapists have the opportunity to discuss certain cultural issues more in depth (e.g., a client could mention in passing that their distress has shaken their faith in God, or that they feel empowered via a local social justice group around gay rights). These opportunities come and go. Sometimes they are important and other times, they are not. Please rate the following items regarding these cultural opportunities.",
+              "Overall, please rate the degree to which the therapist in the video addressed (e.g., responded to or elicited) cultural issues within the sessions (Parts 1 & 2). In many cases, there are times where clients and therapists have the opportunity to discuss certain cultural issues more in depth (e.g., a client could mention in passing that their distress has shaken their faith in God, or that they feel empowered via a local social justice group around gay rights). These opportunities come and go. Sometimes they are important and other times, they are not. Please rate the following items regarding these cultural opportunities.",
             isRequired: true,
             columns: [
               { value: "sd", text: "Strongly Disagree" },
