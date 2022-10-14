@@ -110,6 +110,7 @@ export default function DemographicSurveyPage() {
               "Bi or Multi Racial",
               "Do not wish to identify",
             ],
+            hasOther: true,
           },
           {
             type: "radiogroup",
