@@ -1,5 +1,5 @@
 import Vimeo from "@vimeo/player";
-import React, { useState , useContext, useEffect } from "react";
+import React, { useState , useContext, useEffect, useRef } from "react";
 import {Link, useNavigate} from "react-router-dom";
 import StandardPage from "../components/StandardPage";
 import VideoRetrieval from "../components/VideoRetrieval";
@@ -21,12 +21,17 @@ function VideoPlayer() {
   var masterInsensitive = [];
   var sLinesCorrect = [];
   var iLinesCorrect = [];
-  var secondsLast = -10;
-  var lastLine = "";
-  var numCorrectS = 0;
-  var numIncorrectS = 0;
-  var numCorrectI = 0;
-  var numIncorrectI = 0;
+  const halfwayTime = 496;
+  const secondsLast = useRef(-10);
+  const lastLine = useRef("");
+  const numCorrectS1 = useRef(0);
+  const numIncorrectS1 = useRef(0);
+  const numCorrectI1 = useRef(0);
+  const numIncorrectI1 = useRef(0);
+  const numCorrectS2 = useRef(0);
+  const numIncorrectS2 = useRef(0);
+  const numCorrectI2 = useRef(0);
+  const numIncorrectI2 = useRef(0);
   var readIn = {
     Times: []
   }
@@ -94,22 +99,31 @@ function VideoPlayer() {
 
     player.getCurrentTime().then(function(seconds){
       // You can use seconds and message here to add data to the user's response data
-      console.log(secondsLast);
-      if ((secondsLast + lockoutTime) <= seconds){
+      console.log(secondsLast.current);
+      if ((secondsLast.current + lockoutTime) <= seconds){
         if (message === "Sensitive"){
           let incorrect = true; 
           for (var i = 0; i < masterSensitive.length; i++) {
             if (seconds <= masterSensitive[i]['end'] + 5 && seconds >= masterSensitive[i]['start']) {
-              if(lastLine != masterSensitive[i]['line']){
-                numCorrectS++;
+              if(lastLine.current != masterSensitive[i]['line']){
+                if (seconds < halfwayTime){
+                  numCorrectS1.current++;
+                }else{
+                  numCorrectS2.current++;
+                }
                 response.sLinesCorrect.push(masterSensitive[i]['line']);
+                lastLine.current = masterSensitive[i]['line']
               }
               incorrect = false;
               break;
             } 
           } 
           if (incorrect) {
-            numIncorrectS++;
+            if (seconds < halfwayTime){
+              numIncorrectS1.current++;
+            }else{
+              numIncorrectS2.current++;
+            }
           }
           response.sTimes.push(seconds);  
         }
@@ -117,32 +131,42 @@ function VideoPlayer() {
           let incorrect = true; 
           for (var i = 0; i < masterInsensitive.length; i++) {
             if (seconds <= masterInsensitive[i]['end'] + 5 && seconds >= masterInsensitive[i]['start']) {
-              numCorrectI++;
-              response.iLinesCorrect.push(masterInsensitive[i]['line']);
+              if(lastLine.current != masterInsensitive[i]['line']){
+                if (seconds < halfwayTime){
+                  numCorrectI1.current++;
+                }else{
+                  numCorrectI2.current++;
+                }
+                response.iLinesCorrect.push(masterInsensitive[i]['line']);
+              }
               incorrect = false;
               break;
             }
           }
           if (incorrect) {
-            numIncorrectI++;
+            if (seconds < halfwayTime){
+              numIncorrectI1.current++;
+            }else{
+              numIncorrectI2.current++;
+            }
           }
           response.iTimes.push(seconds);   
         }
-        secondsLast = seconds;
+        secondsLast.current = seconds;
       }
-      console.log(numCorrectI);
-      console.log(numCorrectS);
-      console.log(numIncorrectI);
-      console.log(numIncorrectS);
       console.log(response);
-      console.log(secondsLast);
+      console.log(secondsLast.current);
     });
 
     player.on('ended', function() {
-      response.sCorrect = numCorrectS;
-      response.sIncorrect = numIncorrectS;
-      response.iCorrect = numCorrectI;
-      response.iIncorrect = numIncorrectI;
+      response.sCorrect1 = numCorrectS1.current;
+      response.sIncorrect1 = numIncorrectS1.current;
+      response.iCorrect1 = numCorrectI1.current;
+      response.iIncorrect1 = numIncorrectI1.current;
+      response.sCorrect2 = numCorrectS2.current;
+      response.sIncorrect2 = numIncorrectS2.current;
+      response.iCorrect2 = numCorrectI2.current;
+      response.iIncorrect2 = numIncorrectI2.current;
       console.log('Finished.');
       setFinished(true);
     });

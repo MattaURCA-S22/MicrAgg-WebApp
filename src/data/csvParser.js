@@ -24,11 +24,15 @@ export function csvParser(data) {
     "Sensitive Times," + 
     "Insensitive Times," +
     "Sensitive Lines Identified," + 
-    "Sensitive Correct," + 
-    "Sensitive Incorrect," + 
+    "Sensitive Correct Part 1," + 
+    "Sensitive Incorrect Part 1," + 
+    "Sensitive Correct Part 2," + 
+    "Sensitive Incorrect Part 2," + 
     "Insensitive Lines Identified," +
-    "Insensitive Correct," + 
-    "Insensitive Incorrect," + 
+    "Insensitive Correct Part 1," + 
+    "Insensitive Incorrect Part 1," + 
+    "Insensitive Correct Part 2," + 
+    "Insensitive Incorrect Part 2," + 
     "Q1," + 
     "Q2: Comfortable," + 
     "Q2: Awkward," + 
@@ -99,11 +103,15 @@ export function csvParser(data) {
     timeListHandler(user.sTimes) + '","' +
     timeListHandler(user.iTimes) + '","' +
     listHandler(user.sLinesCorrect) + '","' +
-    notNull(user.sCorrect) + '","' +
-    notNull(user.sIncorrect) + '","' +
+    notNull(user.sCorrect1) + '","' +
+    notNull(user.sIncorrect1) + '","' +
+    notNull(user.sCorrect2) + '","' +
+    notNull(user.sIncorrect2) + '","' +
     listHandler(user.iLinesCorrect) + '","' +
-    notNull(user.iCorrect) + '","' +
-    notNull(user.iIncorrect) + '","' +
+    notNull(user.iCorrect1) + '","' +
+    notNull(user.iIncorrect1) + '","' +
+    notNull(user.iCorrect2) + '","' +
+    notNull(user.iIncorrect2) + '","' +
     notNull(survey.question1) + '","' +
     parseShorthand(notNull(survey.question2).comfortable) + '","' +
     parseShorthand(notNull(survey.question2).awkward) + '","' +
