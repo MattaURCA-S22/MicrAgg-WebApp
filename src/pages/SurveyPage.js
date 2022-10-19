@@ -60,7 +60,7 @@ export default function SurveyPage() {
             name: "question1",
             title: "Please list the themes that emerged within the sessions.",
             isRequired: true,
-            maxLength: 100,
+            maxLength: 500,
           },
           {
             type: "html",
