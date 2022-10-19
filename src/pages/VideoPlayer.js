@@ -17,8 +17,8 @@ function VideoPlayer() {
   const [cssClass, setCssClass] = useState("invisible");
   const { response, checkForValidContext, setNewContext } = useResponse();
   const navigate = useNavigate();
-  var masterSensitive = [];
-  var masterInsensitive = [];
+  const masterSensitive = useRef([]);
+  const masterInsensitive = useRef([]);
   var sLinesCorrect = [];
   var iLinesCorrect = [];
   const halfwayTime = 496;
@@ -72,14 +72,14 @@ function VideoPlayer() {
     const fetchData = async () => {
       if (response.video === "A") {
         readIn = await fillArray("Sensitive");
-        masterSensitive = readIn.Times;
+        masterSensitive.current = readIn.Times;
         readIn = await fillArray("Insensitive");
-        masterInsensitive = readIn.Times;
+        masterInsensitive.current = readIn.Times;
       } else {
         readIn = await fillArray("SensitiveB");
-        masterSensitive = readIn.Times;
+        masterSensitive.current = readIn.Times;
         readIn = await fillArray("InsensitiveB");
-        masterInsensitive = readIn.Times;
+        masterInsensitive.current = readIn.Times;
       }
     };
 
@@ -103,16 +103,16 @@ function VideoPlayer() {
       if ((secondsLast.current + lockoutTime) <= seconds){
         if (message === "Sensitive"){
           let incorrect = true; 
-          for (var i = 0; i < masterSensitive.length; i++) {
-            if (seconds <= masterSensitive[i]['end'] + 5 && seconds >= masterSensitive[i]['start']) {
-              if(lastLine.current != masterSensitive[i]['line']){
+          for (var i = 0; i < masterSensitive.current.length; i++) {
+            if (seconds <= masterSensitive.current[i]['end'] + 5 && seconds >= masterSensitive.current[i]['start']) {
+              if(lastLine.current != masterSensitive.current[i]['line']){
                 if (seconds < halfwayTime){
                   numCorrectS1.current++;
                 }else{
                   numCorrectS2.current++;
                 }
-                response.sLinesCorrect.push(masterSensitive[i]['line']);
-                lastLine.current = masterSensitive[i]['line']
+                response.sLinesCorrect.push(masterSensitive.current[i]['line']);
+                lastLine.current = masterSensitive.current[i]['line']
               }
               incorrect = false;
               break;
@@ -129,15 +129,15 @@ function VideoPlayer() {
         }
         else if (message === "Insensitive"){
           let incorrect = true; 
-          for (var i = 0; i < masterInsensitive.length; i++) {
-            if (seconds <= masterInsensitive[i]['end'] + 5 && seconds >= masterInsensitive[i]['start']) {
-              if(lastLine.current != masterInsensitive[i]['line']){
+          for (var i = 0; i < masterInsensitive.current.length; i++) {
+            if (seconds <= masterInsensitive.current[i]['end'] + 5 && seconds >= masterInsensitive.current[i]['start']) {
+              if(lastLine.current != masterInsensitive.current[i]['line']){
                 if (seconds < halfwayTime){
                   numCorrectI1.current++;
                 }else{
                   numCorrectI2.current++;
                 }
-                response.iLinesCorrect.push(masterInsensitive[i]['line']);
+                response.iLinesCorrect.push(masterInsensitive.current[i]['line']);
               }
               incorrect = false;
               break;
