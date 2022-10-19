@@ -13,12 +13,14 @@ export default function OverallDataTable(props) {
       rows.push(
         <tr>
           <td>{user.uid}</td>
-          <td>{user.sCorrect}</td>
-          <td>{user.sIncorrect}</td>
-          <td>{user.iCorrect}</td>
-          <td>{user.iIncorrect}</td>
-          <td>{timeListHandler(user.sTimes)}</td>
-          <td>{timeListHandler(user.iTimes)}</td>
+          <td>{user.sCorrect1}</td>
+          <td>{user.sIncorrect1}</td>
+          <td>{user.iCorrect1}</td>
+          <td>{user.iIncorrect1}</td>
+          <td>{user.sCorrect2}</td>
+          <td>{user.sIncorrect2}</td>
+          <td>{user.iCorrect2}</td>
+          <td>{user.iIncorrect2}</td>
         </tr>
       );
     }
@@ -32,12 +34,14 @@ export default function OverallDataTable(props) {
         {/* Modify Table Headings Here */}
         <tr>
           <th>User</th>
-          <th># Sensitive Correct</th>
-          <th># Sensitive Wrong</th>
-          <th># Insensitive Correct</th>
-          <th># Insensitive Wrong</th>
-          <th># Sensitive Times</th>
-          <th># Insensitive Times</th>
+          <th># Sensitive Correct Part 1</th>
+          <th># Sensitive Wrong Part 1</th>
+          <th># Insensitive Correct Part 1</th>
+          <th># Insensitive Wrong Part 1</th>
+          <th># Sensitive Correct Part 2</th>
+          <th># Sensitive Wrong Part 2</th>
+          <th># Insensitive Correct Part 2</th>
+          <th># Insensitive Wrong Part 2</th>
         </tr>
 
         {returnRows()}
