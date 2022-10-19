@@ -16,10 +16,7 @@ export function ResponseProvider ({children}) {
             iTimes: [],
             sLinesCorrect: [],
             iLinesCorrect: [],
-            sCorrect: 0,
-            sIncorrect: 0,
-            iCorrect: 0,
-            iIncorrect: 0
+            lastSiteUpdate: '10/19/2022 12:04 PM',
         }
         setResponse(userData);
     }
