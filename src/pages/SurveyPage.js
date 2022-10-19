@@ -72,13 +72,13 @@ export default function SurveyPage() {
             type: "matrix",
             name: "question2",
             title:
-              "In your overall assessment, how comfortable did the therapist appear to you in the sessions (Parts 1 & 2) as they relate to dialogue around the client’s cultural identity or cultural issues?",
+              "In your overall assessment, how comfortable did the therapist appear to you in the sessions (Parts 1 & 2) as they relate to dialogue around the client’s cultural identity or cultural issues? </br></br> The therapist appeared....",
             isRequired: true,
             columns: [
               { value: "sd", text: "Strongly Disagree" },
-              { value: "md", text: "Mildly Disagree" },
+              { value: "md", text: "Disagree" },
               { value: "n", text: "Neutral" },
-              { value: "ma", text: "Mildly Agree" },
+              { value: "ma", text: "Agree" },
               { value: "sa", text: "Strongly Agree" },
             ],
             rows: [
@@ -98,13 +98,13 @@ export default function SurveyPage() {
             type: "matrix",
             name: "question3",
             title:
-              "In this next section, we would like for you to rate the therapist based on the following items. These items reflect the therapist’s cultural humility. As above, it is important to keep in mind the interactions specific to cultural issues in session (as opposed to general interactions). As a reminder, cultural humility is an other oriented mind-frame that is open to explore and understand the other’s worldview and a mind frame that does not assume superiority or expertise. However, this stance does not mean that the therapist is completely deferent to the client’s view, but rather invites the dialogue (two-person philosophy).<br/><br/>Overall, regarding the client’s cultural background, the therapist….",
+              "In this next section, we would like for you to rate the therapist based on the following items. These items reflect the therapist’s cultural humility. As above, it is important to keep in mind the interactions specific to cultural issues in session (as opposed to general interactions). As a reminder, cultural humility is an other oriented mind-frame that is open to explore and understand the other’s worldview and a mind frame that does not assume superiority or expertise. However, this stance does not mean that the therapist is completely deferent to the client’s view, but rather invites the dialogue (two-person philosophy).<br/><br/>Overall, regarding the client’s cultural background, the therapist....",
             isRequired: true,
             columns: [
               { value: "sd", text: "Strongly Disagree" },
-              { value: "md", text: "Mildly Disagree" },
+              { value: "md", text: "Disagree" },
               { value: "n", text: "Neutral" },
-              { value: "ma", text: "Mildly Agree" },
+              { value: "ma", text: "Agree" },
               { value: "sa", text: "Strongly Agree" },
             ],
             rows: [
@@ -151,9 +151,9 @@ export default function SurveyPage() {
             isRequired: true,
             columns: [
               { value: "sd", text: "Strongly Disagree" },
-              { value: "md", text: "Mildly Disagree" },
+              { value: "md", text: "Disagree" },
               { value: "n", text: "Neutral" },
-              { value: "ma", text: "Mildly Agree" },
+              { value: "ma", text: "Agree" },
               { value: "sa", text: "Strongly Agree" },
             ],
             rows: [
