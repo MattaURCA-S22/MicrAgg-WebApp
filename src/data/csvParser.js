@@ -34,34 +34,62 @@ export function csvParser(data) {
     "Insensitive Correct Part 2," + 
     "Insensitive Incorrect Part 2," + 
     "Q1," + 
-    "Q2: Comfortable," + 
-    "Q2: Awkward," + 
-    "Q2: Tense," +
-    "Q2: Nervous," + 
-    "Q2: Confident," + 
-    "Q2: Uneasy," +
-    "Q2: Relaxed," + 
-    "Q2: Calm," + 
-    "Q2: Edgy," +
-    "Q2: Genuine," + 
-    "Q3: Is respectful," +     
-    "Q3: Is open To explore," + 
-    "Q3: Assume he/she already knows alot," + 
-    "Q3: Is considerate," + 
-    "Q3: Is genuinely interested in learning more," + 
-    "Q3: Acts superior," + 
-    "Q3: Is open to seeing things from the client's perspective," + 
-    "Q3: Makes assumptions about the client," + 
-    "Q3: Is open-minded," + 
-    "Q3: Is a know-it-all," + 
-    "Q3: The therapist seems to assume more understanding than the therapist actually does," + 
-    "Q3: Asks questions when the therapist is uncertain," + 
-    "Q4: The therapist encouraged the client to discuss the client's cultural background more," +
-    "Q4: The therapist discussed the client’s cultural background in a way that seemed to have worked," +
-    "Q4: The therapist avoided topics related to the client’s cultural background," +
-    "Q4: The therapist delved more deeply into theclient’s cultural background," +
-    "Q4: There were many chances to have deeperdiscussions about the client’s culturalbackground that never happened," +
-    "Q4: The therapist missed opportunities to discuss the client’s cultural background," +
+    "Q2 Part 1: Comfortable," + 
+    "Q2 Part 1: Awkward," + 
+    "Q2 Part 1: Tense," +
+    "Q2 Part 1: Nervous," + 
+    "Q2 Part 1: Confident," + 
+    "Q2 Part 1: Uneasy," +
+    "Q2 Part 1: Relaxed," + 
+    "Q2 Part 1: Calm," + 
+    "Q2 Part 1: Edgy," +
+    "Q2 Part 1: Genuine," + 
+    "Q2 Part 2: Comfortable," + 
+    "Q2 Part 2: Awkward," + 
+    "Q2 Part 2: Tense," +
+    "Q2 Part 2: Nervous," + 
+    "Q2 Part 2: Confident," + 
+    "Q2 Part 2: Uneasy," +
+    "Q2 Part 2: Relaxed," + 
+    "Q2 Part 2: Calm," + 
+    "Q2 Part 2: Edgy," +
+    "Q2 Part 2: Genuine," + 
+    "Q3 Part 1: Is respectful," +     
+    "Q3 Part 1: Is open To explore," + 
+    "Q3 Part 1: Assume he/she already knows alot," + 
+    "Q3 Part 1: Is considerate," + 
+    "Q3 Part 1: Is genuinely interested in learning more," + 
+    "Q3 Part 1: Acts superior," + 
+    "Q3 Part 1: Is open to seeing things from the client's perspective," + 
+    "Q3 Part 1: Makes assumptions about the client," + 
+    "Q3 Part 1: Is open-minded," + 
+    "Q3 Part 1: Is a know-it-all," + 
+    "Q3 Part 1: The therapist seems to assume more understanding than the therapist actually does," + 
+    "Q3 Part 1: Asks questions when the therapist is uncertain," + 
+    "Q3 Part 2: Is respectful," +     
+    "Q3 Part 2: Is open To explore," + 
+    "Q3 Part 2: Assume he/she already knows alot," + 
+    "Q3 Part 2: Is considerate," + 
+    "Q3 Part 2: Is genuinely interested in learning more," + 
+    "Q3 Part 2: Acts superior," + 
+    "Q3 Part 2: Is open to seeing things from the client's perspective," + 
+    "Q3 Part 2: Makes assumptions about the client," + 
+    "Q3 Part 2: Is open-minded," + 
+    "Q3 Part 2: Is a know-it-all," + 
+    "Q3 Part 2: The therapist seems to assume more understanding than the therapist actually does," + 
+    "Q3 Part 2: Asks questions when the therapist is uncertain," + 
+    "Q4 Part 1: The therapist encouraged the client to discuss the client's cultural background more," +
+    "Q4 Part 1: The therapist discussed the client’s cultural background in a way that seemed to have worked," +
+    "Q4 Part 1: The therapist avoided topics related to the client’s cultural background," +
+    "Q4 Part 1: The therapist delved more deeply into theclient’s cultural background," +
+    "Q4 Part 1: There were many chances to have deeperdiscussions about the client’s culturalbackground that never happened," +
+    "Q4 Part 1: The therapist missed opportunities to discuss the client’s cultural background," +
+    "Q4 Part 2: The therapist encouraged the client to discuss the client's cultural background more," +
+    "Q4 Part 2: The therapist discussed the client’s cultural background in a way that seemed to have worked," +
+    "Q4 Part 2: The therapist avoided topics related to the client’s cultural background," +
+    "Q4 Part 2: The therapist delved more deeply into theclient’s cultural background," +
+    "Q4 Part 2: There were many chances to have deeperdiscussions about the client’s culturalbackground that never happened," +
+    "Q4 Part 2: The therapist missed opportunities to discuss the client’s cultural background," +
     "Q5a: Shut down verbally and/or non-verbally," +
     "Q5a: Was receptive to the therapist’s interventions," +
     "Q5a: Became hostile and/or expressed their anger/upset," +
@@ -123,6 +151,16 @@ export function csvParser(data) {
     parseShorthand(notNull(survey.question2).calm) + '","' +
     parseShorthand(notNull(survey.question2).edgy) + '","' +
     parseShorthand(notNull(survey.question2).genuine) + '","' +
+    parseShorthand(notNull(survey.question2_part2).comfortable) + '","' +
+    parseShorthand(notNull(survey.question2_part2).awkward) + '","' +
+    parseShorthand(notNull(survey.question2_part2).tense) + '","' +
+    parseShorthand(notNull(survey.question2_part2).nervous) + '","' +
+    parseShorthand(notNull(survey.question2_part2).confident) + '","' +
+    parseShorthand(notNull(survey.question2_part2).uneasy) + '","' +
+    parseShorthand(notNull(survey.question2_part2).relaxed) + '","' +
+    parseShorthand(notNull(survey.question2_part2).calm) + '","' +
+    parseShorthand(notNull(survey.question2_part2).edgy) + '","' +
+    parseShorthand(notNull(survey.question2_part2).genuine) + '","' +
     parseShorthand(notNull(survey.question3)._3a) + '","' +
     parseShorthand(notNull(survey.question3)._3b) + '","' +
     parseShorthand(notNull(survey.question3)._3c) + '","' +
@@ -135,12 +173,30 @@ export function csvParser(data) {
     parseShorthand(notNull(survey.question3)._3j) + '","' +
     parseShorthand(notNull(survey.question3)._3k) + '","' +
     parseShorthand(notNull(survey.question3)._3l) + '","' +
+    parseShorthand(notNull(survey.question3)._3a_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3b_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3c_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3d_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3e_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3f_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3g_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3h_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3i_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3j_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3k_part2) + '","' +
+    parseShorthand(notNull(survey.question3)._3l_part2) + '","' +
     parseShorthand(notNull(survey.question4)._4a) + '","' +
     parseShorthand(notNull(survey.question4)._4b) + '","' +
     parseShorthand(notNull(survey.question4)._4c) + '","' +
     parseShorthand(notNull(survey.question4)._4d) + '","' +
     parseShorthand(notNull(survey.question4)._4e) + '","' +
     parseShorthand(notNull(survey.question4)._4f) + '","' +
+    parseShorthand(notNull(survey.question4)._4a_part2) + '","' +
+    parseShorthand(notNull(survey.question4)._4b_part2) + '","' +
+    parseShorthand(notNull(survey.question4)._4c_part2) + '","' +
+    parseShorthand(notNull(survey.question4)._4d_part2) + '","' +
+    parseShorthand(notNull(survey.question4)._4e_part2) + '","' +
+    parseShorthand(notNull(survey.question4)._4f_part2) + '","' +
     parseShorthand(notNull(survey.question5a)._5aa) + '","' +
     parseShorthand(notNull(survey.question5a)._5ab) + '","' +
     parseShorthand(notNull(survey.question5a)._5ac) + '","' +
