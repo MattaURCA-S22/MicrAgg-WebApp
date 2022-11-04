@@ -90,16 +90,16 @@ export function csvParser(data) {
     "Q4 Part 2: The therapist delved more deeply into theclient’s cultural background," +
     "Q4 Part 2: There were many chances to have deeperdiscussions about the client’s culturalbackground that never happened," +
     "Q4 Part 2: The therapist missed opportunities to discuss the client’s cultural background," +
-    "Q5a: Shut down verbally and/or non-verbally," +
-    "Q5a: Was receptive to the therapist’s interventions," +
-    "Q5a: Became hostile and/or expressed their anger/upset," +
-    "Q5a: Was assertive and communicative," +
-    "Q5a: Seemed to agree with the therapist in a placating manner," +
-    "Q5b: Shut down verbally and/or non-verbally," +
-    "Q5b: Was receptive to the therapist’s interventions," +
-    "Q5b: Became hostile and/or expressed their anger/upset," +
-    "Q5b: Was assertive and communicative," +
-    "Q5b: Seemed to agree with the therapist in a placating manner" +
+    "Q5 Part 1: Shut down verbally and/or non-verbally," +
+    "Q5 Part 1: Was receptive to the therapist’s interventions," +
+    "Q5 Part 1: Became hostile and/or expressed their anger/upset," +
+    "Q5 Part 1: Was assertive and communicative," +
+    "Q5 Part 1: Seemed to agree with the therapist in a placating manner," +
+    "Q5 Part 2: Shut down verbally and/or non-verbally," +
+    "Q5 Part 2: Was receptive to the therapist’s interventions," +
+    "Q5 Part 2: Became hostile and/or expressed their anger/upset," +
+    "Q5 Part 2: Was assertive and communicative," +
+    "Q5 Part 2: Seemed to agree with the therapist in a placating manner" +
     "\n";
   for (var i = 0; i < data.length; i++) {
     let user = data[i];

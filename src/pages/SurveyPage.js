@@ -433,9 +433,15 @@ export default function SurveyPage() {
 
   var q = model.getQuestionByName("question2");
   q.isAllRowRequired = true;
+  q = model.getQuestionByName("question2_part2");
+  q.isAllRowRequired = true;
   q = model.getQuestionByName("question3");
   q.isAllRowRequired = true;
+  q = model.getQuestionByName("question3_part2");
+  q.isAllRowRequired = true;
   q = model.getQuestionByName("question4");
+  q.isAllRowRequired = true;
+  q = model.getQuestionByName("question4_part2");
   q.isAllRowRequired = true;
   q = model.getQuestionByName("question5a");
   q.isAllRowRequired = true;
