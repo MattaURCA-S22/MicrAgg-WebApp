@@ -173,30 +173,30 @@ export function csvParser(data) {
     parseShorthand(notNull(survey.question3)._3j) + '","' +
     parseShorthand(notNull(survey.question3)._3k) + '","' +
     parseShorthand(notNull(survey.question3)._3l) + '","' +
-    parseShorthand(notNull(survey.question3)._3a_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3b_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3c_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3d_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3e_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3f_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3g_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3h_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3i_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3j_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3k_part2) + '","' +
-    parseShorthand(notNull(survey.question3)._3l_part2) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3a) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3b) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3c) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3d) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3e) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3f) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3g) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3h) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3i) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3j) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3k) + '","' +
+    parseShorthand(notNull(survey.question3_part2)._3l) + '","' +
     parseShorthand(notNull(survey.question4)._4a) + '","' +
     parseShorthand(notNull(survey.question4)._4b) + '","' +
     parseShorthand(notNull(survey.question4)._4c) + '","' +
     parseShorthand(notNull(survey.question4)._4d) + '","' +
     parseShorthand(notNull(survey.question4)._4e) + '","' +
     parseShorthand(notNull(survey.question4)._4f) + '","' +
-    parseShorthand(notNull(survey.question4)._4a_part2) + '","' +
-    parseShorthand(notNull(survey.question4)._4b_part2) + '","' +
-    parseShorthand(notNull(survey.question4)._4c_part2) + '","' +
-    parseShorthand(notNull(survey.question4)._4d_part2) + '","' +
-    parseShorthand(notNull(survey.question4)._4e_part2) + '","' +
-    parseShorthand(notNull(survey.question4)._4f_part2) + '","' +
+    parseShorthand(notNull(survey.question4_part2)._4a) + '","' +
+    parseShorthand(notNull(survey.question4_part2)._4b) + '","' +
+    parseShorthand(notNull(survey.question4_part2)._4c) + '","' +
+    parseShorthand(notNull(survey.question4_part2)._4d) + '","' +
+    parseShorthand(notNull(survey.question4_part2)._4e) + '","' +
+    parseShorthand(notNull(survey.question4_part2)._4f) + '","' +
     parseShorthand(notNull(survey.question5a)._5aa) + '","' +
     parseShorthand(notNull(survey.question5a)._5ab) + '","' +
     parseShorthand(notNull(survey.question5a)._5ac) + '","' +
