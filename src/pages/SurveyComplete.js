@@ -64,7 +64,7 @@ export default function SurveyCompletePage() {
             <div className="SurveyComplete-body">
                 <br/>
                 <p>
-                    The first 126 people to complete the survey and enter their contact information on the paged linked below will recieve a $20 Amazon giftcard.
+                    The first 126 people to complete the survey and enter their contact information on the page linked below will recieve a $20 Amazon giftcard.
                 </p>
             </div>
                 <br></br>
